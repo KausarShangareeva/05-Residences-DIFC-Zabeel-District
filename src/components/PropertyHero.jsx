@@ -45,46 +45,21 @@ const PropertyHero = ({ onOpenBrochure, onOpenConsultation }) => {
     }
   };
   return (
-    <div className={`property-hero ${heroLoaded ? "hero-loaded" : ""}`} dir={lang === "ar" ? "rtl" : "ltr"}>
+    <div
+      className={`property-hero ${heroLoaded ? "hero-loaded" : ""}`}
+      dir={lang === "ar" ? "rtl" : "ltr"}
+    >
       <div className="property-hero__nav-shell">
         <Navigation onOpenConsultation={onOpenConsultation} />
       </div>
       {/* Hero Image */}
       <div className="property-hero__image-container">
-        <picture>
-          {/* 
-      Для мобильных устройств (ширина до 768px):
-      - w_800: ширина 800px
-      - q_auto:eco: автоматическое качество (эко-режим)
-      - f_auto: автоматический выбор формата (WebP/AVIF)
-    */}
-          <source
-            media="(max-width: 768px)"
-            srcset="https://res.cloudinary.com/dxp7ppipg/image/upload/w_800,q_auto:eco,f_auto/v1770374815/beyond-passo-palm-jumeirah_upscayl_1x_upscayl-lite-4x_bfjx95.png"
-          />
-
-          {/* 
-      Для планшетов (ширина до 1280px ):
-      - w_1280: ширина 1280px
-    */}
-          <source
-            media="(max-width: 1280px)"
-            srcset="https://res.cloudinary.com/dxp7ppipg/image/upload/w_1280,q_auto:eco,f_auto/v1770374815/beyond-passo-palm-jumeirah_upscayl_1x_upscayl-lite-4x_bfjx95.png"
-          />
-
-          {/* 
-      Изображение по умолчанию для больших экранов (десктопы ):
-      - w_1920: ширина 1920px
-    */}
-          <img
-            src="https://res.cloudinary.com/dxp7ppipg/image/upload/w_1920,q_auto:eco,f_auto/v1770374815/beyond-passo-palm-jumeirah_upscayl_1x_upscayl-lite-4x_bfjx95.png"
-            alt={t("propertyHero.altAerial")}
-            className="property-hero__image"
-            loading="lazy"
-            width="1920"
-            height="1080"
-          />
-        </picture>
+        <img
+          src="https://res.cloudinary.com/dxp7ppipg/image/upload/w_1920,q_auto:eco,f_auto/v1770374815/beyond-passo-palm-jumeirah_upscayl_1x_upscayl-lite-4x_bfjx95.png"
+          alt={t("propertyHero.altAerial")}
+          className="property-hero__image"
+          loading="lazy"
+        />
 
         {/* Overlay gradient */}
         <div className="property-hero__overlay"></div>
