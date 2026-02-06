@@ -1053,12 +1053,9 @@ body {
   }
 }
 
-/* Весь хедер — тихое, уверенное появление */
-.header {
-  opacity: 0;
-  animation: headerLuxuryReveal 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-  animation-delay: 0.1s;
-}
+/* Parent container — NO transform/animation here.
+   transform on a parent breaks position:fixed on children
+   (.header__top, .header__bottom, .header-overlay, popup). */
 
 /* Верхняя часть — первый визуальный акцент */
 .header__top {

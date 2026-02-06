@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import "./PropertyHero.css";
 import { Printer, Share2, Home } from "lucide-react";
 import { useLanguage } from "../i18n/LanguageContext";
@@ -5,6 +6,12 @@ import Navigation from "./Navigation";
 
 const PropertyHero = ({ onOpenBrochure, onOpenConsultation }) => {
   const { t, lang } = useLanguage();
+  const [heroLoaded, setHeroLoaded] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setHeroLoaded(true), 200);
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleShare = async () => {
     const url = typeof window !== "undefined" ? window.location.href : "";
@@ -38,7 +45,7 @@ const PropertyHero = ({ onOpenBrochure, onOpenConsultation }) => {
     }
   };
   return (
-    <div className="property-hero" dir={lang === "ar" ? "rtl" : "ltr"}>
+    <div className={`property-hero ${heroLoaded ? "hero-loaded" : ""}`} dir={lang === "ar" ? "rtl" : "ltr"}>
       <div className="property-hero__nav-shell">
         <Navigation onOpenConsultation={onOpenConsultation} />
       </div>
