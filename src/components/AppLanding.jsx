@@ -54,7 +54,8 @@ const AppLanding = () => {
 
               <a
                 href="/brochures/Passo-by-Beyond.pdf"
-                download
+                target="_blank"
+                rel="noopener noreferrer"
                 className="store-button catalog-button"
               >
                 <svg
