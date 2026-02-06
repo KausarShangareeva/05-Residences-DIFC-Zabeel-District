@@ -55,7 +55,14 @@ const PropertyHero = ({ onOpenBrochure, onOpenConsultation }) => {
       {/* Hero Image */}
       <div className="property-hero__image-container">
         <img
-          src="https://res.cloudinary.com/dxp7ppipg/image/upload/w_1920,q_auto:eco,f_auto/v1770374815/beyond-passo-palm-jumeirah_upscayl_1x_upscayl-lite-4x_bfjx95.png"
+          src="https://res.cloudinary.com/dxp7ppipg/image/upload/w_1600,q_auto:good,f_auto,dpr_auto/v1770374815/beyond-passo-palm-jumeirah_upscayl_1x_upscayl-lite-4x_bfjx95.png"
+          srcSet="
+            https://res.cloudinary.com/dxp7ppipg/image/upload/w_768,q_auto:good,f_auto,dpr_auto/v1770374815/beyond-passo-palm-jumeirah_upscayl_1x_upscayl-lite-4x_bfjx95.png 768w,
+            https://res.cloudinary.com/dxp7ppipg/image/upload/w_1200,q_auto:good,f_auto,dpr_auto/v1770374815/beyond-passo-palm-jumeirah_upscayl_1x_upscayl-lite-4x_bfjx95.png 1200w,
+            https://res.cloudinary.com/dxp7ppipg/image/upload/w_1600,q_auto:good,f_auto,dpr_auto/v1770374815/beyond-passo-palm-jumeirah_upscayl_1x_upscayl-lite-4x_bfjx95.png 1600w,
+            https://res.cloudinary.com/dxp7ppipg/image/upload/w_1920,q_auto:good,f_auto,dpr_auto/v1770374815/beyond-passo-palm-jumeirah_upscayl_1x_upscayl-lite-4x_bfjx95.png 1920w
+          "
+          sizes="(max-width: 1024px) 100vw, 100vw"
           alt={t("propertyHero.altAerial")}
           className="property-hero__image"
           loading="lazy"
