@@ -471,11 +471,11 @@
 /* Мобильные устройства (до 480px) */
 @media (max-width: 480px) {
   .property-hero {
-    height: 82rem;
+    height: 78rem;
   }
 
   .property-hero__center {
-    top: 58%;
+    top: 55%;
     max-width: 95%;
   }
 
