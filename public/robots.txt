@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://passo-by-beyond.netlify.app/sitemap.xml

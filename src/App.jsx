@@ -3,7 +3,7 @@ import "./App.css";
 //STYLES
 import { GlobalStyles } from "./styles/GlobalStyles";
 import { useRef } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { useLanguage } from "./i18n/LanguageContext";
 
@@ -31,8 +31,25 @@ import Block from "./components/Block";
 
 function App() {
   const { t, lang } = useLanguage();
+  const location = useLocation();
   const adviceSectionRef = useRef(null);
   const brochureSectionRef = useRef(null);
+  const SITE_URL = "https://passo-by-beyond.netlify.app";
+  const canonicalUrl = `${SITE_URL}${location.pathname}`;
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    name: "Passo by Beyond",
+    url: SITE_URL,
+    logo: `${SITE_URL}/icon.svg`,
+    telephone: "+971 4 428 6151",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Al Salam Tecom Tower",
+      addressLocality: "Dubai",
+      addressCountry: "AE",
+    },
+  };
 
   const handleOpenConsultation = () => {
     if (adviceSectionRef.current) {
@@ -52,6 +69,11 @@ function App() {
         <html lang={lang} />
         <title>{t("meta.title")}</title>
         <meta name="description" content={t("meta.description")} />
+        <link rel="canonical" href={canonicalUrl} />
+        <link rel="alternate" hrefLang="en" href={`${canonicalUrl}?lang=en`} />
+        <link rel="alternate" hrefLang="ru" href={`${canonicalUrl}?lang=ru`} />
+        <link rel="alternate" hrefLang="ar" href={`${canonicalUrl}?lang=ar`} />
+        <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
 
         {/* Стандарт Open Graph (Facebook, WhatsApp, Telegram, LinkedIn) */}
         <meta property="og:type" content="website" />
@@ -59,11 +81,11 @@ function App() {
         <meta property="og:description" content={t("meta.description")} />
         <meta
           property="og:image"
-          content="https://passo-by-beyond.netlify.app/og-image.jpg"
+          content={`${SITE_URL}/og-image.jpg`}
         />
         <meta
           property="og:url"
-          content="https://passo-by-beyond.netlify.app/"
+          content={canonicalUrl}
         />
         <meta property="og:site_name" content="Passo by Beyond" />
         <meta
@@ -77,8 +99,11 @@ function App() {
         <meta name="twitter:description" content={t("meta.description")} />
         <meta
           name="twitter:image"
-          content="https://passo-by-beyond.netlify.app/og-image.jpg"
+          content={`${SITE_URL}/og-image.jpg`}
         />
+        <script type="application/ld+json">
+          {JSON.stringify(organizationSchema)}
+        </script>
       </Helmet>
       <GlobalStyles />
 

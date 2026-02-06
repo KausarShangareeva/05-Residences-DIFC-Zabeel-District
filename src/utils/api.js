@@ -1,4 +1,5 @@
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3001";
+const API_URL =
+  import.meta.env.VITE_API_URL || "https://zero4-passo-by-beyond.onrender.com";
 
 export async function submitLead({ fullName, email, phone, message, source, contactMethod }) {
   try {

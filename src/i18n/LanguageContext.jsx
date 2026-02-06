@@ -24,9 +24,16 @@ const LanguageContext = createContext(null);
 
 // Определяем стартовый язык
 function getInitialLanguage() {
-  const saved = localStorage.getItem("lang");
-  if (saved && SUPPORTED_LANGS.includes(saved)) {
-    return saved;
+  if (typeof window !== "undefined") {
+    const params = new URLSearchParams(window.location.search);
+    const queryLang = params.get("lang");
+    if (queryLang && SUPPORTED_LANGS.includes(queryLang)) {
+      return queryLang;
+    }
+    const saved = localStorage.getItem("lang");
+    if (saved && SUPPORTED_LANGS.includes(saved)) {
+      return saved;
+    }
   }
   return DEFAULT_LANG;
 }
