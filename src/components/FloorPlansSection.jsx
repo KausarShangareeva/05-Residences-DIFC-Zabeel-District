@@ -193,7 +193,7 @@ const FloorPlansSection = ({ onOpenBrochure, onOpenConsultation }) => {
                           <img
                             key={idx}
                             src={img}
-                            alt={`${property.type} Bay Villas Dubai floor plan ${idx + 1}`}
+                            alt={`${property.type} Passo by Beyond floor plan ${idx + 1}`}
                             className="floor-plan-image"
                             onClick={() => setZoomedImage(img)}
                             loading="lazy"

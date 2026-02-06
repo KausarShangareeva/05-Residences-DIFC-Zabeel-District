@@ -973,3 +973,47 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+/* === Ultra-Luxury Cinematic Reveal (CSS only) === */
+
+@keyframes cinematicReveal {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Весь блок как единый «дорогой кадр» */
+.advice-container {
+  opacity: 0;
+  animation: cinematicReveal 1.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: 0.15s;
+}
+
+/* Внутренний контент — мягкая глубина */
+.advice-form-wrapper,
+.advice-visual {
+  opacity: 0;
+  animation: cinematicReveal 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.advice-form-wrapper {
+  animation-delay: 0.35s;
+}
+
+.advice-visual {
+  animation-delay: 0.55s;
+}
+
+/* Тонкое «дыхание» для визуала */
+.advice-visual {
+  transition: transform 1.2s ease;
+}
+
+.advice-visual:hover {
+  transform: scale(1.015);
+}

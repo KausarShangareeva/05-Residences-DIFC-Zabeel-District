@@ -208,3 +208,35 @@
     padding: var(--spacing-sm) var(--spacing-lg);
   }
 }
+
+/* === Luxury reveal animation === */
+
+@keyframes luxuryFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.property-header__title,
+.property-header__tabs,
+.property-header__info {
+  opacity: 0;
+  animation: luxuryFadeUp 1.2s ease-out forwards;
+}
+
+.property-header__title {
+  animation-delay: 0.1s;
+}
+
+.property-header__tabs {
+  animation-delay: 0.25s;
+}
+
+.property-header__info {
+  animation-delay: 0.4s;
+}

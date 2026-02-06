@@ -212,7 +212,7 @@ const BrochureDownloadSection = forwardRef((props, ref) => {
     setSubmitStatus(null);
   };
 
-  const pdfUrl = "/brochures/Bay-Villas.pdf";
+  const pdfUrl = "/brochures/Passo-by-Beyond.pdf";
 
   const handlePdfOpen = () => {
     window.open(pdfUrl, "_blank", "noopener,noreferrer");
@@ -457,7 +457,7 @@ const BrochureDownloadSection = forwardRef((props, ref) => {
             <div className="brochure-preview">
               <img
                 src="https://res.cloudinary.com/dxp7ppipg/image/upload/v1770376408/ChatGPT_Image_Feb_6_2026_12_13_21_PM_dcwajt.png"
-                alt="Bay Villas Phase 2 Dubai Islands brochure preview"
+                alt="Passo by Beyond Palm Jumeirah brochure preview"
                 className="brochure-image"
                 loading="lazy"
               />

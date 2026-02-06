@@ -139,7 +139,9 @@
   align-items: center;
   justify-content: center;
   color: var(--text-secondary);
-  transition: transform 0.2s ease, color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
 }
 
 .block__item-toggle.active {
@@ -155,7 +157,9 @@
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  transition: max-height 0.3s ease, opacity 0.3s ease;
+  transition:
+    max-height 0.3s ease,
+    opacity 0.3s ease;
 }
 
 .block__answer-wrap.open {
@@ -302,4 +306,57 @@
   .block__item-title {
     font-size: var(--font-lg);
   }
+}
+
+/* === Ultra-Luxury Editorial Reveal (CSS only) === */
+
+@keyframes editorialReveal {
+  from {
+    opacity: 0;
+    transform: translateY(48px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Вся секция — как редакционный разворот */
+.block {
+  opacity: 0;
+  animation: editorialReveal 1.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: 0.15s;
+}
+
+/* Верхний блок — первый «вдох» */
+.block__top {
+  opacity: 0;
+  animation: editorialReveal 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: 0.35s;
+}
+
+/* Заголовок и интро — спокойная иерархия */
+.block__header {
+  opacity: 0;
+  animation: editorialReveal 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: 0.55s;
+}
+
+/* Основной layout — ощущение глубины */
+.block__layout {
+  opacity: 0;
+  animation: editorialReveal 1.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: 0.75s;
+}
+
+/* Карточки справа — мягкий luxury-hover */
+.block__item {
+  transition:
+    transform 0.8s ease,
+    box-shadow 0.8s ease;
+}
+
+.block__item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
 }

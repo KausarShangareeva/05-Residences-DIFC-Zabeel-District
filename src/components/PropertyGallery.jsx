@@ -64,29 +64,29 @@ const PropertyGallery = () => {
       <div className="gallery-grid">
         {/* Main large image */}
         <div className="gallery-main" onClick={() => openLightbox(0)}>
-          <img src={images[0]} alt="Bay Villas Phase 2 Dubai Islands main waterfront view" />
+          <img src={images[0]} alt="Passo by Beyond Palm Jumeirah waterfront view" loading="lazy" />
         </div>
 
         {/* Top right images */}
         <div className="gallery-top-right">
           <div className="gallery-item" onClick={() => openLightbox(1)}>
-            <img src={images[1]} alt="Bay Villas Phase 2 luxury pool area" loading="lazy" />
+            <img src={images[1]} alt="Passo by Beyond luxury pool area" loading="lazy" />
           </div>
           <div className="gallery-item" onClick={() => openLightbox(2)}>
-            <img src={images[2]} alt="Bay Villas Phase 2 modern interior design" loading="lazy" />
+            <img src={images[2]} alt="Passo by Beyond modern interior design" loading="lazy" />
           </div>
         </div>
 
         {/* Bottom right images */}
         <div className="gallery-bottom-right">
           <div className="gallery-item" onClick={() => openLightbox(3)}>
-            <img src={images[3]} alt="Bay Villas Phase 2 villa entrance" loading="lazy" />
+            <img src={images[3]} alt="Passo by Beyond residence entrance" loading="lazy" />
           </div>
           <div
             className="gallery-item gallery-item-more"
             onClick={() => openLightbox(4)}
           >
-            <img src={images[4]} alt="Bay Villas Phase 2 exterior architecture" loading="lazy" />
+            <img src={images[4]} alt="Passo by Beyond exterior architecture" loading="lazy" />
             <div className="gallery-overlay">
               <span className="gallery-button">
                 Gallery
@@ -140,7 +140,7 @@ const PropertyGallery = () => {
           >
             <img
               src={images[currentImageIndex]}
-              alt={`Bay Villas ${currentImageIndex + 1}`}
+              alt={`Passo by Beyond ${currentImageIndex + 1}`}
             />
             <div className="lightbox-counter">
               {currentImageIndex + 1} / {images.length}

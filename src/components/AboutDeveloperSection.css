@@ -57,7 +57,7 @@
   min-width: 28rem;
 }
 
-.nakheel-logo {
+.developer-logo {
   width: 100%;
   max-width: 15rem;
   height: auto;
@@ -196,7 +196,7 @@
     padding: 2.5rem 2rem;
   }
 
-  .nakheel-logo {
+  .developer-logo {
     max-width: 10rem;
   }
 
@@ -283,11 +283,53 @@
     font-size: 1.2rem;
   }
 
-  .nakheel-logo {
+  .developer-logo {
     max-width: 9rem;
   }
 
   .about-developer-map {
     height: 28rem;
   }
+}
+
+/* === Luxury reveal base === */
+
+@keyframes luxuryFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Luxury reveal FIX (обязательно) === */
+
+.about-developer-title,
+.about-developer-description,
+.about-developer-logo-card,
+.about-developer-map {
+  opacity: 0;
+  animation-name: luxuryFadeUp;
+  animation-duration: 1.2s;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-fill-mode: forwards;
+}
+
+.about-developer-title {
+  animation-delay: 0.15s;
+}
+
+.about-developer-description {
+  animation-delay: 0.35s;
+}
+
+.about-developer-logo-card {
+  animation-delay: 0.55s;
+}
+
+.about-developer-map {
+  animation-delay: 0.75s;
 }

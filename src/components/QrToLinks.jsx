@@ -4,7 +4,7 @@ import { useLanguage } from "../i18n/LanguageContext";
 export default function QrToLinks() {
   const { lang } = useLanguage();
   // Use production URL for QR code
-  const productionUrl = "https://nakheel-at-dubai-islands.netlify.app";
+  const productionUrl = "https://passo-by-beyond.netlify.app";
   const url = `${productionUrl}/links?lang=${encodeURIComponent(lang)}`;
 
   return (

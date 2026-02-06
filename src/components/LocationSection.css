@@ -296,3 +296,69 @@
     height: 30rem;
   }
 }
+
+/* === Ultra-Luxury Location Cinematic Reveal (CSS only) === */
+
+@keyframes locationCinematicReveal {
+  from {
+    opacity: 0;
+    transform: translateY(56px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Вся секция — как архитектурный кадр */
+.location-section {
+  opacity: 0;
+  animation: locationCinematicReveal 1.7s cubic-bezier(0.22, 1, 0.36, 1)
+    forwards;
+  animation-delay: 0.15s;
+}
+
+/* Верхний контент — уверенное вступление */
+.location-top {
+  opacity: 0;
+  animation: locationCinematicReveal 1.3s cubic-bezier(0.22, 1, 0.36, 1)
+    forwards;
+  animation-delay: 0.4s;
+}
+
+/* Инфо-карточка — ощущение веса и статуса */
+.location-info {
+  opacity: 0;
+  animation: locationCinematicReveal 1.2s cubic-bezier(0.22, 1, 0.36, 1)
+    forwards;
+  animation-delay: 0.65s;
+}
+
+/* Категории — спокойный ритм */
+.location-categories {
+  opacity: 0;
+  animation: locationCinematicReveal 1.3s cubic-bezier(0.22, 1, 0.36, 1)
+    forwards;
+  animation-delay: 0.9s;
+}
+
+/* Карта — финальный «широкий план» */
+.location-map-container {
+  opacity: 0;
+  animation: locationCinematicReveal 1.5s cubic-bezier(0.22, 1, 0.36, 1)
+    forwards;
+  animation-delay: 1.15s;
+}
+
+/* Тонкий luxury-hover для карточек */
+.location-info,
+.category-item {
+  transition:
+    transform 0.8s ease,
+    box-shadow 0.8s ease;
+}
+
+.location-info:hover,
+.category-item:hover {
+  transform: translateY(-4px);
+}

@@ -45,7 +45,7 @@ const AmenitiesSection = ({ onOpenBrochure }) => {
             <div className="amenity-image-wrapper">
               <img
                 src="https://metropolitan.realestate/wp-content/uploads/2024/02/Bay-Villas-1-768x433.jpg"
-                alt="Bay Villas Phase 2 aerial view Dubai Islands"
+                alt="Passo by Beyond private beach Palm Jumeirah"
                 className="amenity-image"
                 loading="lazy"
               />
@@ -66,7 +66,7 @@ const AmenitiesSection = ({ onOpenBrochure }) => {
             <div className="amenity-image-wrapper">
               <img
                 src="https://metropolitan.realestate/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2024/02/Bay-Villas-2-768x433.jpg.webp"
-                alt="Bay Villas Phase 2 pool and waterfront view"
+                alt="Passo by Beyond wellness and pool area"
                 className="amenity-image"
                 loading="lazy"
               />

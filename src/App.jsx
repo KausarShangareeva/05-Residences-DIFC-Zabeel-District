@@ -59,13 +59,13 @@ function App() {
         <meta property="og:description" content={t("meta.description")} />
         <meta
           property="og:image"
-          content="https://nakheel-at-dubai-islands.netlify.app/og-image.jpg"
+          content="https://passo-by-beyond.netlify.app/og-image.jpg"
         />
         <meta
           property="og:url"
-          content="https://nakheel-at-dubai-islands.netlify.app/"
+          content="https://passo-by-beyond.netlify.app/"
         />
-        <meta property="og:site_name" content="Nakheel Dubai Islands" />
+        <meta property="og:site_name" content="Passo by Beyond" />
         <meta
           property="og:locale"
           content={lang === "ar" ? "ar_AE" : lang === "ru" ? "ru_RU" : "en_GB"}
@@ -77,7 +77,7 @@ function App() {
         <meta name="twitter:description" content={t("meta.description")} />
         <meta
           name="twitter:image"
-          content="https://nakheel-at-dubai-islands.netlify.app/og-image.jpg"
+          content="https://passo-by-beyond.netlify.app/og-image.jpg"
         />
       </Helmet>
       <GlobalStyles />

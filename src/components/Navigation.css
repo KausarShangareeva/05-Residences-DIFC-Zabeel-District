@@ -126,7 +126,7 @@ body {
   width: 90%;
   max-width: 46rem;
   background-color: var(--bg-white);
-  z-index: 1001;
+  z-index: 1090;
   overflow: visible;
   transition: all 0.3s ease;
   box-shadow: var(--shadow-xl);
@@ -416,7 +416,7 @@ body {
   border: none;
   cursor: pointer;
   padding: 0.5rem;
-  z-index: 1001;
+  z-index: 1080;
 }
 
 .header-menu__burger-line {
@@ -815,7 +815,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1001;
+    z-index: 1080;
     background: rgba(245, 247, 244, 0.8);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -861,9 +861,8 @@ body {
     border-left: 1px solid rgba(255, 255, 255, 0.3);
     transition: right 0.3s ease;
     overflow-y: auto;
-    z-index: 1000;
+    z-index: 1070;
     box-shadow: -4px 0 30px rgba(0, 0, 0, 0.08);
-    direction: rtl;
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
@@ -871,6 +870,10 @@ body {
   .header__bottom::-webkit-scrollbar {
     width: 0;
     height: 0;
+  }
+
+  .header--rtl .header__bottom {
+    direction: rtl;
   }
 
   [data-theme="dark"] .header__bottom {
@@ -985,7 +988,7 @@ body {
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999;
+  z-index: 1060;
   animation: fadeIn 0.3s ease;
 }
 
@@ -1035,4 +1038,75 @@ body {
   .header-menu__link {
     font-size: 1.6rem;
   }
+}
+
+/* === Ultra-Luxury Header Entrance & Micro-Motion (CSS only) === */
+
+@keyframes headerLuxuryReveal {
+  from {
+    opacity: 0;
+    transform: translateY(-32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Весь хедер — тихое, уверенное появление */
+.header {
+  opacity: 0;
+  animation: headerLuxuryReveal 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: 0.1s;
+}
+
+/* Верхняя часть — первый визуальный акцент */
+.header__top {
+  opacity: 0;
+  animation: headerLuxuryReveal 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: 0.25s;
+}
+
+/* Нижняя навигация — чуть позже, создаёт глубину */
+.header__bottom {
+  opacity: 0;
+  animation: headerLuxuryReveal 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: 0.45s;
+}
+
+/* Luxury-hover для пунктов меню */
+.header-menu__link {
+  transition:
+    color 0.4s ease,
+    transform 0.4s ease;
+}
+
+.header-menu__link:hover {
+  transform: translateY(-2px);
+}
+
+/* Иконки — едва заметное «оживление» */
+.header-menu__icon {
+  transition:
+    color 0.4s ease,
+    transform 0.4s ease;
+}
+
+.header-menu__link:hover .header-menu__icon {
+  transform: translateY(-1px);
+}
+
+/* Кнопки — спокойный premium-feedback */
+.btn-list-property,
+.btn-shortlist,
+.header-menu__primary-btn {
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.btn-list-property:hover,
+.header-menu__primary-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
 }

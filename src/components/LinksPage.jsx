@@ -20,7 +20,7 @@ export default function LinksPage() {
     "https://api.whatsapp.com/send/?phone=971567715771&text=Hello%21+I+am+interested+in+Passo+by+Beyond&type=phone_number&app_absent=0";
   const telegramUrl = "https://t.me/iammmhmd";
   const phoneNumber = "+971 56 771 5771";
-  const catalogUrl = "/brochures/Bay-Villas.pdf";
+  const catalogUrl = "/brochures/Passo-by-Beyond.pdf";
 
   return (
     <div className="links-page">

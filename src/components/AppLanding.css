@@ -278,3 +278,51 @@
     margin-bottom: -5rem;
   }
 }
+
+/* === Ultra-Luxury App Landing Reveal (CSS only) === */
+
+@keyframes appCinematicReveal {
+  from {
+    opacity: 0;
+    transform: translateY(48px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Базовая инициализация */
+.app-landing *,
+.app-landing {
+  opacity: 0;
+  animation-name: appCinematicReveal;
+  animation-duration: 1.4s;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-fill-mode: forwards;
+}
+
+/* Иерархия (очень важно для luxury-ощущения) */
+.text-section {
+  animation-delay: 0.15s;
+}
+
+.main-title {
+  animation-delay: 0.3s;
+}
+
+.description {
+  animation-delay: 0.45s;
+}
+
+.download-section {
+  animation-delay: 0.6s;
+}
+
+.phone-section {
+  animation-delay: 0.85s;
+}
+
+.qr-section {
+  animation-delay: 1.05s;
+}

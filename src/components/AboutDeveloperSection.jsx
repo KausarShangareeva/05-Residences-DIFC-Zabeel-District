@@ -29,7 +29,7 @@ const AboutDeveloperSection = ({ onOpenConsultation }) => {
             <img
               src="/icon.svg"
               alt="Beyond developer logo"
-              className="nakheel-logo"
+              className="developer-logo"
               loading="lazy"
             />
             <button

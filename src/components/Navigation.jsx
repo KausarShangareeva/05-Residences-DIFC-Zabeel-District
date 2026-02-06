@@ -161,7 +161,10 @@ const Navigation = ({ onOpenConsultation }) => {
   const currencies = ["AED", "USD", "EUR"];
 
   return (
-    <header className="header" dir="ltr">
+    <header
+      className={`header ${lang === "ar" ? "header--rtl" : ""}`}
+      dir="ltr"
+    >
       {/* Top Header */}
       <div className="header__top" ref={topRef}>
         <div className="header-top__container">

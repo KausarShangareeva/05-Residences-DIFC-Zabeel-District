@@ -53,7 +53,7 @@ const AppLanding = () => {
               </a>
 
               <a
-                href="/brochures/Bay-Villas.pdf"
+                href="/brochures/Passo-by-Beyond.pdf"
                 download
                 className="store-button catalog-button"
               >
