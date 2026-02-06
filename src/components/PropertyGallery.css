@@ -1,0 +1,367 @@
+/* Property Gallery Styles - 1rem = 10px */
+
+.property-gallery {
+  width: 100%;
+  max-width: var(--max-width-container);
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+  height: 40rem;
+}
+
+.gallery-main {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 1.2rem;
+  position: relative;
+}
+
+.gallery-top-right {
+  grid-column: 2 / 4;
+  grid-row: 1 / 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.gallery-bottom-right {
+  grid-column: 2 / 4;
+  grid-row: 2 / 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.gallery-item {
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 1.2rem;
+  position: relative;
+}
+
+.gallery-item-more {
+  position: relative;
+}
+
+.gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* .gallery-item-more:hover .gallery-overlay {
+  opacity: 1;
+} */
+
+.gallery-button {
+  background: var(--bg-white);
+  color: var(--text-primary);
+  padding: 1rem 2rem;
+  border-radius: 3rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  box-shadow: var(--shadow-md);
+}
+
+.gallery-main img,
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gallery-main:hover img,
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Lightbox Styles */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.723);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-content img {
+  max-width: 100%;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 0.8rem;
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+  z-index: 10001;
+  backdrop-filter: blur(1rem);
+}
+
+.lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.lightbox-arrow {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  width: 5.6rem;
+  height: 5.6rem;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+  z-index: 10001;
+  backdrop-filter: blur(1rem);
+}
+
+.lightbox-arrow:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.lightbox-arrow-left {
+  left: 3rem;
+}
+
+.lightbox-arrow-right {
+  right: 3rem;
+}
+
+.lightbox-counter {
+  position: absolute;
+  bottom: -4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 500;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0.8rem 1.6rem;
+  border-radius: 2rem;
+  backdrop-filter: blur(1rem);
+}
+
+/* RTL support */
+[dir="rtl"] .gallery-button {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .lightbox-close {
+  left: 2rem;
+  right: auto;
+}
+
+/* Responsive Design */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .gallery-grid {
+    height: 45rem;
+  }
+
+  .property-gallery {
+    padding: 1.5rem;
+  }
+
+  .lightbox {
+    padding: 3rem;
+  }
+
+  .lightbox-arrow {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+
+  .lightbox-arrow-left {
+    left: 2rem;
+  }
+
+  .lightbox-arrow-right {
+    right: 2rem;
+  }
+}
+
+/* Mobile Landscape and Small Tablets */
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    height: auto;
+    gap: 0.8rem;
+  }
+
+  .gallery-main {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    height: 30rem;
+  }
+
+  .gallery-top-right {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    height: 15rem;
+  }
+
+  .gallery-bottom-right {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+    height: 15rem;
+  }
+
+  .property-gallery {
+    padding: 1rem;
+  }
+
+  .gallery-main,
+  .gallery-item {
+    border-radius: 0.8rem;
+  }
+
+  .gallery-button {
+    font-size: 1.4rem;
+    padding: 0.8rem 1.6rem;
+  }
+
+  .lightbox {
+    padding: 2rem 1rem;
+  }
+
+  .lightbox-arrow {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .lightbox-arrow-left {
+    left: 1rem;
+  }
+
+  .lightbox-arrow-right {
+    right: 1rem;
+  }
+
+  .lightbox-close {
+    top: 1rem;
+    right: 1rem;
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .lightbox-counter {
+    font-size: 1.4rem;
+    bottom: -3.5rem;
+  }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 0.6rem;
+  }
+
+  .gallery-main {
+    grid-column: 1 / 2;
+    height: 25rem;
+  }
+
+  .gallery-top-right,
+  .gallery-bottom-right {
+    grid-column: 1 / 2;
+    grid-template-columns: 1fr 1fr;
+    height: 12rem;
+    gap: 0.6rem;
+  }
+
+  .property-gallery {
+    padding: 0.8rem;
+  }
+
+  .gallery-button {
+    font-size: 1.2rem;
+    padding: 0.6rem 1.2rem;
+    gap: 0.4rem;
+  }
+
+  .lightbox-arrow {
+    width: 3.6rem;
+    height: 3.6rem;
+  }
+
+  .lightbox-arrow svg {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  .lightbox-close {
+    width: 3.6rem;
+    height: 3.6rem;
+  }
+
+  .lightbox-close svg {
+    width: 2rem;
+    height: 2rem;
+  }
+}

@@ -1,0 +1,581 @@
+/* PropertyHero.css - 1rem = 10px */
+
+.property-hero {
+  position: relative;
+  width: 100%;
+  height: 87rem;
+  overflow: hidden;
+}
+
+.property-hero__nav-shell {
+  position: relative;
+  z-index: 20;
+}
+
+/* Hero Image */
+.property-hero__image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.property-hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.container {
+  max-width: var(--max-width-container);
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+  width: 100%;
+}
+
+.property-hero__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 8, 6, 0.7) 0%,
+    rgba(10, 8, 6, 0.45) 35%,
+    rgba(10, 8, 6, 0.35) 55%,
+    rgba(10, 8, 6, 0.5) 80%,
+    rgba(10, 8, 6, 0.8) 100%
+  );
+}
+
+.property-hero__center {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #ffffff;
+  z-index: 5;
+  width: 100%;
+  max-width: 80%;
+  padding: 0 var(--spacing-lg);
+  box-sizing: border-box;
+}
+
+.property-hero__title {
+  font-family: "Eugusto", sans-serif;
+  font-size: 10rem;
+  font-weight: 100;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.property-hero__title-logo {
+  width: clamp(18rem, 45vw, 52rem);
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.property-hero-minititle {
+  display: block;
+  font-family: "Tangerine", "Eugusto", cursive;
+  font-size: 7rem;
+  letter-spacing: 0.02em;
+  margin-top: -7rem;
+  margin-bottom: 1.4rem;
+  color: #ffffff;
+}
+
+.property-hero__subtitle {
+  /* Плавное изменение размера шрифта в зависимости от ширины экрана */
+  font-size: clamp(1.6rem, 2.2vw, 2.2rem);
+  line-height: 1.5; /* Немного уменьшим межстрочный интервал */
+  color: rgba(255, 255, 255, 0.92);
+  max-width: 68rem;
+  margin: 0 auto;
+
+  /* --- Магия для ограничения в 2 строки --- */
+  height: 3em; /* Высота, равная двум строкам (1.5 * 2) */
+  overflow: hidden; /* Скрываем все, что не помещается */
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Ограничиваем текст двумя строками */
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis; /* Добавляем многоточие в конце, если текст обрезан */
+}
+
+.property-hero__stats {
+  margin-top: 10rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2.4rem;
+  align-items: stretch;
+  padding: 2.2rem 2.4rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1.6rem;
+  background: rgba(10, 12, 12, 0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.property-hero__stat {
+  text-align: left;
+  padding: 0 1.4rem;
+  position: relative;
+}
+
+.property-hero__stat::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0.6rem;
+  bottom: 0.6rem;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.property-hero__stat:last-child::after {
+  content: none;
+}
+
+.property-hero__stat-label {
+  font-size: 1.3rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 1.2rem;
+}
+
+.property-hero__stat-value {
+  font-family:
+    "Eugusto",
+    "Montserrat",
+    "Zain",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    "Oxygen",
+    "Ubuntu",
+    "Cantarell",
+    "Fira Sans",
+    "Droid Sans",
+    "Helvetica Neue",
+    sans-serif;
+  font-size: clamp(1.8rem, 2.2vw, 3rem);
+  line-height: 1.2;
+}
+
+.property-hero__stat-value span {
+  display: block;
+  font-size: clamp(1.3rem, 1.6vw, 1.8rem);
+  color: rgba(255, 255, 255, 0.86);
+  margin-top: 0.8rem;
+  font-family:
+    "Montserrat",
+    "Zain",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    "Oxygen",
+    "Ubuntu",
+    "Cantarell",
+    "Fira Sans",
+    "Droid Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+
+/* Top Navigation (Save/Share bar) */
+.property-hero__nav {
+  position: relative;
+  max-width: var(--max-width-container);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: var(--spacing-sm) var(--spacing-xl);
+  z-index: 10;
+}
+
+.property-hero__back {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  border-radius: 0.6rem;
+  padding: 1rem 1.6rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  box-shadow: 0 0.2rem 0.8rem rgba(0, 0, 0, 0.1);
+}
+
+.property-hero__back:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translateX(-0.2rem);
+  box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.15);
+}
+
+.property-hero__back svg {
+  flex-shrink: 0;
+}
+
+/* Breadcrumb */
+.property-hero__breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.3rem;
+  color: white;
+  text-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.3);
+  flex: 1;
+  overflow: hidden;
+}
+
+.property-hero__breadcrumb span {
+  white-space: nowrap;
+}
+
+.property-hero__separator {
+  opacity: 0.6;
+  font-weight: 300;
+}
+
+.property-hero__breadcrumb-current {
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Action Buttons */
+.property-hero__actions {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.property-hero__action-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  border-radius: 0.6rem;
+  padding: 1rem 1.6rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+  color: #1a1a1a;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  box-shadow: 0 0.2rem 0.8rem rgba(0, 0, 0, 0.1);
+}
+
+.property-hero__action-btn:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-0.2rem);
+  box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.15);
+}
+
+/* Property Type Tags */
+.property-hero__tags {
+  position: absolute;
+  left: 50%;
+  width: 100%;
+  bottom: var(--spacing-xl);
+  transform: translateX(-50%);
+  max-width: var(--max-width-container);
+  padding: 0 var(--spacing-xl);
+  display: flex;
+  gap: var(--spacing-md);
+  z-index: 10;
+  box-sizing: border-box;
+}
+
+.property-hero__tag {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(1rem);
+  border: 0.1rem solid rgba(255, 255, 255, 0.3);
+  border-radius: 0.6rem;
+  padding: 1rem 1.8rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.property-hero__tag:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-0.2rem);
+}
+
+.property-hero__tag--active {
+  background: rgba(255, 255, 255, 0.9);
+  color: #1a1a1a;
+  border-color: rgba(255, 255, 255, 0.9);
+}
+
+.property-hero__tag--active:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+/* Nakheel Logo */
+.property-hero__logo {
+  position: absolute;
+  bottom: var(--spacing-xl);
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: var(--max-width-container);
+  width: 100%;
+  padding: 0 var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--spacing-sm);
+  z-index: 10;
+  box-sizing: border-box;
+}
+
+.property-hero__logo svg {
+  filter: drop-shadow(0 0.2rem 0.8rem rgba(0, 0, 0, 0.3));
+}
+
+.property-hero__logo-text {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.3rem;
+  color: white;
+  text-shadow: 0 0.2rem 0.8rem rgba(0, 0, 0, 0.3);
+}
+
+/* --- Responsive Design --- */
+
+/* Планшеты и небольшие десктопы (до 1024px) */
+@media (max-width: 1024px) {
+  .container {
+    display: none;
+  }
+
+  .property-hero {
+    height: 75rem;
+  }
+
+  .property-hero__center {
+    top: 60%;
+    max-width: 90%;
+  }
+
+  .property-hero__title {
+    font-size: 8rem;
+  }
+
+  .property-hero-minititle {
+    font-size: 6rem;
+    margin-top: -6rem;
+  }
+
+  .property-hero__subtitle {
+    font-size: 2.2rem;
+    max-width: 60rem;
+  }
+
+  .property-hero__stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 8rem;
+    padding: 2rem;
+  }
+
+  .property-hero__stat:nth-child(2n)::after {
+    display: none;
+  }
+
+  .property-hero__tags {
+    justify-content: center;
+  }
+}
+
+/* Планшеты в портретной ориентации (до 768px) */
+@media (max-width: 768px) {
+  .property-hero {
+    height: 70rem;
+  }
+
+  .property-hero__center {
+    top: 55%;
+    max-width: 92%;
+  }
+
+  .property-hero__title {
+    font-size: 6.5rem;
+    letter-spacing: 0.05em;
+  }
+
+  .property-hero-minititle {
+    font-size: 5rem;
+    margin-top: -5rem;
+  }
+
+  .property-hero__subtitle {
+    font-size: 2rem;
+  }
+
+  .property-hero__stats {
+    margin-top: 6rem;
+    padding: 1.8rem;
+  }
+
+  .property-hero__nav {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
+  .property-hero__action-btn span {
+    display: none; /* Скрываем текст, оставляем иконку */
+  }
+
+  .property-hero__action-btn {
+    padding: 1.2rem;
+  }
+
+  .property-hero__tags {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    bottom: var(--spacing-md);
+  }
+
+  .property-hero__tag {
+    padding: 0.8rem 1.4rem;
+    font-size: 1.2rem;
+  }
+}
+
+/* Мобильные устройства (до 480px) */
+@media (max-width: 480px) {
+  .property-hero {
+    height: 82rem;
+  }
+
+  .property-hero__center {
+    top: 58%;
+    max-width: 95%;
+  }
+
+  .property-hero__title {
+    font-size: 6.5rem;
+  }
+
+  .property-hero-minititle {
+    font-size: 3.5rem;
+    margin-top: -3.5rem;
+  }
+
+  .property-hero__subtitle {
+    font-size: 1.8rem;
+    line-height: 1.5;
+  }
+
+  .property-hero__stats {
+    grid-template-columns: 1fr; /* Один столбец */
+    gap: 1.6rem;
+    margin-top: 4rem;
+    padding: 1.6rem;
+    text-align: center;
+  }
+
+  .property-hero__stat {
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .property-hero__stat::after {
+    display: none; /* Убираем все разделители */
+  }
+
+  .property-hero__stat-label {
+    margin-bottom: 0.6rem;
+  }
+
+  .property-hero__nav {
+    justify-content: space-between;
+  }
+
+  .property-hero__actions {
+    gap: 0.8rem;
+  }
+
+  .property-hero__logo {
+    align-items: center;
+  }
+}
+
+/* Самые маленькие экраны (до 320px) */
+@media (max-width: 320px) {
+  .property-hero__title {
+    font-size: 3.8rem;
+  }
+  .property-hero-minititle {
+    font-size: 3rem;
+    margin-top: -3rem;
+  }
+  .property-hero__subtitle {
+    font-size: 1.6rem;
+  }
+}
+
+/* --- Анимация появления элементов --- */
+
+/* Начальное состояние (до анимации) */
+.property-hero__title,
+.property-hero-minititle,
+.property-hero__subtitle,
+.property-hero__stats {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Класс, который мы добавим через JavaScript для запуска анимации */
+.hero-loaded .property-hero__title {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s; /* Задержка для заголовка */
+}
+
+.hero-loaded .property-hero-minititle {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s; /* Задержка для подзаголовка */
+}
+
+.hero-loaded .property-hero__subtitle {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.6s; /* Задержка для описания */
+}
+
+.hero-loaded .property-hero__stats {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.8s; /* Задержка для блока статистики */
+}

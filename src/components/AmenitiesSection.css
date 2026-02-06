@@ -1,0 +1,331 @@
+/* Main Section */
+.amenities-section {
+  width: 100%;
+  padding: 6rem 2rem;
+  background-color: var(--bg-light);
+}
+
+.amenities-container {
+  max-width: var(--max-width-container);
+  margin: 0 auto;
+}
+
+/* Title */
+.amenities-title {
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 5rem 0;
+  text-align: left;
+  line-height: 1.2;
+}
+
+/* Grid Layout */
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+/* Amenity Card */
+.amenity-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.amenity-icon-circle {
+  width: 8rem;
+  height: 8rem;
+  background-color: var(--bg-alt);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.amenity-icon {
+  width: 3.6rem;
+  height: 3.6rem;
+  color: var(--primary-color);
+}
+
+.amenity-heading {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.amenity-description {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin: 0;
+  flex: 1;
+}
+
+.amenity-image-wrapper {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 0.4rem 2rem rgba(0, 0, 0, 0.08);
+}
+
+.amenity-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.amenity-image-wrapper:hover .amenity-image {
+  transform: scale(1.05);
+}
+
+/* Tags Section */
+.amenity-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-bottom: 3rem;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 1.8rem;
+  background-color: var(--bg-white);
+  border: var(--border-thin);
+  border-radius: 5rem;
+  transition: var(--transition-normal);
+  cursor: default;
+}
+
+.tag:hover {
+  border-color: var(--primary-color);
+  background-color: var(--bg-light);
+}
+
+.tag-icon {
+  width: 1.8rem;
+  height: 1.8rem;
+  flex-shrink: 0;
+  color: var(--primary-color);
+}
+
+.tag-text {
+  font-size: 1.4rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  font-weight: 400;
+}
+
+.tag-text-only {
+  padding: 1rem 2rem;
+}
+
+/* Buttons Section */
+.amenity-buttons {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.amenity-btn {
+  padding: 1.4rem 3.2rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition-normal);
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  white-space: nowrap;
+  font-family: inherit;
+}
+
+.btn-outline {
+  background-color: var(--bg-white);
+  border: var(--border-medium);
+  color: var(--text-secondary);
+}
+
+.btn-outline:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  background-color: var(--bg-light);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--text-button);
+  border: 0.15rem solid var(--primary-color);
+  flex: 1;
+  max-width: fit-content;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-0.2rem);
+}
+
+/* RTL support */
+[dir="rtl"] .amenities-title {
+  text-align: right;
+}
+
+[dir="rtl"] .amenity-card {
+  text-align: right;
+}
+
+[dir="rtl"] .tag {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .amenity-buttons {
+  justify-content: flex-end;
+}
+
+[dir="rtl"] .amenity-btn {
+  flex-direction: row-reverse;
+}
+
+.download-icon {
+  width: 2rem;
+  height: 2rem;
+  stroke-width: 2;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .amenities-title {
+    font-size: 3.2rem;
+  }
+
+  .amenities-grid {
+    gap: 3rem;
+  }
+
+  .amenity-heading {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .amenities-section {
+    padding: 4rem 1.6rem;
+  }
+
+  .amenities-title {
+    font-size: 2.8rem;
+    margin-bottom: 3rem;
+  }
+
+  .amenities-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .amenity-icon-circle {
+    width: 7rem;
+    height: 7rem;
+  }
+
+  .amenity-icon {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+
+  .amenity-heading {
+    font-size: 2rem;
+  }
+
+  .amenity-description {
+    font-size: 1.5rem;
+  }
+
+  .amenity-tags {
+    gap: 1rem;
+  }
+
+  .tag {
+    padding: 0.9rem 1.6rem;
+  }
+
+  .tag-text {
+    font-size: 1.3rem;
+  }
+
+  .amenity-buttons {
+    flex-direction: column;
+  }
+
+  .amenity-btn {
+    width: 100%;
+    padding: 1.6rem 2.4rem;
+  }
+
+  .btn-primary {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .amenities-section {
+    padding: 3rem 1.2rem;
+  }
+
+  .amenities-title {
+    font-size: 2.4rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .amenity-icon-circle {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .amenity-icon {
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+
+  .amenity-heading {
+    font-size: 1.8rem;
+  }
+
+  .amenity-description {
+    font-size: 1.4rem;
+  }
+
+  .tag {
+    padding: 0.8rem 1.4rem;
+  }
+
+  .tag-icon {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  .tag-text {
+    font-size: 1.2rem;
+  }
+
+  .amenity-btn {
+    padding: 1.4rem 2rem;
+    font-size: 1.5rem;
+  }
+}

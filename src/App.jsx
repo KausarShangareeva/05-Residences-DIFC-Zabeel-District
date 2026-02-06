@@ -1,0 +1,162 @@
+import "./App.css";
+
+//STYLES
+import { GlobalStyles } from "./styles/GlobalStyles";
+import { useRef } from "react";
+import { Route, Routes } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+import { useLanguage } from "./i18n/LanguageContext";
+
+//COMPONENTS
+// import Navigation from "./components/Navigation";
+import PropertyHero from "./components/PropertyHero";
+import PropertyHeader from "./components/PropertyHeader";
+import AboutProject from "./components/AboutProject";
+import PropertyGallery from "./components/PropertyGallery";
+import FloorPlansSection from "./components/FloorPlansSection";
+import AdviceSection from "./components/AdviceSection";
+import AmenitiesSection from "./components/AmenitiesSection";
+import AboutDeveloperSection from "./components/AboutDeveloperSection";
+import BrochureDownloadSection from "./components/BrochureDownloadSection";
+import LocationSection from "./components/LocationSection";
+import ProjectMaterialsSection from "./components/ProjectMaterialsSection";
+import Questions from "./components/Questions";
+import Footer from "./components/Footer";
+import TermsAndConditions from "./components/TermsAndConditions";
+import PrivacyPolicy from "./components/PrivacyPolicy";
+import FloatingActions from "./components/FloatingActions";
+import AppLanding from "./components/AppLanding";
+import LinksPage from "./components/LinksPage";
+import Block from "./components/Block";
+
+function App() {
+  const { t, lang } = useLanguage();
+  const adviceSectionRef = useRef(null);
+  const brochureSectionRef = useRef(null);
+
+  const handleOpenConsultation = () => {
+    if (adviceSectionRef.current) {
+      adviceSectionRef.current.openPopup();
+    }
+  };
+
+  const handleOpenBrochure = () => {
+    if (brochureSectionRef.current) {
+      brochureSectionRef.current.openPopup();
+    }
+  };
+
+  return (
+    <div className="App">
+      <Helmet>
+        <html lang={lang} />
+        <title>{t("meta.title")}</title>
+        <meta name="description" content={t("meta.description")} />
+
+        {/* Стандарт Open Graph (Facebook, WhatsApp, Telegram, LinkedIn) */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={t("meta.title")} />
+        <meta property="og:description" content={t("meta.description")} />
+        <meta
+          property="og:image"
+          content="https://nakheel-at-dubai-islands.netlify.app/og-image.jpg"
+        />
+        <meta
+          property="og:url"
+          content="https://nakheel-at-dubai-islands.netlify.app/"
+        />
+        <meta property="og:site_name" content="Nakheel Dubai Islands" />
+        <meta
+          property="og:locale"
+          content={lang === "ar" ? "ar_AE" : lang === "ru" ? "ru_RU" : "en_GB"}
+        />
+
+        {/* Специфично для Twitter (X ) */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={t("meta.title")} />
+        <meta name="twitter:description" content={t("meta.description")} />
+        <meta
+          name="twitter:image"
+          content="https://nakheel-at-dubai-islands.netlify.app/og-image.jpg"
+        />
+      </Helmet>
+      <GlobalStyles />
+
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              {/* <Navigation onOpenConsultation={handleOpenConsultation} /> */}
+              <main id="main-content">
+                <PropertyHero
+                  onOpenBrochure={handleOpenBrochure}
+                  onOpenConsultation={handleOpenConsultation}
+                />
+                <PropertyHeader
+                  onOpenConsultation={handleOpenConsultation}
+                  onOpenBrochure={handleOpenBrochure}
+                />
+                <AboutProject />
+                <PropertyGallery />
+                <FloorPlansSection
+                  onOpenBrochure={handleOpenBrochure}
+                  onOpenConsultation={handleOpenConsultation}
+                />
+                <AdviceSection ref={adviceSectionRef} />
+                <AmenitiesSection onOpenBrochure={handleOpenBrochure} />
+                <AboutDeveloperSection
+                  onOpenConsultation={handleOpenConsultation}
+                />
+                <BrochureDownloadSection ref={brochureSectionRef} />
+                <LocationSection onOpenBrochure={handleOpenBrochure} />
+                <ProjectMaterialsSection onOpenBrochure={handleOpenBrochure} />
+
+                <Questions />
+                <FloatingActions />
+                <AppLanding />
+              </main>
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/terms"
+          element={
+            <>
+              <main>
+                <TermsAndConditions />
+              </main>
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/privacy"
+          element={
+            <>
+              <main>
+                <PrivacyPolicy />
+              </main>
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/block"
+          element={
+            <>
+              <main>
+                <Block />
+              </main>
+              <Footer />
+            </>
+          }
+        />
+        <Route path="/links" element={<LinksPage />} />
+      </Routes>
+    </div>
+  );
+}
+
+export default App;

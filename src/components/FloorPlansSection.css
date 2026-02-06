@@ -1,0 +1,635 @@
+/* FloorPlansSection.css */
+
+/* Base reset and variables */
+* {
+  box-sizing: border-box;
+}
+
+.floor-plans-section {
+  width: 100%;
+  padding: 4rem 2rem;
+  background-color: var(--bg-light);
+}
+
+.floor-plans-container {
+  max-width: var(--max-width-container);
+  margin: 0 auto;
+}
+
+.floor-plans-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 3rem;
+  line-height: 1.2;
+}
+
+.floor-plans-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.floor-plans-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0;
+  flex-wrap: wrap;
+}
+
+.floor-plans-toggle {
+  display: inline-flex;
+  align-items: center;
+  border: var(--border-thin);
+  border-radius: 7px;
+  overflow: hidden;
+  background-color: var(--bg-alt);
+  margin-bottom: 3rem;
+}
+
+.floor-plans-toggle__btn {
+  padding: 0.9rem 1.6rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.floor-plans-toggle__btn.active {
+  background-color: var(--primary-color);
+  color: var(--text-button);
+}
+
+.floor-plans-toggle__btn:hover {
+  color: var(--text-primary);
+}
+
+/* Header */
+.floor-plans-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 2rem;
+  padding: 1.5rem 2rem;
+  background-color: var(--bg-alt);
+  border-radius: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.header-label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Floor plans list */
+.floor-plans-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.floor-plan-item {
+  border-bottom: var(--border-thin);
+}
+
+.floor-plan-item:last-child {
+  border-bottom: none;
+}
+
+/* Accordion header */
+.floor-plan-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.floor-plan-header:hover {
+  background-color: var(--bg-alt);
+}
+
+.floor-plan-info {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 2rem;
+  width: 100%;
+  text-align: left;
+  align-items: center;
+}
+
+.property-type {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.property-area {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+}
+
+.property-price {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.property-price .price-currency {
+  color: var(--currency-color);
+  font-weight: 600;
+}
+
+/* Accordion icon */
+.accordion-icon {
+  flex-shrink: 0;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--border-thin);
+  border-radius: 0.8rem;
+  transition: all 0.3s ease;
+  color: var(--text-secondary);
+  margin-left: 2rem;
+}
+
+.accordion-icon.open {
+  transform: rotate(180deg);
+  background-color: var(--bg-alt);
+}
+
+.accordion-icon svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Accordion content */
+.floor-plan-content {
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.4s ease,
+    padding 0.4s ease;
+}
+
+.floor-plan-content.open {
+  max-height: 100rem;
+  padding: 0 2rem 3rem 2rem;
+}
+
+/* Floor plan details */
+.floor-plan-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  padding-top: 2rem;
+}
+
+.floor-plan-images {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.floor-plan-image {
+  width: calc(50% - 1rem);
+  height: auto;
+  object-fit: contain;
+  border: var(--border-thin);
+  border-radius: 0.4rem;
+  cursor: zoom-in;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.floor-plan-image:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Specs */
+.floor-plan-specs {
+  background-color: var(--bg-alt);
+  width: 42rem;
+  padding: var(--spacing-2xl) var(--spacing-xl);
+  border-radius: 0.8rem;
+}
+
+.specs-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 2rem;
+}
+
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0;
+  border-bottom: var(--border-thin);
+}
+
+.spec-row:last-of-type {
+  border-bottom: none;
+  margin-bottom: 2rem;
+}
+
+.spec-label {
+  font-size: 1.4rem;
+  color: var(--text-secondary);
+}
+
+.spec-value {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.download-link {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.2s ease;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.download-link:hover {
+  color: var(--primary-dark);
+}
+
+/* Buttons */
+.register-button {
+  width: 100%;
+  padding: 1.4rem 2rem;
+  background-color: var(--primary-color);
+  color: var(--text-button);
+  font-size: 1.5rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.register-button:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-0.2rem);
+}
+
+.download-all-button {
+  width: 100%;
+  margin-top: 2rem;
+  padding: 1.8rem 2rem;
+  background-color: var(--primary-color);
+  color: var(--text-button);
+  font-size: 1.6rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.download-all-button:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-0.2rem);
+}
+
+.download-all-button svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.floor-plans-disclaimer {
+  margin-top: 1.2rem;
+  font-size: 1.3rem;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+/* RTL support */
+
+[dir="rtl"] .floor-plans-controls {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .floor-plans-header {
+  text-align: right;
+}
+
+[dir="rtl"] .header-label {
+  text-align: right;
+}
+
+[dir="rtl"] .floor-plans-title {
+  text-align: right;
+}
+
+[dir="rtl"] .floor-plan-header {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .floor-plan-info {
+  text-align: right;
+}
+
+[dir="rtl"] .floor-plan-details {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .download-link {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .register-button {
+  text-align: center;
+}
+
+[dir="rtl"] .download-all-button {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .floor-plans-toggle {
+  flex-direction: row-reverse;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .floor-plans-title {
+    font-size: 2.8rem;
+    margin-bottom: 0;
+  }
+
+  .floor-plans-heading {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .floor-plans-controls {
+    width: 100%;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+
+  .floor-plans-toggle {
+    flex: 0 0 auto;
+  }
+
+  .floor-plan-details {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .floor-plan-images {
+    justify-content: center;
+  }
+
+  .floor-plan-image {
+    width: 100%;
+    max-width: 40rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .floor-plans-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .floor-plans-title {
+    font-size: 2.4rem;
+  }
+
+  .floor-plans-controls {
+    width: 50%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+
+  [dir="rtl"] .floor-plans-heading {
+    align-items: flex-start;
+  }
+
+  [dir="rtl"] .floor-plans-controls {
+    align-items: flex-end;
+  }
+
+  [dir="rtl"] .floor-plans-toggle {
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  .floor-plans-toggle {
+    width: fit-content;
+  }
+
+  .floor-plans-header {
+    display: none;
+  }
+
+  .floor-plan-info {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .property-type {
+    font-size: 1.8rem;
+  }
+
+  .property-area,
+  .property-price {
+    font-size: 1.4rem;
+  }
+
+  .floor-plan-header {
+    padding: 1.5rem;
+  }
+
+  .accordion-icon {
+    width: 3.6rem;
+    height: 3.6rem;
+    margin-left: 1rem;
+  }
+
+  .floor-plan-content.open {
+    padding: 0 1.5rem 2rem 1.5rem;
+  }
+
+  .floor-plan-details {
+    gap: 2rem;
+    flex-direction: column;
+  }
+
+  .floor-plan-specs {
+    padding: 2rem;
+    width: 100%;
+  }
+
+  .spec-label,
+  .spec-value,
+  .download-link {
+    font-size: 1.3rem;
+  }
+
+  .register-button {
+    font-size: 1.4rem;
+    padding: 1.3rem 1.8rem;
+  }
+
+  .download-all-button {
+    font-size: 1.5rem;
+    padding: 1.6rem 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  [dir="rtl"] .accordion-icon {
+    margin-left: 2rem;
+    margin-right: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .floor-plans-section {
+    padding: 2rem 1rem;
+  }
+
+  .floor-plans-title {
+    font-size: 2rem;
+  }
+
+  .property-type {
+    font-size: 1.6rem;
+  }
+
+  .property-area,
+  .property-price {
+    font-size: 1.3rem;
+  }
+
+  .floor-plan-header {
+    padding: 1.2rem;
+  }
+
+  .accordion-icon {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+
+  .floor-plan-specs {
+    padding: 1.5rem;
+  }
+
+  .spec-label,
+  .spec-value,
+  .download-link {
+    font-size: 1.2rem;
+  }
+
+  .register-button {
+    font-size: 1.3rem;
+    padding: 1.2rem 1.5rem;
+  }
+
+  .download-all-button {
+    font-size: 1.4rem;
+    padding: 1.5rem 1.5rem;
+  }
+}
+
+/* Lightbox */
+.floor-plan-lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  cursor: zoom-out;
+  animation: lightboxFadeIn 0.2s ease;
+}
+
+@keyframes lightboxFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+  line-height: 1;
+}
+
+.lightbox-close:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.lightbox-image {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  border-radius: 0.8rem;
+  cursor: default;
+  animation: lightboxImageIn 0.3s ease;
+}
+
+@keyframes lightboxImageIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

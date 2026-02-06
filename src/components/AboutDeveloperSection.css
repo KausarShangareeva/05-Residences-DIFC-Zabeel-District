@@ -1,0 +1,293 @@
+.about-developer-section {
+  width: 100%;
+  background-color: var(--bg-light);
+  padding: 6rem 0 0 0;
+}
+
+.about-developer-container {
+  max-width: var(--max-width-container);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.master-plan-container {
+  max-width: var(--max-width-container);
+  margin: 0 auto;
+}
+
+.about-developer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 6rem;
+  margin-bottom: 6rem;
+}
+
+.about-developer-text {
+  flex: 1;
+  max-width: var(--max-width-content);
+}
+
+.about-developer-title {
+  font-size: 3.6rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-primary);
+  margin: 0 0 2.4rem 0;
+  letter-spacing: -0.02em;
+}
+
+.about-developer-description {
+  font-size: 1.5rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin: 0;
+  font-weight: 400;
+}
+
+.about-developer-logo-card {
+  flex-shrink: 0;
+  background-color: var(--bg-alt);
+  border-radius: 1.6rem;
+  padding: 3rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  min-width: 28rem;
+}
+
+.nakheel-logo {
+  width: 100%;
+  max-width: 15rem;
+  height: auto;
+  filter: var(--logo-filter-brand);
+  transition: filter 0.3s ease;
+}
+
+.interest-free-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 2rem;
+  background-color: var(--bg-white);
+  border: 1px solid var(--primary-color);
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  white-space: nowrap;
+}
+
+.interest-free-badge:hover {
+  color: var(--text-light);
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-0.2rem);
+}
+
+.info-icon {
+  color: currentColor;
+  flex-shrink: 0;
+}
+
+.about-developer-map {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  height: 70rem;
+  overflow: hidden;
+  background-image: url(https://metropolitan.realestate/wp-content/uploads/2024/02/bay-villas-01.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.map-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.master-plan-badge {
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  max-width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-white);
+  border-radius: 1rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  letter-spacing: 0.05em;
+  box-shadow: var(--shadow-md);
+  z-index: 10;
+}
+
+.master-plan-badge:hover {
+  background-color: var(--primary-color);
+  color: var(--text-button);
+}
+
+.master-plan-badge svg {
+  color: currentColor;
+}
+
+/* RTL support */
+
+[dir="rtl"] .about-developer-text {
+  text-align: right;
+}
+
+[dir="rtl"] .about-developer-logo-card {
+  text-align: right;
+}
+
+[dir="rtl"] .interest-free-badge {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .master-plan-badge {
+  margin-left: 0;
+  margin-right: 2rem;
+  flex-direction: row-reverse;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-developer-section {
+    padding: 4rem 0 0 0;
+  }
+
+  .about-developer-container {
+    padding: 0 1.6rem;
+  }
+
+  .about-developer-content {
+    flex-direction: column;
+    gap: 3rem;
+    margin-bottom: 4rem;
+  }
+
+  .about-developer-text {
+    max-width: 100%;
+  }
+
+  .about-developer-title {
+    font-size: 2.8rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .about-developer-description {
+    font-size: 1.4rem;
+    line-height: 1.6;
+  }
+
+  .about-developer-logo-card {
+    width: 100%;
+    min-width: unset;
+    padding: 2.5rem 2rem;
+  }
+
+  .nakheel-logo {
+    max-width: 10rem;
+  }
+
+  .interest-free-badge {
+    padding: 0.8rem 1.6rem;
+  }
+
+  .interest-free-text {
+    font-size: 1.3rem;
+  }
+
+  .about-developer-map {
+    height: 50rem;
+  }
+
+  .master-plan-badge {
+    top: 2rem;
+    left: 2rem;
+    padding: 0.8rem 1.4rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-developer-section {
+    padding: 3rem 0 0 0;
+  }
+
+  .about-developer-container {
+    padding: 0 1.2rem;
+  }
+
+  .about-developer-content {
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .about-developer-title {
+    font-size: 2.2rem;
+    line-height: 1.25;
+  }
+
+  .about-developer-description {
+    font-size: 1.3rem;
+    line-height: 1.6;
+  }
+
+  .about-developer-logo-card {
+    padding: 1.8rem 1.4rem;
+    gap: 1.6rem;
+    width: 100%;
+    align-items: center;
+  }
+
+  .about-developer-map {
+    height: 32rem;
+  }
+
+  .master-plan-badge {
+    top: 1.6rem;
+    left: 1.6rem;
+    padding: 0.7rem 1.2rem;
+    font-size: 1.1rem;
+  }
+
+  .interest-free-badge {
+    width: 100%;
+    justify-content: center;
+    padding: 0.9rem 1.2rem;
+    font-size: 1.4rem;
+  }
+
+  .interest-free-text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .about-developer-title {
+    font-size: 2rem;
+  }
+
+  .about-developer-description {
+    font-size: 1.2rem;
+  }
+
+  .nakheel-logo {
+    max-width: 9rem;
+  }
+
+  .about-developer-map {
+    height: 28rem;
+  }
+}

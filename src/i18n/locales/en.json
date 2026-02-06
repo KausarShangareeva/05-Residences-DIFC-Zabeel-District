@@ -1,0 +1,596 @@
+{
+  "meta": {
+    "title": "Passo by Beyond | Palm Jumeirah Dubai",
+    "description": "Invest in Passo by Beyond at Palm Jumeirah. Ultra-luxury beachfront residences with 250m private beach. Two iconic towers, 625 residences. 60/40 payment plan. Handover Q3 2029. Get a free consultation from Dubai market experts!"
+  },
+  "navigation": {
+    "about": "About",
+    "gallery": "Gallery",
+    "floorPlans": "Floor Plans",
+    "amenities": "Amenities",
+    "developer": "Developer",
+    "location": "Location",
+    "materials": "Materials",
+    "faq": "FAQ",
+    "phone": "+971 4 428 6151",
+    "cta": "Get a free consultation",
+    "language": "EN",
+    "currency": "AED",
+    "chooseLanguage": "Choose language",
+    "selectCurrency": "Select currency",
+    "save": "Save",
+    "mobileTitle": "Navigation",
+    "settingsTitle": "Languages & Settings",
+    "settingsToggle": "Language, currency & area",
+    "languageLabel": "Language",
+    "currencyLabel": "Currency",
+    "areaLabel": "Area",
+    "apply": "Apply",
+    "contacts": "Contacts"
+  },
+  "propertyHero": {
+    "save": "Open brochure",
+    "share": "SHARE",
+    "shareTitle": "Passo by Beyond",
+    "shareText": "Check out Passo by Beyond on Palm Jumeirah.",
+    "shareCopied": "Link copied to clipboard.",
+    "sharePrompt": "Copy this link:",
+    "townhouses": "APARTMENTS",
+    "villas": "PENTHOUSES",
+    "altAerial": "Passo by Beyond aerial view",
+    "title": "Passo",
+    "minititle": "by Beyond",
+    "subtitle": "Discover modern living with premium design, smart layouts, and flexible payment plans.",
+    "stats": {
+      "startingPrice": {
+        "label": "Starting price:",
+        "value": "Fill the form",
+        "subvalue": "for updated details"
+      },
+      "units": {
+        "label": "Units:",
+        "value": "1 to 6BR Apartments",
+        "subvalue": "Penthouses & Beach Mansions"
+      },
+      "handover": {
+        "label": "Handover:",
+        "value": "2029",
+        "subvalue": "Q3"
+      },
+      "paymentPlan": {
+        "label": "Payment Plan:",
+        "value": "60/40",
+        "subvalue": "Flexible options"
+      }
+    }
+  },
+  "propertyHeader": {
+    "titleAccent": "Passo",
+    "titleBy": "by",
+    "titleLocation": "Beyond at Palm Jumeirah",
+    "tabs": {
+      "about": "ABOUT",
+      "gallery": "GALLERY",
+      "floorPlans": "FLOOR PLANS",
+      "amenities": "AMENITIES",
+      "developer": "DEVELOPER",
+      "location": "LOCATION",
+      "materials": "MATERIALS",
+      "faq": "FAQ"
+    },
+    "location": "Palm Jumeirah",
+    "handover": "Handover",
+    "paymentPlan": "Payment Plan",
+    "inquiry": "Property Inquiry",
+    "brochure": "Open brochure"
+  },
+  "aboutProject": {
+    "titlePrefix": "About",
+    "titleAccent": "Passo",
+    "titleSuffix": "by Beyond",
+    "description": [
+      "Passo by Beyond is an ultra-luxury beachfront development on the crescent of Palm Jumeirah, featuring two sculptural towers — Avita and Bella — home to a limited collection of 625 residences. With 250 metres of private white-sand beach, panoramic views of the Arabian Gulf, and architecture inspired by the coastal environment, Passo redefines waterfront living on one of the last remaining beachfront plots on Palm Jumeirah.",
+      "The project offers 1 to 4-bedroom apartments, 4 to 5-bedroom penthouses with double-height layouts and plunge pools, and exclusive 6-bedroom beach mansions with multi-level indoor-outdoor living. Each residence features floor-to-ceiling windows, open-plan layouts, high-end finishes, and smart home systems — all designed to maximize natural light and ocean views."
+    ],
+    "infoTitle": "ABOUT THE PROJECT",
+    "labels": {
+      "developer": "Developer",
+      "areaFrom": "Area from",
+      "apartments": "Apartments",
+      "penthouses": "Penthouses",
+      "mansions": "Mansions",
+      "paymentPlan": "Payment Plan"
+    },
+    "values": {
+      "developer": "BEYOND",
+      "apartments": "1-4BR",
+      "penthouses": "4-5BR",
+      "mansions": "6BR",
+      "paymentPlan": "60/40"
+    },
+    "materials": "Project materials"
+  },
+  "floorPlans": {
+    "titlePrefix": "Property Types &",
+    "titleAccent": "Floor Plans",
+    "headers": {
+      "propertyType": "PROPERTY TYPE",
+      "livingArea": "LIVING AREA",
+      "startingPrice": "STARTING PRICE"
+    },
+    "areaTitle": "AREA",
+    "areaFromPrefix": "from",
+    "askPrice": "Ask for Price",
+    "disclaimer": "Prices are indicative and subject to availability.",
+    "labels": {
+      "groundFloor": "Suite area",
+      "firstFloor": "Balcony area",
+      "thirdFloor": "Balcony",
+      "garageCovered": "Collection",
+      "floorPlans": "Floor Plans",
+      "download": "Download",
+      "register": "Register your Interest"
+    },
+    "downloadAll": "Download all Floor Plans",
+    "properties": [
+      {
+        "id": 1,
+        "type": "1 bedroom Apartments",
+        "area": "from 111 sq. m.",
+        "price": "Ask for Price",
+        "details": {
+          "groundFloor": "76 sq. m.",
+          "firstFloor": "34 sq. m.",
+          "garage": " "
+        },
+        "images": [
+          "https://metropolitan.realestate/wp-content/uploads/2025/08/1br-1191sqft-internal-820sqft-external-371sqft.webp"
+        ]
+      },
+      {
+        "id": 2,
+        "type": "2 bedroom Apartments",
+        "area": "from 181 sq. m.",
+        "price": "Ask for Price",
+        "details": {
+          "groundFloor": "114 sq. m.",
+          "firstFloor": "67 sq. m.",
+          "garage": " "
+        },
+        "images": [
+          "https://metropolitan.realestate/wp-content/uploads/2025/08/2br-1947sqft-internal-1229sqft-external-718sqft.webp"
+        ]
+      },
+      {
+        "id": 3,
+        "type": "3 bedroom Apartments",
+        "area": "from 168 sq. m.",
+        "price": "Ask for Price",
+        "details": {
+          "groundFloor": "152 sq. m.",
+          "firstFloor": "16 sq. m.",
+          "garage": " "
+        },
+        "images": [
+          "https://metropolitan.realestate/wp-content/uploads/2025/08/3br-1810qsft-internal-1632qsft-external-167sqft.webp"
+        ]
+      },
+      {
+        "id": 4,
+        "type": "4 bedroom Apartments",
+        "area": "from 268 sq. m.",
+        "price": "Ask for Price",
+        "details": {
+          "groundFloor": "228 sq. m.",
+          "firstFloor": "38 sq. m.",
+          "garage": " "
+        },
+        "images": [
+          "https://metropolitan.realestate/wp-content/uploads/2025/08/4br-2881sqft-internal-2449sqft-external-410sqft.webp"
+        ]
+      },
+      {
+        "id": 5,
+        "type": "4 bedroom Penthouse",
+        "area": "from 682 sq. m.",
+        "price": "Ask for Price",
+        "details": {
+          "groundFloor": "466 sq. m.",
+          "firstFloor": "215 sq. m.",
+          "garage": " "
+        },
+        "images": [
+          "https://metropolitan.realestate/wp-content/uploads/2025/08/4br-penthouse-7338sqft-internal-5021sqft-external-2317sqft.webp"
+        ]
+      },
+      {
+        "id": 6,
+        "type": "5 bedroom Penthouse",
+        "area": "from 724 sq. m.",
+        "price": "Ask for Price",
+        "details": {
+          "groundFloor": "507 sq. m.",
+          "firstFloor": "216 sq. m.",
+          "garage": " "
+        },
+        "images": [
+          "https://metropolitan.realestate/wp-content/uploads/2025/08/5br-penthouse-7789sqft-internal-5460sqft-external-2320sqft.webp"
+        ]
+      },
+      {
+        "id": 7,
+        "type": "6 bedroom Beach Mansions",
+        "area": "from 1,086 sq. m.",
+        "price": "Ask for Price",
+        "details": {
+          "groundFloor": "620 sq. m.",
+          "firstFloor": "459 sq. m.",
+          "garage": " "
+        },
+        "images": [
+          "https://metropolitan.realestate/wp-content/uploads/2025/08/6br-beach-mansion-11688sqft-internal-6674sqft-external-4946sqft.webp"
+        ]
+      }
+    ]
+  },
+  "advice": {
+    "titlePrefix": "Get a",
+    "titleAccent": "free consultation",
+    "titleSuffix": "",
+    "subtitle": "We will contact you on WhatsApp or phone within 15 minutes. No spam.",
+    "form": {
+      "fullName": "Full Name*",
+      "email": "E-Mail (optional)",
+      "phone": "Phone*",
+      "phonePlaceholder": "70 123 45 67",
+      "countrySearch": "Search country or code",
+      "noResults": "No matches found",
+      "phoneHint": "Format: +country code number. Example:",
+      "phoneErrors": {
+        "required": "Please enter your phone number.",
+        "tooShort": "Phone number is too short — {count} digits missing.",
+        "tooLong": "Phone number is too long — {count} extra digits. For {country}, {digits} digits are allowed after {dial}.",
+        "mismatch": "Invalid phone format. Use {example}"
+      },
+      "phoneValid": "Looks good! Your phone number is valid.",
+      "phoneKeepGoing": "Keep going, looking good so far 🙂",
+      "sending": "Sending...",
+      "success": "Thank you! We'll contact you soon.",
+      "error": "Something went wrong. Please try again.",
+      "checkboxLabel": "I agree to receive information about offers, deals and services from this website (optional)."
+    },
+    "disclaimerPrefix": "By clicking the submit button, I acknowledge and provide my personal data and agree to the",
+    "disclaimerPrivacy": "Privacy Policy",
+    "disclaimerMiddle": "applicable data protection laws, and",
+    "disclaimerTerms": "Terms of Use",
+    "submit": "Get a free consultation",
+    "testimonial": "Our specialists will consult you on any issues and help you conclude a swift transaction with the lowest risk in order to protect your investment."
+  },
+  "gallery": {
+    "title": "Gallery",
+    "mainAlt": "Passo by Beyond main view",
+    "poolAlt": "Passo by Beyond pool view",
+    "interiorAlt": "Passo by Beyond interior",
+    "entranceAlt": "Passo by Beyond entrance",
+    "exteriorAlt": "Passo by Beyond exterior",
+    "button": "Gallery"
+  },
+  "amenities": {
+    "titlePrefix": "Amenities of",
+    "titleAccent": "Passo by Beyond",
+    "cards": {
+      "beach": {
+        "title": "250m Private White-Sand Beach",
+        "description": "Residents enjoy direct access to a pristine 250-metre private beach with breathtaking views of the Arabian Gulf, creating a seamless indoor-outdoor lifestyle of unparalleled coastal luxury."
+      },
+      "community": {
+        "title": "Resort-Level Wellness & Leisure",
+        "description": "From a 260 sqm wellness pavilion with spa facilities and a sky-level infinity pool to a Montessori-inspired kids' pavilion and an executive library, Passo delivers five-star resort amenities for every resident."
+      }
+    },
+    "tags": {
+      "skyPool": "Sky-level infinity pool and landscaped gardens",
+      "cascadingPools": "Cascading pools across podium and beach levels",
+      "socialClub": "Social Club & Executive Library",
+      "pianoCafe": "Piano Café",
+      "kidsClub": "Montessori-inspired Kids Pavilion",
+      "fitness": "Fully equipped fitness facilities",
+      "wellness": "Outdoor wellness zones",
+      "concierge": "Concierge services",
+      "evCharging": "EV charging stations",
+      "smartHome": "Smart home systems"
+    },
+    "downloadBrochure": "Open brochure"
+  },
+  "developer": {
+    "titleAccent": "Beyond",
+    "titleSuffix": "is an ultra-luxury real estate developer in Dubai",
+    "description": "Beyond is an emerging ultra-luxury developer in Dubai with close affiliations to Omniyat — one of the region's most respected names in high-end real estate. While operating independently, Beyond shares a design-forward ethos and commitment to delivering landmark residential buildings in ultra-premium locations. Guided by a philosophy of architectural excellence and nature-inspired design, Beyond creates residences that harmonize with their surroundings while setting new benchmarks for luxury living in the UAE.",
+    "interestFree": "Interest-free installments",
+    "masterPlan": "MASTER PLAN"
+  },
+  "location": {
+    "title": "Location",
+    "description": "Palm Jumeirah is Dubai's most iconic waterfront address, offering residents an unrivalled blend of exclusivity and connectivity. Passo is situated on the crescent of Palm Jumeirah — one of the last remaining beachfront plots on the island — providing panoramic sea views toward Burj Al Arab and Atlantis. With direct access to Sheikh Zayed Road and proximity to Dubai Marina, JBR, and Downtown Dubai, residents enjoy world-class dining, retail, and entertainment within minutes.",
+    "aboutTitle": "ABOUT PALM JUMEIRAH",
+    "labels": {
+      "style": "Style",
+      "focalPoint": "Focal point",
+      "masterPlan": "Master Plan"
+    },
+    "values": {
+      "style": "Island",
+      "focalPoint": "Beachfront",
+      "download": "Open brochure"
+    },
+    "categories": {
+      "entertainment": "ENTERTAINMENT",
+      "clinics": "CLINICS",
+      "schools": "SCHOOLS"
+    },
+    "entertainmentPlaces": [
+      {
+        "time": "4min",
+        "name": "Atlantis The Royal"
+      },
+      {
+        "time": "12min",
+        "name": "Nakheel Mall"
+      },
+      {
+        "time": "13min",
+        "name": "Dubai Marina & JBR"
+      },
+      {
+        "time": "20min",
+        "name": "Mall of the Emirates"
+      }
+    ],
+    "clinicsPlaces": [
+      {
+        "time": "10min",
+        "name": "King's College Hospital"
+      },
+      {
+        "time": "15min",
+        "name": "Dubai Marina Medical Centre"
+      },
+      {
+        "time": "20min",
+        "name": "Mediclinic Parkview Hospital"
+      },
+      {
+        "time": "25min",
+        "name": "American Hospital Dubai"
+      }
+    ],
+    "schoolsPlaces": [
+      {
+        "time": "10min",
+        "name": "Dubai International Academy"
+      },
+      {
+        "time": "12min",
+        "name": "Emirates International School"
+      },
+      {
+        "time": "15min",
+        "name": "GEMS Wellington Academy"
+      },
+      {
+        "time": "20min",
+        "name": "American School of Dubai"
+      }
+    ]
+  },
+  "materials": {
+    "titlePrefix": "Project",
+    "titleAccent": "Materials",
+    "items": [
+      {
+        "title": "Brochure",
+        "fileType": "PDF",
+        "fileSize": "125.33 Mb"
+      },
+      {
+        "title": "Floor Plans",
+        "fileType": "PDF",
+        "fileSize": "11.1 Mb"
+      },
+      {
+        "title": "Master Plan",
+        "fileType": "PDF",
+        "fileSize": "0.9 Mb"
+      }
+    ]
+  },
+  "brochure": {
+    "titlePrefix": "Open",
+    "titleAccent": "brochure",
+    "popupTitlePrefix": "Get the brochure",
+    "popupTitleAccent": "for free",
+    "popupSubtitle": "Discover all project details",
+    "form": {
+      "fullName": "Full name*",
+      "email": "E-Mail (optional)",
+      "phone": "Phone*",
+      "phoneHint": "Format: +country code number. Example:",
+      "phoneErrors": {
+        "required": "Please enter your phone number.",
+        "tooShort": "Phone number is too short — {count} digits missing.",
+        "tooLong": "Phone number is too long — {count} extra digits. For {country}, {digits} digits are allowed after {dial}.",
+        "mismatch": "Invalid phone format. Use {example}"
+      },
+      "phoneValid": "Looks good! Your phone number is valid.",
+      "phoneKeepGoing": "Keep going, looking good so far 🙂",
+      "buttonNote": "PDF size is ~125 MB 🙂",
+      "countrySearch": "Search country or code",
+      "noResults": "No matches found",
+      "checkboxLabel": "I agree to receive information about offers, deals and services from this website (optional)."
+    },
+    "disclaimer": "By submitting this form, I consent to the collection and processing of my personal data and agree to the",
+    "privacyPolicy": "Privacy Policy",
+    "disclaimerMiddle": "applicable data protection laws, and",
+    "termsOfUse": "Terms of Use",
+    "submit": "Open the Brochure",
+    "infoTitle": "Brochure",
+    "infoSize": "PDF 125.33 Mb"
+  },
+  "faq": {
+    "title": "FAQ",
+    "readMore": "All Questions & Answers",
+    "questions": [
+      {
+        "question": "What makes Passo by Beyond a unique investment on Palm Jumeirah?",
+        "answer": "Passo is located on one of the last remaining beachfront plots on Palm Jumeirah's crescent, making it a rare opportunity in an established ultra-premium market. The project features 250 metres of private beach, two architecturally distinctive towers by Beyond (affiliated with Omniyat), and a limited collection of just 625 residences. With projected rental yields of approximately 6.9% and eligibility for the UAE 10-year Golden Visa, Passo combines lifestyle appeal with strong investment fundamentals."
+      },
+      {
+        "question": "What is the payment plan for Passo by Beyond?",
+        "answer": "Passo offers a 60/40 payment plan: 10% at booking, 10% one month after booking, then 5% installments every six months through the construction period, with the remaining 40% due at handover in Q3 2029. This structure allows buyers to spread payments over the construction timeline while keeping the majority of the investment tied to the completed asset."
+      },
+      {
+        "question": "What types of residences are available and what are the starting prices?",
+        "answer": "The project offers 1-bedroom apartments from 968 sq. ft. starting at AED 5.5M, 2-bedroom apartments from 1,587 sq. ft. starting at AED 8.5M, 3-bedroom apartments from 2,122 sq. ft. starting at AED 15M, and 4-bedroom apartments from 3,419 sq. ft. starting at AED 24M. Premium options include 5-bedroom penthouses from 7,569 sq. ft. with double-height layouts and plunge pools, as well as exclusive 6-bedroom beach mansions from 10,167 sq. ft. with multi-level indoor-outdoor living."
+      },
+      {
+        "question": "How convenient is the location of Passo for daily living and connectivity?",
+        "answer": "Passo enjoys a prime position on the Palm Jumeirah crescent with direct access to Sheikh Zayed Road. Atlantis The Royal and The Pointe are just 4 minutes away, Nakheel Mall is 12 minutes, Dubai Marina and JBR are 13 minutes, and Downtown Dubai with Burj Khalifa is approximately 12–15 minutes by car. Dubai International Airport is reachable within 35 minutes. International schools, hospitals, and world-class dining are all within close proximity."
+      }
+    ]
+  },
+  "footer": {
+    "address": "36-38 Floor, Al Salam Tecom Tower, Dubai, UAE",
+    "reviews": "Reviews",
+    "reviewCount": "622 reviews",
+    "serviceRating": "Service Rating",
+    "disclaimer": "We are an authorized channel partner for this project. All information on this website is based on publicly available sources and marketing materials provided by the developer. The content is for informational purposes only and does not constitute an offer or contract. Prices, availability, and project details are subject to change without prior notice. For the latest information and availability, please contact our sales team.",
+    "copyright": "© 2025 Beyond. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsConditions": "Terms & Conditions"
+  },
+  "fab": {
+    "label": "Quick actions",
+    "toTop": "Back to top",
+    "whatsapp": "WhatsApp"
+  },
+  "block": {
+    "backToProject": "Back to project",
+    "title": "Frequently Asked",
+    "titleAccent": "Questions",
+    "intro": "Here you'll find key questions about the project, purchase terms, and infrastructure. We've gathered everything important for your decision.",
+    "ctaTitle": "Still have questions?",
+    "ctaText": "Leave a request and we'll contact you in your preferred way.",
+    "ctaButton": "Ask a question",
+    "popupTitle": "Ask a question",
+    "popupSubtitle": "We'll respond as quickly as possible.",
+    "questionLabel": "Your question",
+    "questionPlaceholder": "Write what interests you",
+    "contactMethodLabel": "How should we respond?",
+    "contactPhone": "By phone",
+    "contactWhatsApp": "WhatsApp",
+    "contactTelegram": "Telegram",
+    "successMessage": "Request sent.",
+    "errorMessage": "Failed to send. Please try again.",
+    "submitting": "Sending...",
+    "submit": "Send"
+  },
+  "termsAndConditions": {
+    "eyebrow": "Legal",
+    "backToProject": "Back to project",
+    "address": "36-38 Floor, Al Salam Tecom Tower, Dubai, UAE",
+    "reviews": "Reviews",
+    "reviewCount": "622 reviews",
+    "serviceRating": "Service Rating",
+    "disclaimer": "We are an authorized channel partner for this project. All information on this website is based on publicly available sources and marketing materials provided by the developer. The content is for informational purposes only and does not constitute an offer or contract. Prices, availability, and project details are subject to change without prior notice. For the latest information and availability, please contact our sales team.",
+    "copyright": "© 2025 Beyond. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsConditions": "Terms & Conditions",
+    "termsTitle": "Terms & Conditions",
+    "termsIntro": "By using this website, you agree to the following terms and conditions. If you do not agree, please discontinue use.",
+    "section1Title": "1. Website Ownership",
+    "section1Text": "This website is owned and operated by an authorized channel partner, a licensed real estate brokerage based in Dubai, UAE. We are an authorized channel partner for the real estate projects promoted on this website. We are not the official developer, unless explicitly stated.",
+    "section2Title": "2. Purpose of the Website",
+    "section2Text": "This website is intended to provide general information about real estate projects. All information is subject to change without notice. You may not copy, distribute, or reproduce any content without written permission.",
+    "section3Title": "3. Accuracy of Information",
+    "section3Text": "While we strive to provide accurate and updated information, we do not guarantee the completeness or accuracy of the content. Prices, layouts, offers, and availability are subject to change by the developer or seller without prior notice.",
+    "section4Title": "4. Limitation of Liability",
+    "section4Text": "We are not liable for any direct or indirect losses resulting from your use of the site or reliance on its content. Final purchase decisions should be made after professional and legal consultation.",
+    "section5Title": "5. External Links",
+    "section5Text": "This website may include links to third-party websites for your convenience. We do not endorse or take responsibility for the content, policies, or practices of these external sites.",
+    "section6Title": "6. Changes to Terms",
+    "section6Text": "We reserve the right to update or modify these Terms & Conditions at any time. Continued use of the website after changes indicates your acceptance of the revised terms.",
+    "section7Title": "7. Governing Law",
+    "section7Text": "These Terms & Conditions are governed by the laws of the Emirate of Dubai and the United Arab Emirates."
+  },
+  "privacyPolicy": {
+    "eyebrow": "Privacy",
+    "backToProject": "Back to project",
+    "privacyTitle": "Privacy Policy",
+    "section1Title": "1. Introduction",
+    "section1Text": "This Privacy Policy explains how https://passoresidences.ae/ (\"we,\" \"our,\" or \"us\") collects, uses, and protects the personal information you provide through our website. By using our website, you agree to the terms of this Privacy Policy.",
+    "section2Title": "2. Information We Collect",
+    "section2Intro": "When you submit your details on our website, we may collect the following information:",
+    "section2List": [
+      "Full Name",
+      "Contact Information (Phone number, Email address)",
+      "Property Preferences and Interests"
+    ],
+    "section3Title": "3. How We Use Your Information",
+    "section3Intro": "We use your personal information to:",
+    "section3List": [
+      "Contact you regarding real estate projects and offers",
+      "Provide information about properties and services",
+      "Improve our services and website experience"
+    ],
+    "cookiesNote": "We may use cookies to enhance user experience and track website performance. You can disable cookies in your browser settings if you prefer.",
+    "section4Title": "4. Data Protection",
+    "section4Intro": "We do not sell or rent your personal information. We may share your data with:",
+    "section4List": [
+      "Authorized developers or project owners, if required",
+      "CRM or marketing platforms used to follow up with leads",
+      "Regulatory authorities, if legally required"
+    ],
+    "section5Title": "5. Third-Party Websites",
+    "section5Text": "Our website may contain links to developer or third-party websites. We are not responsible for the privacy practices or content of these external websites.",
+    "section6Title": "6. User Rights",
+    "section6Intro": "You have the right to:",
+    "section6List": [
+      "Request access to your personal information",
+      "Request correction or deletion of your data",
+      "Withdraw your consent to receive marketing communications at any time by contacting us"
+    ],
+    "section7Title": "7. Changes to This Policy",
+    "section7Text": "We reserve the right to update this Privacy Policy at any time. Any updates will be posted on this page.",
+    "section8Title": "8. Contact Us",
+    "section8Text": "For any questions regarding this Privacy Policy or to exercise your data rights, please contact:",
+    "contactEmail": "info@passoresidences.ae"
+  },
+  "units": {
+    "sqft": "sq. ft.",
+    "sqm": "sq. m."
+  },
+  "pdf": {
+    "chooseDelivery": "How would you like to receive the brochure?",
+    "retryDownload": "If the brochure didn't open, please try again",
+    "downloadPdf": "Open PDF"
+  },
+  "links": {
+    "title": "Passo by Beyond",
+    "subtitle": "Contact Us",
+    "whatsapp": "WhatsApp",
+    "telegram": "Telegram",
+    "call": "Call",
+    "website": "Visit Website",
+    "catalog": "Open Brochure",
+    "footer": "Palm Jumeirah, Dubai, UAE"
+  },
+  "appLanding": {
+    "titleLine1": "Beachfront Luxury",
+    "titleLine2": "Redefined",
+    "description": "Instant access to information, floor plans, and materials — no app installation required.",
+    "contactTitle": "Get in Touch",
+    "catalog": "Open Brochure",
+    "qrLabel": "SCAN THE QR CODE",
+    "phoneAlt": "Mobile Experience"
+  }
+}

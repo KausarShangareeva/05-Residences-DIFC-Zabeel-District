@@ -1,0 +1,280 @@
+.app-landing {
+  background-color: var(--bg-alt);
+  padding: var(--spacing-3xl) var(--spacing-lg);
+  padding-bottom: 0;
+  overflow: hidden;
+}
+
+.content-wrapper {
+  max-width: var(--max-width-container);
+  margin: 0 auto;
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+  width: 100%;
+}
+
+/* Text Section */
+
+.text-section {
+  text-align: left;
+  max-width: 50rem;
+}
+
+.main-title {
+  font-size: 4.2rem;
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xl);
+  line-height: var(--line-height-tight);
+}
+
+.main-title .italic {
+  font-style: italic;
+  font-weight: var(--font-normal);
+  color: var(--primary-color);
+}
+
+.description {
+  font-size: 1.8rem;
+  color: var(--text-secondary);
+  line-height: var(--line-height-loose);
+  margin-bottom: var(--spacing-xl);
+}
+
+/* Download Section */
+.download-section {
+  margin-top: var(--spacing-2xl);
+}
+
+.download-title {
+  font-size: 1.8rem;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-lg);
+  font-weight: var(--font-semibold);
+}
+
+.download-buttons {
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.store-button {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md) var(--spacing-xl);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  font-weight: var(--font-medium);
+  font-size: 1.5rem;
+  transition: all var(--transition-normal);
+  border: none;
+}
+
+.button-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.button-text {
+  font-size: 1.5rem;
+}
+
+.telegram-button {
+  background: linear-gradient(135deg, #2aabee 0%, #229ed9 100%);
+  color: var(--text-button);
+}
+
+.telegram-button:hover {
+  transform: translateY(-0.2rem);
+  box-shadow: var(--shadow-md);
+}
+
+.whatsapp-button {
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  color: var(--text-button);
+}
+
+.whatsapp-button:hover {
+  transform: translateY(-0.2rem);
+  box-shadow: var(--shadow-md);
+}
+
+.catalog-button {
+  background: var(--primary-color);
+  color: var(--text-button);
+}
+
+.catalog-button:hover {
+  background: var(--primary-dark);
+  transform: translateY(-0.2rem);
+  box-shadow: var(--shadow-md);
+}
+
+/* Phone Section */
+.phone-section {
+  display: flex;
+  align-items: center;
+}
+
+.phone-image {
+  max-height: 75rem;
+  object-fit: contain;
+  margin-bottom: -9rem;
+  z-index: 1;
+  margin-left: -10rem;
+}
+
+/* QR Section */
+.qr-section {
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.download-app-btn {
+  font-size: var(--font-md);
+  font-weight: var(--font-bold);
+  cursor: pointer;
+  margin-bottom: var(--spacing-lg);
+  transition: all var(--transition-normal);
+  letter-spacing: 0.1rem;
+}
+
+.download-app-btn:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-0.2rem);
+}
+
+.qr-label {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-md);
+  font-weight: var(--font-semibold);
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+/* RTL */
+.app-landing[dir="rtl"] .content-wrapper {
+  direction: rtl;
+}
+
+.app-landing[dir="rtl"] .text-section {
+  text-align: right;
+}
+
+.app-landing[dir="rtl"] .download-buttons {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.app-landing[dir="rtl"] .phone-image {
+  margin-left: 0;
+  margin-right: 5rem;
+}
+
+@media (max-width: 1200px) {
+  .app-landing[dir="rtl"] .download-buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-landing[dir="rtl"] .download-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .app-landing[dir="rtl"] .phone-image {
+    margin-right: 0;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .content-wrapper {
+    flex-direction: column;
+    gap: var(--spacing-2xl);
+  }
+
+  .text-section {
+    text-align: center;
+    max-width: 60rem;
+    margin: 0 auto;
+  }
+
+  .features-list li {
+    text-align: left;
+  }
+
+  .download-buttons {
+    justify-content: center;
+  }
+
+  .phone-section {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .main-title {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .app-landing {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 2.4rem;
+  }
+
+  .download-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .store-button {
+    width: 100%;
+    max-width: 30rem;
+    justify-content: center;
+  }
+
+  .phone-section {
+    flex-direction: column;
+    gap: var(--spacing-xl);
+    align-items: center;
+  }
+
+  .phone-image {
+    max-height: 55rem;
+    margin-bottom: -6rem;
+    order: 2;
+  }
+
+  .qr-section {
+    order: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1.4rem;
+  }
+
+  .phone-image {
+    max-height: 45rem;
+    margin-bottom: -5rem;
+  }
+}
