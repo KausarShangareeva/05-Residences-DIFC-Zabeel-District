@@ -35,13 +35,13 @@ export const GlobalStyles = createGlobalStyle`
   font-size: 62.5%; /* 1rem = 10px */
 
   /* Colors */
-  --primary-color: #c7a45a; /* antique gold */
+  --primary-color: #BC903E; /* antique gold */
   --primary-dark: #a57d33; /* deep gold */
   --secondary-color: #6d7b88; /* slate steel */
   --accent-color: #e0c27c; /* warm champagne */
   --currency-color: #c7a45a;
 
-  --text-button: #1b1612;
+  --text-button: #000000;
   --text-primary: #2a2622;
   --text-secondary: #6a635b;
   --text-light: rgba(255, 255, 255, 0.92);
