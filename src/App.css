@@ -3,10 +3,12 @@
   overflow-x: hidden;
 }
 
+.reveal-on-scroll,
 .reveal-on-scroll * {
   animation-play-state: paused !important;
 }
 
+.reveal-on-scroll.is-visible,
 .reveal-on-scroll.is-visible * {
   animation-play-state: running !important;
 }
