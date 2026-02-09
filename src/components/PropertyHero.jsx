@@ -55,17 +55,19 @@ const PropertyHero = ({ onOpenBrochure, onOpenConsultation }) => {
       {/* Hero Image */}
       <div className="property-hero__image-container">
         <img
-          src="https://res.cloudinary.com/dxp7ppipg/image/upload/v1770632125/POOL_hthava.jpg"
+          src="https://res.cloudinary.com/dxp7ppipg/image/upload/f_auto,q_auto,w_1600/v1770632125/POOL_hthava.jpg"
           srcSet="
-            https://res.cloudinary.com/dxp7ppipg/image/upload/v1770632125/POOL_hthava.jpg 768w,
-            https://res.cloudinary.com/dxp7ppipg/image/upload/v1770632125/POOL_hthava.jpg 1200w,
-            https://res.cloudinary.com/dxp7ppipg/image/upload/v1770632125/POOL_hthava.jpg 1600w,
-            https://res.cloudinary.com/dxp7ppipg/image/upload/v1770632125/POOL_hthava.jpg 1920w
+            https://res.cloudinary.com/dxp7ppipg/image/upload/f_auto,q_auto,w_768/v1770632125/POOL_hthava.jpg 768w,
+            https://res.cloudinary.com/dxp7ppipg/image/upload/f_auto,q_auto,w_1200/v1770632125/POOL_hthava.jpg 1200w,
+            https://res.cloudinary.com/dxp7ppipg/image/upload/f_auto,q_auto,w_1600/v1770632125/POOL_hthava.jpg 1600w,
+            https://res.cloudinary.com/dxp7ppipg/image/upload/f_auto,q_auto,w_1920/v1770632125/POOL_hthava.jpg 1920w
           "
           sizes="(max-width: 1024px) 100vw, 100vw"
           alt={t("propertyHero.altAerial")}
           className="property-hero__image"
-          loading="lazy"
+          loading="eager"
+          decoding="async"
+          fetchPriority="high"
         />
 
         {/* Overlay gradient */}

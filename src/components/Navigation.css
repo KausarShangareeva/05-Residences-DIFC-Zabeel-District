@@ -1135,14 +1135,8 @@ body {
    transform on a parent breaks position:fixed on children
    (.header__top, .header__bottom, .header-overlay, popup). */
 
-/* Верхняя часть — первый визуальный акцент
-   backwards = keyframe 0% applied during delay (hidden),
-   after animation ends = element reverts to defaults (opacity:1, transform:none).
-   No leftover transform that breaks position:fixed or .pinned override. */
-.header__top {
-  animation: headerLuxuryReveal 1s cubic-bezier(0.22, 1, 0.36, 1) backwards;
-  animation-delay: 0.25s;
-}
+/* Top header has NO animation — it contains the LCP element
+   (span.header-logo__text-main). Any opacity:0 start delays LCP paint. */
 
 /* Нижняя навигация — чуть позже, создаёт глубину */
 .header__bottom {

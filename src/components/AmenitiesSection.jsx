@@ -47,10 +47,12 @@ const AmenitiesSection = ({ onOpenBrochure }) => {
             </p>
             <div className="amenity-image-wrapper">
               <img
-                src="https://res.cloudinary.com/dxp7ppipg/image/upload/v1770632130/DIFC_Zabeel_District_Residential_l5ewif.jpg"
+                src="https://res.cloudinary.com/dxp7ppipg/image/upload/f_auto,q_auto,w_1200/v1770632130/DIFC_Zabeel_District_Residential_l5ewif.jpg"
                 alt="The Residences DIFC green walkways"
                 className="amenity-image"
                 loading="lazy"
+                width="1200"
+                height="800"
               />
             </div>
           </div>
@@ -68,10 +70,12 @@ const AmenitiesSection = ({ onOpenBrochure }) => {
             </p>
             <div className="amenity-image-wrapper">
               <img
-                src="https://res.cloudinary.com/dxp7ppipg/image/upload/v1770632125/POOL_hthava.jpg"
+                src="https://res.cloudinary.com/dxp7ppipg/image/upload/f_auto,q_auto,w_1200/v1770632125/POOL_hthava.jpg"
                 alt="The Residences DIFC pool and leisure"
                 className="amenity-image"
                 loading="lazy"
+                width="1200"
+                height="800"
               />
             </div>
           </div>

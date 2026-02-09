@@ -466,7 +466,7 @@
   position: relative;
   background:
     linear-gradient(135deg, rgba(16, 18, 22, 0.75), rgba(16, 18, 22, 0.35)),
-    url("https://res.cloudinary.com/dxp7ppipg/image/upload/v1770640507/ChatGPT_Image_Feb_9_2026_01_34_40_PM_hxy39a.png")
+    url("https://res.cloudinary.com/dxp7ppipg/image/upload/f_auto,q_auto,w_1600/v1770640507/ChatGPT_Image_Feb_9_2026_01_34_40_PM_hxy39a.png")
       center/cover no-repeat;
   overflow: hidden;
   box-shadow: var(--shadow-md);

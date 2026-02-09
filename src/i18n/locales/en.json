@@ -399,7 +399,10 @@
       "buttonNote": "",
       "countrySearch": "Search country or code",
       "noResults": "No matches found",
-      "checkboxLabel": "I agree to receive information about offers, deals and services from this website (optional)."
+      "checkboxLabel": "I agree to receive information about offers, deals and services from this website (optional).",
+      "sending": "Sending...",
+      "success": "Thank you! We'll contact you soon.",
+      "error": "Something went wrong. Please try again."
     },
     "disclaimer": "By submitting this form, I consent to the collection and processing of my personal data and agree to the",
     "privacyPolicy": "Privacy Policy",

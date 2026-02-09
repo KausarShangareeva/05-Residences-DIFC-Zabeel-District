@@ -3,14 +3,14 @@ import "./ProjectMaterialsSection.css";
 import { Download } from "lucide-react";
 import { useLanguage } from "../i18n/LanguageContext";
 
-const ProjectMaterialsSection = () => {
+const ProjectMaterialsSection = ({ onOpenBrochure }) => {
   const { t, lang } = useLanguage();
   const baseMaterials = [
     {
       id: 1,
       title: "Floor Plan",
       image:
-        "https://res.cloudinary.com/dxp7ppipg/image/upload/v1770637310/The_Residences_DIFC_Zabeel_District_Floor_Plans_d6qzuv.png",
+        "https://res.cloudinary.com/dxp7ppipg/image/upload/v1770648729/The_Residences_DIFC_Zabeel_District_floor_plan_kbbeeo.png",
       fileType: "PDF",
       fileSize: "0.6 Mb",
       link: "/brochures/The-Residences-By-DIFC-Floor-Plan.pdf",
@@ -19,7 +19,7 @@ const ProjectMaterialsSection = () => {
       id: 2,
       title: "Payment Plan",
       image:
-        "https://res.cloudinary.com/dxp7ppipg/image/upload/v1770637310/The_Residences_DIFC_Zabeel_District_Payment_Plan_izqggj.png",
+        "https://res.cloudinary.com/dxp7ppipg/image/upload/v1770648729/The_Residences_DIFC_Zabeel_District_payment_plan_a1b5qt.png",
       fileType: "PDF",
       fileSize: "5 Mb",
       link: "/brochures/The-Residences-by-DIFC-Payment-Plan.pdf",
@@ -28,7 +28,7 @@ const ProjectMaterialsSection = () => {
       id: 3,
       title: "Brochure",
       image:
-        "https://res.cloudinary.com/dxp7ppipg/image/upload/v1770637310/The_Residences_DIFC_Zabeel_District_Brochure_szvjbn.png",
+        "https://res.cloudinary.com/dxp7ppipg/image/upload/v1770648728/The_Residences_DIFC_Zabeel_District_brochure_fbbruy.png",
       fileType: "PDF",
       fileSize: "9 Mb",
       link: "/brochures/The-Residences-by-DIFC-Masterplan-Presentation-Updated.pdf",
@@ -37,7 +37,7 @@ const ProjectMaterialsSection = () => {
       id: 4,
       title: "Factsheet",
       image:
-        "https://res.cloudinary.com/dxp7ppipg/image/upload/v1770637311/The_Residences_DIFC_Zabeel_District_Fact_Sheet_eeyjxm.png",
+        "https://res.cloudinary.com/dxp7ppipg/image/upload/v1770648729/The_Residences_DIFC_Zabeel_District_fact_sheet_zmolje.png",
       fileType: "PDF",
       fileSize: "1 Mb",
       link: "/brochures/The-Residences-DIFC-Zabeel-District-Factsheet-Feb-2026.pdf",
@@ -77,12 +77,10 @@ const ProjectMaterialsSection = () => {
 
         <div className="project-materials-grid">
           {materials.map((material) => (
-            <a
+            <div
+              onClick={() => onOpenBrochure(material.link)}
               key={material.id}
               className="material-card"
-              href={material.link}
-              target="_blank"
-              rel="noreferrer"
             >
               <div className="material-image-wrapper">
                 <img
@@ -102,7 +100,7 @@ const ProjectMaterialsSection = () => {
                   {material.fileType} {material.fileSize}
                 </p>
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </div>

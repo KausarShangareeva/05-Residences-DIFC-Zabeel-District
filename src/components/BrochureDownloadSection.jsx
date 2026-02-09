@@ -42,8 +42,13 @@ const BrochureDownloadSection = forwardRef((props, ref) => {
     );
   }, [selectedCountry]);
 
+  const defaultPdfUrl =
+    "/brochures/The-Residences-by-DIFC-Masterplan-Presentation-Updated.pdf";
+  const [activePdfUrl, setActivePdfUrl] = useState(defaultPdfUrl);
+
   useImperativeHandle(ref, () => ({
-    openPopup: () => {
+    openPopup: (customPdfUrl) => {
+      setActivePdfUrl(customPdfUrl || defaultPdfUrl);
       setIsPopupOpen(true);
       document.body.style.overflow = "hidden";
     },
@@ -212,11 +217,8 @@ const BrochureDownloadSection = forwardRef((props, ref) => {
     setSubmitStatus(null);
   };
 
-  const pdfUrl =
-    "/brochures/The-Residences-by-DIFC-Masterplan-Presentation-Updated.pdf";
-
   const handlePdfOpen = () => {
-    window.open(pdfUrl, "_blank", "noopener,noreferrer");
+    window.open(activePdfUrl, "_blank", "noopener,noreferrer");
     closeDeliveryModal();
   };
 
@@ -226,7 +228,7 @@ const BrochureDownloadSection = forwardRef((props, ref) => {
       "Thanks for reaching out and showing interest in Residences DIFC Zabeel District, Dubai.",
       "",
       "Here is the brochure with all the key details:",
-      pdfUrl,
+      activePdfUrl,
       "",
       "Let us know if you’d like recommendations based on your budget or preferences — we’re here to help.",
     ],
@@ -235,7 +237,7 @@ const BrochureDownloadSection = forwardRef((props, ref) => {
       "Спасибо за ваш интерес к проекту Residences DIFC Zabeel District.",
       "",
       "По ссылке ниже вы можете скачать официальную брошюру с планировками, ценами и подробной информацией:",
-      pdfUrl,
+      activePdfUrl,
       "",
       "Если появятся вопросы или нужен индивидуальный подбор — с радостью поможем.",
     ],
@@ -244,7 +246,7 @@ const BrochureDownloadSection = forwardRef((props, ref) => {
       "شكرًا لاهتمامك بمشروع Residences DIFC Zabeel District, Dubai.",
       "",
       "يمكنك تحميل الكتيّب الرسمي من الرابط أدناه:",
-      pdfUrl,
+      activePdfUrl,
       "",
       "يسعدنا مساعدتك في حال كان لديك أي استفسار.",
     ],
@@ -432,12 +434,12 @@ const BrochureDownloadSection = forwardRef((props, ref) => {
 
               {submitStatus === "success" && (
                 <div className="form-success">
-                  Thank you! We'll contact you soon.
+                  {t("brochure.form.success")}
                 </div>
               )}
               {submitStatus === "error" && (
                 <div className="form-error">
-                  Something went wrong. Please try again.
+                  {t("brochure.form.error")}
                 </div>
               )}
 
@@ -447,7 +449,7 @@ const BrochureDownloadSection = forwardRef((props, ref) => {
                 disabled={isSubmitting || !isPhoneValid}
               >
                 <span>
-                  {isSubmitting ? "Sending..." : t("brochure.submit")}
+                  {isSubmitting ? t("brochure.form.sending") : t("brochure.submit")}
                 </span>
                 {!isSubmitting && <Download size={18} />}
               </button>
@@ -460,10 +462,12 @@ const BrochureDownloadSection = forwardRef((props, ref) => {
           <div className="brochure-visual">
             <div className="brochure-preview">
               <img
-                src="https://res.cloudinary.com/dxp7ppipg/image/upload/v1770640508/ChatGPT_Image_Feb_9_2026_01_34_48_PM_tab22z.png"
+                src="https://res.cloudinary.com/dxp7ppipg/image/upload/f_auto,q_auto,w_900/v1770640508/ChatGPT_Image_Feb_9_2026_01_34_48_PM_tab22z.png"
                 alt="The Residences DIFC Zabeel District, Dubai brochure preview"
                 className="brochure-image"
                 loading="lazy"
+                width="900"
+                height="1100"
               />
             </div>
           </div>
@@ -581,12 +585,12 @@ const BrochureDownloadSection = forwardRef((props, ref) => {
 
                 {submitStatus === "success" && (
                   <div className="form-success">
-                    Thank you! We'll contact you soon.
+                    {t("brochure.form.success")}
                   </div>
                 )}
                 {submitStatus === "error" && (
                   <div className="form-error">
-                    Something went wrong. Please try again.
+                    {t("brochure.form.error")}
                   </div>
                 )}
 
@@ -596,7 +600,7 @@ const BrochureDownloadSection = forwardRef((props, ref) => {
                   disabled={isSubmitting || !isPhoneValid}
                 >
                   <span>
-                    {isSubmitting ? "Sending..." : t("brochure.submit")}
+                    {isSubmitting ? t("brochure.form.sending") : t("brochure.submit")}
                   </span>
                   {!isSubmitting && <Download size={18} />}
                 </button>

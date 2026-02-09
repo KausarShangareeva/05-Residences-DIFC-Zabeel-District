@@ -2,7 +2,7 @@ import "./App.css";
 
 //STYLES
 import { GlobalStyles } from "./styles/GlobalStyles";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, lazy, Suspense } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { useLanguage } from "./i18n/LanguageContext";
@@ -12,22 +12,28 @@ import { useLanguage } from "./i18n/LanguageContext";
 import PropertyHero from "./components/PropertyHero";
 import PropertyHeader from "./components/PropertyHeader";
 import AboutProject from "./components/AboutProject";
-import PropertyGallery from "./components/PropertyGallery";
-import FloorPlansSection from "./components/FloorPlansSection";
-import AdviceSection from "./components/AdviceSection";
-import AmenitiesSection from "./components/AmenitiesSection";
-import AboutDeveloperSection from "./components/AboutDeveloperSection";
-import BrochureDownloadSection from "./components/BrochureDownloadSection";
-import LocationSection from "./components/LocationSection";
-import ProjectMaterialsSection from "./components/ProjectMaterialsSection";
-import Questions from "./components/Questions";
-import Footer from "./components/Footer";
-import TermsAndConditions from "./components/TermsAndConditions";
-import PrivacyPolicy from "./components/PrivacyPolicy";
-import FloatingActions from "./components/FloatingActions";
-import AppLanding from "./components/AppLanding";
-import LinksPage from "./components/LinksPage";
-import Block from "./components/Block";
+const PropertyGallery = lazy(() => import("./components/PropertyGallery"));
+const FloorPlansSection = lazy(() => import("./components/FloorPlansSection"));
+const AdviceSection = lazy(() => import("./components/AdviceSection"));
+const AmenitiesSection = lazy(() => import("./components/AmenitiesSection"));
+const AboutDeveloperSection = lazy(
+  () => import("./components/AboutDeveloperSection"),
+);
+const BrochureDownloadSection = lazy(
+  () => import("./components/BrochureDownloadSection"),
+);
+const LocationSection = lazy(() => import("./components/LocationSection"));
+const ProjectMaterialsSection = lazy(
+  () => import("./components/ProjectMaterialsSection"),
+);
+const Questions = lazy(() => import("./components/Questions"));
+const Footer = lazy(() => import("./components/Footer"));
+const TermsAndConditions = lazy(() => import("./components/TermsAndConditions"));
+const PrivacyPolicy = lazy(() => import("./components/PrivacyPolicy"));
+const FloatingActions = lazy(() => import("./components/FloatingActions"));
+const AppLanding = lazy(() => import("./components/AppLanding"));
+const LinksPage = lazy(() => import("./components/LinksPage"));
+const Block = lazy(() => import("./components/Block"));
 
 function App() {
   const { t, lang } = useLanguage();
@@ -57,9 +63,9 @@ function App() {
     }
   };
 
-  const handleOpenBrochure = () => {
+  const handleOpenBrochure = (pdfUrl) => {
     if (brochureSectionRef.current) {
-      brochureSectionRef.current.openPopup();
+      brochureSectionRef.current.openPopup(pdfUrl);
     }
   };
 
@@ -140,25 +146,28 @@ function App() {
                   onOpenBrochure={handleOpenBrochure}
                 />
                 <AboutProject />
-                <PropertyGallery />
-                <FloorPlansSection
-                  onOpenBrochure={handleOpenBrochure}
-                  onOpenConsultation={handleOpenConsultation}
-                />
-                <AdviceSection ref={adviceSectionRef} />
-                <AmenitiesSection onOpenBrochure={handleOpenBrochure} />
-                <AboutDeveloperSection
-                  onOpenConsultation={handleOpenConsultation}
-                />
-                <BrochureDownloadSection ref={brochureSectionRef} />
-                <LocationSection onOpenBrochure={handleOpenBrochure} />
-                <ProjectMaterialsSection onOpenBrochure={handleOpenBrochure} />
-
-                <Questions />
-                <FloatingActions />
-                <AppLanding />
+                <Suspense fallback={null}>
+                  <PropertyGallery />
+                  <FloorPlansSection
+                    onOpenBrochure={handleOpenBrochure}
+                    onOpenConsultation={handleOpenConsultation}
+                  />
+                  <AdviceSection ref={adviceSectionRef} />
+                  <AmenitiesSection onOpenBrochure={handleOpenBrochure} />
+                  <AboutDeveloperSection
+                    onOpenConsultation={handleOpenConsultation}
+                  />
+                  <BrochureDownloadSection ref={brochureSectionRef} />
+                  <LocationSection onOpenBrochure={handleOpenBrochure} />
+                  <ProjectMaterialsSection onOpenBrochure={handleOpenBrochure} />
+                  <Questions />
+                  <FloatingActions />
+                  <AppLanding />
+                </Suspense>
               </main>
-              <Footer />
+              <Suspense fallback={null}>
+                <Footer />
+              </Suspense>
             </>
           }
         />
@@ -167,9 +176,13 @@ function App() {
           element={
             <>
               <main>
-                <TermsAndConditions />
+                <Suspense fallback={null}>
+                  <TermsAndConditions />
+                </Suspense>
               </main>
-              <Footer />
+              <Suspense fallback={null}>
+                <Footer />
+              </Suspense>
             </>
           }
         />
@@ -178,9 +191,13 @@ function App() {
           element={
             <>
               <main>
-                <PrivacyPolicy />
+                <Suspense fallback={null}>
+                  <PrivacyPolicy />
+                </Suspense>
               </main>
-              <Footer />
+              <Suspense fallback={null}>
+                <Footer />
+              </Suspense>
             </>
           }
         />
@@ -189,13 +206,24 @@ function App() {
           element={
             <>
               <main>
-                <Block />
+                <Suspense fallback={null}>
+                  <Block />
+                </Suspense>
               </main>
-              <Footer />
+              <Suspense fallback={null}>
+                <Footer />
+              </Suspense>
             </>
           }
         />
-        <Route path="/links" element={<LinksPage />} />
+        <Route
+          path="/links"
+          element={
+            <Suspense fallback={null}>
+              <LinksPage />
+            </Suspense>
+          }
+        />
       </Routes>
     </div>
   );

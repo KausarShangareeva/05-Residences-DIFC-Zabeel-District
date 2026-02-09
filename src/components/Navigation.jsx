@@ -43,26 +43,49 @@ const Navigation = ({ onOpenConsultation }) => {
   }, [isDarkMode]);
 
   useEffect(() => {
-    const calculateInitialOffset = () => {
-      if (topRef.current && bottomRef.current) {
-        const topRect = topRef.current.getBoundingClientRect();
-        const bottomRect = bottomRef.current.getBoundingClientRect();
-        setTopHeight(topRect.height);
-        setBottomHeight(bottomRect.height);
-        // Store the initial offset only once (top header height)
+    if (!topRef.current || !bottomRef.current) return;
+
+    let frameId = null;
+    const lastHeights = { top: 0, bottom: 0 };
+
+    const measure = () => {
+      frameId = null;
+      if (!topRef.current || !bottomRef.current) return;
+      const topRect = topRef.current.getBoundingClientRect();
+      const bottomRect = bottomRef.current.getBoundingClientRect();
+      const nextTop = Math.round(topRect.height);
+      const nextBottom = Math.round(bottomRect.height);
+
+      if (nextTop !== lastHeights.top) {
+        lastHeights.top = nextTop;
+        setTopHeight(nextTop);
         if (initialOffsetRef.current === null) {
-          initialOffsetRef.current = topRect.height;
+          initialOffsetRef.current = nextTop;
         }
+      }
+      if (nextBottom !== lastHeights.bottom) {
+        lastHeights.bottom = nextBottom;
+        setBottomHeight(nextBottom);
       }
     };
 
-    // Calculate after a short delay to ensure page is loaded
-    const timer = setTimeout(calculateInitialOffset, 100);
-    window.addEventListener("resize", calculateInitialOffset);
+    const scheduleMeasure = () => {
+      if (frameId) return;
+      frameId = window.requestAnimationFrame(measure);
+    };
+
+    const observer = new ResizeObserver(scheduleMeasure);
+    observer.observe(topRef.current);
+    observer.observe(bottomRef.current);
+    window.addEventListener("resize", scheduleMeasure);
+    scheduleMeasure();
 
     return () => {
-      clearTimeout(timer);
-      window.removeEventListener("resize", calculateInitialOffset);
+      if (frameId) {
+        window.cancelAnimationFrame(frameId);
+      }
+      observer.disconnect();
+      window.removeEventListener("resize", scheduleMeasure);
     };
   }, []);
 

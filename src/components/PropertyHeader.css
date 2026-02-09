@@ -133,19 +133,19 @@
 }
 
 .property-header__btn--secondary {
-  background-color: transparent;
-  color: var(--primary-color);
-  border: var(--border-thin);
+  background-color: var(--bg-light);
+  color: var(--text-primary);
+  border: 0.1rem solid #c8b89a;
   flex: 1;
 }
 
 .property-header__btn--secondary svg {
-  color: var(--primary-color);
+  color: var(--text-primary);
 }
 
 .property-header__btn--secondary:hover {
-  border-color: var(--primary-color);
-  background-color: var(--bg-light);
+  border-color: #9a865f;
+  background-color: var(--bg-white);
 }
 
 /* RTL support */

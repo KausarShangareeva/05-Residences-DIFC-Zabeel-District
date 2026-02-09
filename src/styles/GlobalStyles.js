@@ -35,8 +35,8 @@ export const GlobalStyles = createGlobalStyle`
   font-size: 62.5%; /* 1rem = 10px */
 
   /* Colors */
-  --primary-color: #BC903E; /* antique gold */
-  --primary-dark: #a57d33; /* deep gold */
+  --primary-color: #9a742e; /* antique gold (higher contrast) */
+  --primary-dark: #7f5e24; /* deep gold */
   --secondary-color: #6d7b88; /* slate steel */
   --accent-color: #e0c27c; /* warm champagne */
   --currency-color: #c7a45a;
