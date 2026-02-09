@@ -70,11 +70,11 @@ function App() {
   };
 
   useEffect(() => {
-    const elements = document.querySelectorAll(".reveal-on-scroll");
-    if (!elements.length) return;
+    const supportsIO = "IntersectionObserver" in window;
+    const revealAll = (nodes) => nodes.forEach((el) => el.classList.add("is-visible"));
 
-    if (!("IntersectionObserver" in window)) {
-      elements.forEach((el) => el.classList.add("is-visible"));
+    if (!supportsIO) {
+      revealAll(Array.from(document.querySelectorAll(".reveal-on-scroll")));
       return;
     }
 
@@ -90,9 +90,85 @@ function App() {
       { root: null, threshold: 0.2, rootMargin: "0px 0px -10% 0px" },
     );
 
-    elements.forEach((el) => observer.observe(el));
+    const markVisible = (el) => {
+      if (!el.classList.contains("is-visible")) {
+        el.classList.add("is-visible");
+      }
+      observer.unobserve(el);
+    };
 
-    return () => observer.disconnect();
+    const observeNodes = (nodes) => {
+      nodes.forEach((el) => {
+        if (!el.classList.contains("is-visible")) {
+          observer.observe(el);
+        }
+      });
+    };
+
+    const initialNodes = Array.from(document.querySelectorAll(".reveal-on-scroll"));
+    observeNodes(initialNodes);
+
+    let rafId = null;
+    const checkInView = () => {
+      const nodes = Array.from(
+        document.querySelectorAll(".reveal-on-scroll:not(.is-visible)"),
+      );
+      nodes.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.9 && rect.bottom > 0) {
+          markVisible(el);
+        }
+      });
+    };
+
+    const scheduleCheck = () => {
+      if (rafId !== null) return;
+      rafId = window.requestAnimationFrame(() => {
+        rafId = null;
+        checkInView();
+      });
+    };
+
+    checkInView();
+
+    const mutationObserver = new MutationObserver((mutations) => {
+      const added = [];
+      mutations.forEach((mutation) => {
+        mutation.addedNodes.forEach((node) => {
+          if (node.nodeType !== 1) return;
+          if (node.classList?.contains("reveal-on-scroll")) {
+            added.push(node);
+          }
+          if (node.querySelectorAll) {
+            node.querySelectorAll(".reveal-on-scroll").forEach((child) => {
+              added.push(child);
+            });
+          }
+        });
+      });
+      if (added.length) {
+        observeNodes(added);
+        scheduleCheck();
+      }
+    });
+
+    mutationObserver.observe(document.body, {
+      childList: true,
+      subtree: true,
+    });
+
+    window.addEventListener("scroll", scheduleCheck, { passive: true });
+    window.addEventListener("resize", scheduleCheck);
+
+    return () => {
+      mutationObserver.disconnect();
+      observer.disconnect();
+      if (rafId !== null) {
+        window.cancelAnimationFrame(rafId);
+      }
+      window.removeEventListener("scroll", scheduleCheck);
+      window.removeEventListener("resize", scheduleCheck);
+    };
   }, [location.pathname]);
 
   return (
@@ -148,20 +224,40 @@ function App() {
                 <AboutProject />
                 <Suspense fallback={null}>
                   <PropertyGallery />
+                </Suspense>
+                <Suspense fallback={null}>
                   <FloorPlansSection
                     onOpenBrochure={handleOpenBrochure}
                     onOpenConsultation={handleOpenConsultation}
                   />
+                </Suspense>
+                <Suspense fallback={null}>
                   <AdviceSection ref={adviceSectionRef} />
+                </Suspense>
+                <Suspense fallback={null}>
                   <AmenitiesSection onOpenBrochure={handleOpenBrochure} />
+                </Suspense>
+                <Suspense fallback={null}>
                   <AboutDeveloperSection
                     onOpenConsultation={handleOpenConsultation}
                   />
+                </Suspense>
+                <Suspense fallback={null}>
                   <BrochureDownloadSection ref={brochureSectionRef} />
+                </Suspense>
+                <Suspense fallback={null}>
                   <LocationSection onOpenBrochure={handleOpenBrochure} />
+                </Suspense>
+                <Suspense fallback={null}>
                   <ProjectMaterialsSection onOpenBrochure={handleOpenBrochure} />
+                </Suspense>
+                <Suspense fallback={null}>
                   <Questions />
+                </Suspense>
+                <Suspense fallback={null}>
                   <FloatingActions />
+                </Suspense>
+                <Suspense fallback={null}>
                   <AppLanding />
                 </Suspense>
               </main>
