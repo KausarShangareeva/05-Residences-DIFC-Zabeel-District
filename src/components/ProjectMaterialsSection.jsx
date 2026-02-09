@@ -3,7 +3,7 @@ import "./ProjectMaterialsSection.css";
 import { Download } from "lucide-react";
 import { useLanguage } from "../i18n/LanguageContext";
 
-const ProjectMaterialsSection = ({ onOpenBrochure }) => {
+const ProjectMaterialsSection = () => {
   const { t, lang } = useLanguage();
   const baseMaterials = [
     {
@@ -13,7 +13,7 @@ const ProjectMaterialsSection = ({ onOpenBrochure }) => {
         "https://res.cloudinary.com/dxp7ppipg/image/upload/v1770637310/The_Residences_DIFC_Zabeel_District_Floor_Plans_d6qzuv.png",
       fileType: "PDF",
       fileSize: "0.6 Mb",
-      link: "#",
+      link: "/brochures/The-Residences-By-DIFC-Floor-Plan.pdf",
     },
     {
       id: 2,
@@ -22,7 +22,7 @@ const ProjectMaterialsSection = ({ onOpenBrochure }) => {
         "https://res.cloudinary.com/dxp7ppipg/image/upload/v1770637310/The_Residences_DIFC_Zabeel_District_Payment_Plan_izqggj.png",
       fileType: "PDF",
       fileSize: "5 Mb",
-      link: "#",
+      link: "/brochures/The-Residences-by-DIFC-Payment-Plan.pdf",
     },
     {
       id: 3,
@@ -31,7 +31,7 @@ const ProjectMaterialsSection = ({ onOpenBrochure }) => {
         "https://res.cloudinary.com/dxp7ppipg/image/upload/v1770637310/The_Residences_DIFC_Zabeel_District_Brochure_szvjbn.png",
       fileType: "PDF",
       fileSize: "9 Mb",
-      link: "#",
+      link: "/brochures/The-Residences-by-DIFC-Masterplan-Presentation-Updated.pdf",
     },
     {
       id: 4,
@@ -40,7 +40,7 @@ const ProjectMaterialsSection = ({ onOpenBrochure }) => {
         "https://res.cloudinary.com/dxp7ppipg/image/upload/v1770637311/The_Residences_DIFC_Zabeel_District_Fact_Sheet_eeyjxm.png",
       fileType: "PDF",
       fileSize: "1 Mb",
-      link: "#",
+      link: "/brochures/The-Residences-DIFC-Zabeel-District-Factsheet-Feb-2026.pdf",
     },
   ];
 
@@ -52,11 +52,14 @@ const ProjectMaterialsSection = ({ onOpenBrochure }) => {
       localized.fileSize && !String(localized.fileSize).includes("—")
         ? localized.fileSize
         : material.fileSize;
+    const link =
+      localized.link && localized.link !== "#" ? localized.link : material.link;
 
     return {
       ...material,
       ...localized,
       fileSize,
+      link,
     };
   });
 
@@ -74,10 +77,12 @@ const ProjectMaterialsSection = ({ onOpenBrochure }) => {
 
         <div className="project-materials-grid">
           {materials.map((material) => (
-            <div
-              onClick={onOpenBrochure}
+            <a
               key={material.id}
               className="material-card"
+              href={material.link}
+              target="_blank"
+              rel="noreferrer"
             >
               <div className="material-image-wrapper">
                 <img
@@ -97,7 +102,7 @@ const ProjectMaterialsSection = ({ onOpenBrochure }) => {
                   {material.fileType} {material.fileSize}
                 </p>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>

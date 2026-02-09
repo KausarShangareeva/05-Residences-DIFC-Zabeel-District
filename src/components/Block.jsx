@@ -261,85 +261,87 @@ const Block = () => {
         : "info";
 
   return (
-    <section className="block" dir={lang === "ar" ? "rtl" : "ltr"}>
-      <SchemaMarkup schemaData={buildFaqSchema(faqData)} />
-      <div className="block__container">
-        <div className="block__top">
-          <Link to="/" className="block__back-link btn-list-property">
-            <span className="block__back-icon">←</span>
-            {t("block.backToProject")}
-          </Link>
-          <button
-            type="button"
-            className="block__mode-toggle btn-shortlist"
-            onClick={toggleTheme}
-            aria-label="Toggle theme"
-          >
-            {isDarkMode ? (
-              <Sun className="moonsun" size={20} />
-            ) : (
-              <Moon className="moonsun" size={20} />
-            )}
-          </button>
-        </div>
+    <>
+      <section className="block" dir={lang === "ar" ? "rtl" : "ltr"}>
+        <SchemaMarkup schemaData={buildFaqSchema(faqData)} />
+        <div className="block__container">
+          <div className="block__top">
+            <Link to="/" className="block__back-link btn-list-property">
+              <span className="block__back-icon">←</span>
+              {t("block.backToProject")}
+            </Link>
+            <button
+              type="button"
+              className="block__mode-toggle btn-shortlist"
+              onClick={toggleTheme}
+              aria-label="Toggle theme"
+            >
+              {isDarkMode ? (
+                <Sun className="moonsun" size={20} />
+              ) : (
+                <Moon className="moonsun" size={20} />
+              )}
+            </button>
+          </div>
 
-        <div className="block__layout">
-          <div className="block__left">
-            <header className="block__header">
-              <p className="block__eyebrow">{t("faq.title")}</p>
-              <h2 className="block__title">
-                {t("block.title")} <span>{t("block.titleAccent")}</span>
-              </h2>
-              <p className="block__intro">
-                {t("block.intro")}
-              </p>
-            </header>
+          <div className="block__layout">
+            <div className="block__left">
+              <header className="block__header">
+                <p className="block__eyebrow">{t("faq.title")}</p>
+                <h2 className="block__title">
+                  {t("block.title")} <span>{t("block.titleAccent")}</span>
+                </h2>
+                <p className="block__intro">
+                  {t("block.intro")}
+                </p>
+              </header>
 
-            <div className="block__cta">
-              <h3 className="block__cta-title">{t("block.ctaTitle")}</h3>
-              <p className="block__cta-text">
-                {t("block.ctaText")}
-              </p>
-              <button
-                type="button"
-                className="btn-list-property"
-                onClick={openPopup}
-              >
-                {t("block.ctaButton")}
-              </button>
+              <div className="block__cta">
+                <h3 className="block__cta-title">{t("block.ctaTitle")}</h3>
+                <p className="block__cta-text">
+                  {t("block.ctaText")}
+                </p>
+                <button
+                  type="button"
+                  className="btn-list-property"
+                  onClick={openPopup}
+                >
+                  {t("block.ctaButton")}
+                </button>
+              </div>
+            </div>
+
+            <div className="block__right">
+              {faqData.map((item, index) => (
+                <article className="block__item" key={index}>
+                  <button
+                    className={`block__item-toggle ${
+                      openIndex === index ? "active" : ""
+                    }`}
+                    onClick={() => toggleAccordion(index)}
+                    type="button"
+                  >
+                    <span className="block__index">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <span className="block__item-title">{item.question}</span>
+                    <span className="block__icon">
+                      {openIndex === index ? <Minus size={20} /> : <Plus size={20} />}
+                    </span>
+                  </button>
+                  <div
+                    className={`block__answer-wrap ${
+                      openIndex === index ? "open" : ""
+                    }`}
+                  >
+                    <p className="block__answer">{item.answer}</p>
+                  </div>
+                </article>
+              ))}
             </div>
           </div>
-
-          <div className="block__right">
-            {faqData.map((item, index) => (
-              <article className="block__item" key={index}>
-                <button
-                  className={`block__item-toggle ${
-                    openIndex === index ? "active" : ""
-                  }`}
-                  onClick={() => toggleAccordion(index)}
-                  type="button"
-                >
-                  <span className="block__index">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                  <span className="block__item-title">{item.question}</span>
-                  <span className="block__icon">
-                    {openIndex === index ? <Minus size={20} /> : <Plus size={20} />}
-                  </span>
-                </button>
-                <div
-                  className={`block__answer-wrap ${
-                    openIndex === index ? "open" : ""
-                  }`}
-                >
-                  <p className="block__answer">{item.answer}</p>
-                </div>
-              </article>
-            ))}
-          </div>
         </div>
-      </div>
+      </section>
 
       {isPopupOpen && (
         <>
@@ -486,7 +488,7 @@ const Block = () => {
           </div>
         </>
       )}
-    </section>
+    </>
   );
 };
 
