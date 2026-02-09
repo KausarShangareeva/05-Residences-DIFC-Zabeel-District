@@ -17,16 +17,18 @@ const LocationSection = ({ onOpenBrochure }) => {
   const schoolsPlaces = Array.isArray(schoolsData) ? schoolsData : [];
 
   return (
-    <div id="location" className="location-section" dir={lang === "ar" ? "rtl" : "ltr"}>
+    <div
+      id="location"
+      className="location-section"
+      dir={lang === "ar" ? "rtl" : "ltr"}
+    >
       <div className="location-content">
         <div className="location-top">
           <div className="location-left">
             <h2>
               <span className="text-accent">{t("location.title")}</span>
             </h2>
-            <p className="location-description">
-              {t("location.description")}
-            </p>
+            <p className="location-description">{t("location.description")}</p>
           </div>
 
           <div className="location-info">
@@ -36,11 +38,17 @@ const LocationSection = ({ onOpenBrochure }) => {
               <span className="info-value">{t("location.values.style")}</span>
             </div>
             <div className="info-item">
-              <span className="info-label">{t("location.labels.focalPoint")}</span>
-              <span className="info-value">{t("location.values.focalPoint")}</span>
+              <span className="info-label">
+                {t("location.labels.focalPoint")}
+              </span>
+              <span className="info-value">
+                {t("location.values.focalPoint")}
+              </span>
             </div>
             <div className="info-item">
-              <span className="info-label">{t("location.labels.masterPlan")}</span>
+              <span className="info-label">
+                {t("location.labels.masterPlan")}
+              </span>
               <button onClick={onOpenBrochure} className="info-link">
                 {t("location.values.download")}
                 <FileDown size={18} />
@@ -102,14 +110,14 @@ const LocationSection = ({ onOpenBrochure }) => {
 
       <div className="location-map-container">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14422.956847284365!2d55.264!3d25.328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5d2d8e9b8d9d%3A0x1a2b3c4d5e6f7g8h!2sDubai%20Islands!5e0!3m2!1sen!2sae!4v1234567890"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=55.2826346%2C25.2173735%2C55.3026346%2C25.2373735&layer=mapnik&marker=25.2273735%2C55.2926346"
           width="100%"
           height="100%"
           style={{ border: 0 }}
           allowFullScreen=""
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="Dubai Islands Location"
+          title="DIFC Zabeel District Location"
         ></iframe>
       </div>
     </div>

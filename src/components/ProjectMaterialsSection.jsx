@@ -8,39 +8,57 @@ const ProjectMaterialsSection = ({ onOpenBrochure }) => {
   const baseMaterials = [
     {
       id: 1,
-      title: "Brochure",
+      title: "Floor Plan",
       image:
-        "https://res.cloudinary.com/dxp7ppipg/image/upload/v1767973063/ChatGPT_Image_Jan_9_2026_04_29_01_PM_tuxxft.png",
+        "https://res.cloudinary.com/dxp7ppipg/image/upload/v1770637310/The_Residences_DIFC_Zabeel_District_Floor_Plans_d6qzuv.png",
       fileType: "PDF",
-      fileSize: "125.33 Mb",
+      fileSize: "0.6 Mb",
       link: "#",
     },
     {
       id: 2,
-      title: "Floor Plans",
+      title: "Payment Plan",
       image:
-        "https://res.cloudinary.com/dxp7ppipg/image/upload/v1767973063/ChatGPT_Image_Jan_9_2026_04_31_54_PM_ykcoiq.png",
+        "https://res.cloudinary.com/dxp7ppipg/image/upload/v1770637310/The_Residences_DIFC_Zabeel_District_Payment_Plan_izqggj.png",
       fileType: "PDF",
-      fileSize: "11.1 Mb",
+      fileSize: "5 Mb",
       link: "#",
     },
     {
       id: 3,
-      title: "Master Plan",
+      title: "Brochure",
       image:
-        "https://res.cloudinary.com/dxp7ppipg/image/upload/v1767973064/ChatGPT_Image_Jan_9_2026_04_36_20_PM_jnfxsp.png",
+        "https://res.cloudinary.com/dxp7ppipg/image/upload/v1770637310/The_Residences_DIFC_Zabeel_District_Brochure_szvjbn.png",
       fileType: "PDF",
-      fileSize: "0.9 Mb",
+      fileSize: "9 Mb",
+      link: "#",
+    },
+    {
+      id: 4,
+      title: "Factsheet",
+      image:
+        "https://res.cloudinary.com/dxp7ppipg/image/upload/v1770637311/The_Residences_DIFC_Zabeel_District_Fact_Sheet_eeyjxm.png",
+      fileType: "PDF",
+      fileSize: "1 Mb",
       link: "#",
     },
   ];
 
   const materialsData = t("materials.items");
   const localizedMaterials = Array.isArray(materialsData) ? materialsData : [];
-  const materials = baseMaterials.map((material, index) => ({
-    ...material,
-    ...localizedMaterials[index],
-  }));
+  const materials = baseMaterials.map((material, index) => {
+    const localized = localizedMaterials[index] || {};
+    const fileSize =
+      localized.fileSize && !String(localized.fileSize).includes("—")
+        ? localized.fileSize
+        : material.fileSize;
+
+    return {
+      ...material,
+      ...localized,
+      fileSize,
+    };
+  });
 
   return (
     <section
@@ -50,7 +68,7 @@ const ProjectMaterialsSection = ({ onOpenBrochure }) => {
     >
       <div className="project-materials-container">
         <h2 className="project-materials-title">
-          {t("materials.titlePrefix")} {" "}
+          {t("materials.titlePrefix")}{" "}
           <span className="text-accent">{t("materials.titleAccent")}</span>
         </h2>
 

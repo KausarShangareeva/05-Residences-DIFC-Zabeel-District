@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Passo by Beyond | Palm Jumeirah Dubai",
-    "description": "Invest in Passo by Beyond at Palm Jumeirah. Ultra-luxury beachfront residences with 250m private beach. Two iconic towers, 625 residences. 60/40 payment plan. Handover Q3 2029. Get a free consultation from Dubai market experts!"
+    "title": "The Residences DIFC | Zabeel District Dubai",
+    "description": "Invest in The Residences DIFC at Zabeel District. 463 luxury residences by DIFC Developments. 1–4BR apartments & duplex penthouses from AED 2.6M. 70/30 payment plan. Handover Q4 2029. Get a free consultation from Dubai market experts!"
   },
   "navigation": {
     "about": "About",
@@ -31,43 +31,47 @@
   "propertyHero": {
     "save": "Open brochure",
     "share": "SHARE",
-    "shareTitle": "Passo by Beyond",
-    "shareText": "Check out Passo by Beyond on Palm Jumeirah.",
+    "shareTitle": "The Residences DIFC",
+    "shareText": "Check out The Residences DIFC at Zabeel District, Dubai.",
     "shareCopied": "Link copied to clipboard.",
     "sharePrompt": "Copy this link:",
     "townhouses": "APARTMENTS",
-    "villas": "PENTHOUSES",
-    "altAerial": "Passo by Beyond aerial view",
-    "title": "Passo",
-    "minititle": "by Beyond",
-    "subtitle": "Discover modern living with premium design, smart layouts, and flexible payment plans.",
+    "villas": "DUPLEX PENTHOUSES",
+    "altAerial": "The Residences DIFC aerial view",
+    "title": "The Residences",
+    "titleScript": "The",
+    "titleMain": "Residences",
+    "minititle": "DIFC",
+    "subtitle": "DIFC Zabeel District",
+    "subtitleLead": "DIFC",
+    "subtitleTrail": "Zabeel District",
     "stats": {
       "startingPrice": {
         "label": "Starting price:",
-        "value": "Fill the form",
-        "subvalue": "for updated details"
+        "value": "AED 2.6M",
+        "subvalue": "for 1BR apartment"
       },
       "units": {
         "label": "Units:",
-        "value": "1 to 6BR Apartments",
-        "subvalue": "Penthouses & Beach Mansions"
+        "value": "1 to 4BR Apartments",
+        "subvalue": "Duplex Penthouses"
       },
       "handover": {
         "label": "Handover:",
         "value": "2029",
-        "subvalue": "Q3"
+        "subvalue": "Q4"
       },
       "paymentPlan": {
         "label": "Payment Plan:",
-        "value": "60/40",
+        "value": "70/30",
         "subvalue": "Flexible options"
       }
     }
   },
   "propertyHeader": {
-    "titleAccent": "Passo",
+    "titleAccent": "The Residences",
     "titleBy": "by",
-    "titleLocation": "Beyond at Palm Jumeirah",
+    "titleLocation": "DIFC at Zabeel District",
     "tabs": {
       "about": "ABOUT",
       "gallery": "GALLERY",
@@ -78,7 +82,7 @@
       "materials": "MATERIALS",
       "faq": "FAQ"
     },
-    "location": "Palm Jumeirah",
+    "location": "Zabeel District, DIFC",
     "handover": "Handover",
     "paymentPlan": "Payment Plan",
     "inquiry": "Property Inquiry",
@@ -86,27 +90,25 @@
   },
   "aboutProject": {
     "titlePrefix": "About",
-    "titleAccent": "Passo",
-    "titleSuffix": "by Beyond",
+    "titleAccent": "The Residences",
+    "titleSuffix": "DIFC",
     "description": [
-      "Passo by Beyond is an ultra-luxury beachfront development on the crescent of Palm Jumeirah, featuring two sculptural towers — Avita and Bella — home to a limited collection of 625 residences. With 250 metres of private white-sand beach, panoramic views of the Arabian Gulf, and architecture inspired by the coastal environment, Passo redefines waterfront living on one of the last remaining beachfront plots on Palm Jumeirah.",
-      "The project offers 1 to 4-bedroom apartments, 4 to 5-bedroom penthouses with double-height layouts and plunge pools, and exclusive 6-bedroom beach mansions with multi-level indoor-outdoor living. Each residence features floor-to-ceiling windows, open-plan layouts, high-end finishes, and smart home systems — all designed to maximize natural light and ocean views."
+      "The Residences DIFC is a landmark luxury development within Zabeel District — the ambitious new expansion of Dubai International Financial Centre spanning 7.1 million sq. ft. Developed by DIFC Developments, the project offers 463 freehold residences across two signature towers, ranging from elegant one-bedroom apartments to expansive duplex penthouses with panoramic views of Dubai's skyline.",
+      "Set within an AED 100 billion live-work-play ecosystem designed for 125,000+ people, The Residences provide a rare opportunity to own property in one of the world's most advanced financial hubs. Residents enjoy direct access to a 2 km Green Loop, world-class retail at Zabeel Village, the Art Pavilion, Innovation Hub, and AI Campus — all connected by pedestrian-first boulevards and smart mobility networks."
     ],
     "infoTitle": "ABOUT THE PROJECT",
     "labels": {
       "developer": "Developer",
       "areaFrom": "Area from",
       "apartments": "Apartments",
-      "penthouses": "Penthouses",
-      "mansions": "Mansions",
+      "penthouses": "Duplex Penthouses",
       "paymentPlan": "Payment Plan"
     },
     "values": {
-      "developer": "BEYOND",
-      "apartments": "1-4BR",
-      "penthouses": "4-5BR",
-      "mansions": "6BR",
-      "paymentPlan": "60/40"
+      "developer": "DIFC Developments",
+      "apartments": "1–3BR",
+      "penthouses": "3–4BR Duplex",
+      "paymentPlan": "70/30"
     },
     "materials": "Project materials"
   },
@@ -115,7 +117,8 @@
     "titleAccent": "Floor Plans",
     "headers": {
       "propertyType": "PROPERTY TYPE",
-      "livingArea": "LIVING AREA",
+      "units": "NO. OF UNITS",
+      "livingArea": "AVERAGE AREA",
       "startingPrice": "STARTING PRICE"
     },
     "areaTitle": "AREA",
@@ -135,101 +138,63 @@
     "properties": [
       {
         "id": 1,
-        "type": "1 bedroom Apartments",
-        "area": "from 111 sq. m.",
-        "price": "Ask for Price",
+        "type": "1 Bedroom Apartment",
+        "area": "from 846 sq. ft.",
+        "price": "from AED 2,600,000",
         "details": {
-          "groundFloor": "76 sq. m.",
-          "firstFloor": "34 sq. m.",
+          "groundFloor": "846 sq. ft.",
+          "firstFloor": "—",
           "garage": " "
         },
-        "images": [
-          "https://metropolitan.realestate/wp-content/uploads/2025/08/1br-1191sqft-internal-820sqft-external-371sqft.webp"
-        ]
+        "images": []
       },
       {
         "id": 2,
-        "type": "2 bedroom Apartments",
-        "area": "from 181 sq. m.",
+        "type": "2 Bedroom Apartment",
+        "area": "from 1,460 sq. ft.",
         "price": "Ask for Price",
         "details": {
-          "groundFloor": "114 sq. m.",
-          "firstFloor": "67 sq. m.",
+          "groundFloor": "1,460 sq. ft.",
+          "firstFloor": "—",
           "garage": " "
         },
-        "images": [
-          "https://metropolitan.realestate/wp-content/uploads/2025/08/2br-1947sqft-internal-1229sqft-external-718sqft.webp"
-        ]
+        "images": []
       },
       {
         "id": 3,
-        "type": "3 bedroom Apartments",
-        "area": "from 168 sq. m.",
+        "type": "3 Bedroom Apartment",
+        "area": "from 1,898 sq. ft.",
         "price": "Ask for Price",
         "details": {
-          "groundFloor": "152 sq. m.",
-          "firstFloor": "16 sq. m.",
+          "groundFloor": "1,898 sq. ft.",
+          "firstFloor": "—",
           "garage": " "
         },
-        "images": [
-          "https://metropolitan.realestate/wp-content/uploads/2025/08/3br-1810qsft-internal-1632qsft-external-167sqft.webp"
-        ]
+        "images": []
       },
       {
         "id": 4,
-        "type": "4 bedroom Apartments",
-        "area": "from 268 sq. m.",
+        "type": "3 Bedroom Duplex Penthouse",
+        "area": "from 3,437 sq. ft.",
         "price": "Ask for Price",
         "details": {
-          "groundFloor": "228 sq. m.",
-          "firstFloor": "38 sq. m.",
+          "groundFloor": "3,437 sq. ft.",
+          "firstFloor": "—",
           "garage": " "
         },
-        "images": [
-          "https://metropolitan.realestate/wp-content/uploads/2025/08/4br-2881sqft-internal-2449sqft-external-410sqft.webp"
-        ]
+        "images": []
       },
       {
         "id": 5,
-        "type": "4 bedroom Penthouse",
-        "area": "from 682 sq. m.",
+        "type": "4 Bedroom Duplex Penthouse",
+        "area": "from 4,489 sq. ft.",
         "price": "Ask for Price",
         "details": {
-          "groundFloor": "466 sq. m.",
-          "firstFloor": "215 sq. m.",
+          "groundFloor": "4,489 sq. ft.",
+          "firstFloor": "—",
           "garage": " "
         },
-        "images": [
-          "https://metropolitan.realestate/wp-content/uploads/2025/08/4br-penthouse-7338sqft-internal-5021sqft-external-2317sqft.webp"
-        ]
-      },
-      {
-        "id": 6,
-        "type": "5 bedroom Penthouse",
-        "area": "from 724 sq. m.",
-        "price": "Ask for Price",
-        "details": {
-          "groundFloor": "507 sq. m.",
-          "firstFloor": "216 sq. m.",
-          "garage": " "
-        },
-        "images": [
-          "https://metropolitan.realestate/wp-content/uploads/2025/08/5br-penthouse-7789sqft-internal-5460sqft-external-2320sqft.webp"
-        ]
-      },
-      {
-        "id": 7,
-        "type": "6 bedroom Beach Mansions",
-        "area": "from 1,086 sq. m.",
-        "price": "Ask for Price",
-        "details": {
-          "groundFloor": "620 sq. m.",
-          "firstFloor": "459 sq. m.",
-          "garage": " "
-        },
-        "images": [
-          "https://metropolitan.realestate/wp-content/uploads/2025/08/6br-beach-mansion-11688sqft-internal-6674sqft-external-4946sqft.webp"
-        ]
+        "images": []
       }
     ]
   },
@@ -268,59 +233,62 @@
   },
   "gallery": {
     "title": "Gallery",
-    "mainAlt": "Passo by Beyond main view",
-    "poolAlt": "Passo by Beyond pool view",
-    "interiorAlt": "Passo by Beyond interior",
-    "entranceAlt": "Passo by Beyond entrance",
-    "exteriorAlt": "Passo by Beyond exterior",
+    "mainAlt": "The Residences DIFC main view",
+    "poolAlt": "The Residences DIFC pool area",
+    "interiorAlt": "The Residences DIFC interior",
+    "entranceAlt": "The Residences DIFC grand lobby",
+    "exteriorAlt": "The Residences DIFC exterior",
     "button": "Gallery"
   },
   "amenities": {
     "titlePrefix": "Amenities of",
-    "titleAccent": "Passo by Beyond",
+    "titleAccent": "The Residences DIFC",
     "cards": {
       "beach": {
-        "title": "250m Private White-Sand Beach",
-        "description": "Residents enjoy direct access to a pristine 250-metre private beach with breathtaking views of the Arabian Gulf, creating a seamless indoor-outdoor lifestyle of unparalleled coastal luxury."
+        "title": "2 km Green Loop & Wellness Trail",
+        "description": "Residents enjoy a pedestrian-only 2-kilometre wellness loop weaving through landscaped gardens, curated art installations, and open spaces — with 20% of the district dedicated to greenery and recreation."
       },
       "community": {
-        "title": "Resort-Level Wellness & Leisure",
-        "description": "From a 260 sqm wellness pavilion with spa facilities and a sky-level infinity pool to a Montessori-inspired kids' pavilion and an executive library, Passo delivers five-star resort amenities for every resident."
+        "title": "World-Class Lifestyle & Leisure",
+        "description": "From resort-style pools and a kids' splash pad to padel and squash courts, a fully equipped gym, yoga studio, and a 200-key boutique hotel with an exclusive members club — The Residences deliver five-star urban amenities."
       }
     },
     "tags": {
-      "skyPool": "Sky-level infinity pool and landscaped gardens",
-      "cascadingPools": "Cascading pools across podium and beach levels",
-      "socialClub": "Social Club & Executive Library",
-      "pianoCafe": "Piano Café",
-      "kidsClub": "Montessori-inspired Kids Pavilion",
-      "fitness": "Fully equipped fitness facilities",
-      "wellness": "Outdoor wellness zones",
-      "concierge": "Concierge services",
-      "evCharging": "EV charging stations",
-      "smartHome": "Smart home systems"
+      "views": "Expansive views to Dubai landmarks",
+      "architecture": "Contemporary architecture and sculptural facade",
+      "greenLoop": "Access to a 2km Inner Circle (green walkways)",
+      "retail": "Curated premium retail and destination F&B",
+      "social": "Social gathering spaces",
+      "pool": "Resort-style pool with cabanas",
+      "familyPool": "Family pool with kids' splash pad",
+      "clubhouse": "Clubhouse with gym and yoga studio",
+      "courts": "Padel court and squash courts",
+      "arrival": "Hospitality-inspired arrival experience",
+      "waterFeatures": "Thematic water features",
+      "lobby": "Lobby and lounge spaces",
+      "coworking": "Shared working spaces"
     },
     "downloadBrochure": "Open brochure"
   },
   "developer": {
-    "titleAccent": "Beyond",
-    "titleSuffix": "is an ultra-luxury real estate developer in Dubai",
-    "description": "Beyond is an emerging ultra-luxury developer in Dubai with close affiliations to Omniyat — one of the region's most respected names in high-end real estate. While operating independently, Beyond shares a design-forward ethos and commitment to delivering landmark residential buildings in ultra-premium locations. Guided by a philosophy of architectural excellence and nature-inspired design, Beyond creates residences that harmonize with their surroundings while setting new benchmarks for luxury living in the UAE.",
+    "titleAccent": "DIFC Developments",
+    "titleSuffix": "is the real estate arm of Dubai International Financial Centre",
+    "description": "DIFC Developments is the real estate development arm of Dubai International Financial Centre — one of the world's most advanced financial centres. With the Zabeel District masterplan valued at over AED 100 billion, DIFC Developments is creating a transformative live-work-play ecosystem spanning 17.7 million sq. ft. The district is designed to host 42,000+ companies and a workforce of 125,000+, integrating luxury residences, world-class retail, cultural landmarks, and cutting-edge innovation hubs into a single visionary urban community.",
     "interestFree": "Interest-free installments",
     "masterPlan": "MASTER PLAN"
   },
   "location": {
     "title": "Location",
-    "description": "Palm Jumeirah is Dubai's most iconic waterfront address, offering residents an unrivalled blend of exclusivity and connectivity. Passo is situated on the crescent of Palm Jumeirah — one of the last remaining beachfront plots on the island — providing panoramic sea views toward Burj Al Arab and Atlantis. With direct access to Sheikh Zayed Road and proximity to Dubai Marina, JBR, and Downtown Dubai, residents enjoy world-class dining, retail, and entertainment within minutes.",
-    "aboutTitle": "ABOUT PALM JUMEIRAH",
+    "description": "Zabeel District is the ambitious new expansion of DIFC, strategically positioned at the crossroads of Dubai's most dynamic corridors. With direct links to the Museum of the Future, Dubai World Trade Centre, and the existing DIFC Gate District, residents enjoy unmatched connectivity to Downtown Dubai, Business Bay, and Dubai International Airport. The district features pedestrian-first boulevards, smart mobility systems, and over 1 million sq. ft. of curated retail and dining at Zabeel Village.",
+    "aboutTitle": "ABOUT ZABEEL DISTRICT",
     "labels": {
       "style": "Style",
       "focalPoint": "Focal point",
       "masterPlan": "Master Plan"
     },
     "values": {
-      "style": "Island",
-      "focalPoint": "Beachfront",
+      "style": "Urban",
+      "focalPoint": "Financial Centre",
       "download": "Open brochure"
     },
     "categories": {
@@ -330,56 +298,56 @@
     },
     "entertainmentPlaces": [
       {
-        "time": "4min",
-        "name": "Atlantis The Royal"
+        "time": "3min",
+        "name": "Museum of the Future"
       },
       {
-        "time": "12min",
-        "name": "Nakheel Mall"
+        "time": "5min",
+        "name": "Downtown Dubai & Burj Khalifa"
       },
       {
-        "time": "13min",
-        "name": "Dubai Marina & JBR"
+        "time": "5min",
+        "name": "Dubai Mall"
       },
       {
-        "time": "20min",
-        "name": "Mall of the Emirates"
+        "time": "10min",
+        "name": "Dubai World Trade Centre"
       }
     ],
     "clinicsPlaces": [
       {
-        "time": "10min",
-        "name": "King's College Hospital"
-      },
-      {
-        "time": "15min",
-        "name": "Dubai Marina Medical Centre"
-      },
-      {
-        "time": "20min",
+        "time": "5min",
         "name": "Mediclinic Parkview Hospital"
       },
       {
-        "time": "25min",
+        "time": "10min",
+        "name": "Emirates Hospital – DHCC"
+      },
+      {
+        "time": "12min",
         "name": "American Hospital Dubai"
+      },
+      {
+        "time": "15min",
+        "name": "King's College Hospital"
       }
     ],
     "schoolsPlaces": [
       {
+        "time": "5min",
+        "name": "DIFC Academy"
+      },
+      {
         "time": "10min",
-        "name": "Dubai International Academy"
+        "name": "JSS International School"
       },
       {
         "time": "12min",
-        "name": "Emirates International School"
+        "name": "GEMS Wellington Primary"
       },
       {
         "time": "15min",
-        "name": "GEMS Wellington Academy"
-      },
-      {
-        "time": "20min",
-        "name": "American School of Dubai"
+        "name": "Raffles World Academy"
       }
     ]
   },
@@ -388,19 +356,24 @@
     "titleAccent": "Materials",
     "items": [
       {
+        "title": "Floor Plan",
+        "fileType": "PDF",
+        "fileSize": "— Mb"
+      },
+      {
+        "title": "Payment Plan",
+        "fileType": "PDF",
+        "fileSize": "— Mb"
+      },
+      {
         "title": "Brochure",
         "fileType": "PDF",
-        "fileSize": "125.33 Mb"
+        "fileSize": "— Mb"
       },
       {
-        "title": "Floor Plans",
+        "title": "Factsheet",
         "fileType": "PDF",
-        "fileSize": "11.1 Mb"
-      },
-      {
-        "title": "Master Plan",
-        "fileType": "PDF",
-        "fileSize": "0.9 Mb"
+        "fileSize": "— Mb"
       }
     ]
   },
@@ -423,7 +396,7 @@
       },
       "phoneValid": "Looks good! Your phone number is valid.",
       "phoneKeepGoing": "Keep going, looking good so far 🙂",
-      "buttonNote": "PDF size is ~125 MB 🙂",
+      "buttonNote": "",
       "countrySearch": "Search country or code",
       "noResults": "No matches found",
       "checkboxLabel": "I agree to receive information about offers, deals and services from this website (optional)."
@@ -434,27 +407,31 @@
     "termsOfUse": "Terms of Use",
     "submit": "Open the Brochure",
     "infoTitle": "Brochure",
-    "infoSize": "PDF 125.33 Mb"
+    "infoSize": "PDF"
   },
   "faq": {
     "title": "FAQ",
     "readMore": "All Questions & Answers",
     "questions": [
       {
-        "question": "What makes Passo by Beyond a unique investment on Palm Jumeirah?",
-        "answer": "Passo is located on one of the last remaining beachfront plots on Palm Jumeirah's crescent, making it a rare opportunity in an established ultra-premium market. The project features 250 metres of private beach, two architecturally distinctive towers by Beyond (affiliated with Omniyat), and a limited collection of just 625 residences. With projected rental yields of approximately 6.9% and eligibility for the UAE 10-year Golden Visa, Passo combines lifestyle appeal with strong investment fundamentals."
+        "question": "What makes The Residences DIFC a unique investment opportunity?",
+        "answer": "The Residences DIFC is part of the Zabeel District — an AED 100+ billion masterplan expanding Dubai's leading financial centre. With only 463 residences in Phase A, freehold ownership open to all nationalities, and projected rental yields of 6–8% driven by high corporate tenancy demand from 42,000+ companies in DIFC, the project offers strong capital appreciation potential. Properties above AED 2M qualify for the UAE 10-year Golden Visa."
       },
       {
-        "question": "What is the payment plan for Passo by Beyond?",
-        "answer": "Passo offers a 60/40 payment plan: 10% at booking, 10% one month after booking, then 5% installments every six months through the construction period, with the remaining 40% due at handover in Q3 2029. This structure allows buyers to spread payments over the construction timeline while keeping the majority of the investment tied to the completed asset."
+        "question": "What is the payment plan for The Residences DIFC?",
+        "answer": "The Residences DIFC offers a 70/30 payment plan: 5% down payment at booking, 65% in installments during the construction period, and the remaining 30% due at handover in Q4 2029. This structure allows buyers to manage payments over the construction timeline while securing a property in one of Dubai's most prestigious addresses."
       },
       {
-        "question": "What types of residences are available and what are the starting prices?",
-        "answer": "The project offers 1-bedroom apartments from 968 sq. ft. starting at AED 5.5M, 2-bedroom apartments from 1,587 sq. ft. starting at AED 8.5M, 3-bedroom apartments from 2,122 sq. ft. starting at AED 15M, and 4-bedroom apartments from 3,419 sq. ft. starting at AED 24M. Premium options include 5-bedroom penthouses from 7,569 sq. ft. with double-height layouts and plunge pools, as well as exclusive 6-bedroom beach mansions from 10,167 sq. ft. with multi-level indoor-outdoor living."
+        "question": "What types of residences are available and what are the sizes?",
+        "answer": "The project offers five residence types: 1-bedroom apartments from 846 sq. ft. (247 units), 2-bedroom apartments from 1,460 sq. ft. (164 units), 3-bedroom apartments from 1,898 sq. ft. (40 units), 3-bedroom duplex penthouses from 3,437 sq. ft. (6 units), and 4-bedroom duplex penthouses from 4,489 sq. ft. (6 units). Starting prices begin at AED 2.6 million for a 1-bedroom apartment."
       },
       {
-        "question": "How convenient is the location of Passo for daily living and connectivity?",
-        "answer": "Passo enjoys a prime position on the Palm Jumeirah crescent with direct access to Sheikh Zayed Road. Atlantis The Royal and The Pointe are just 4 minutes away, Nakheel Mall is 12 minutes, Dubai Marina and JBR are 13 minutes, and Downtown Dubai with Burj Khalifa is approximately 12–15 minutes by car. Dubai International Airport is reachable within 35 minutes. International schools, hospitals, and world-class dining are all within close proximity."
+        "question": "What amenities and lifestyle does Zabeel District offer?",
+        "answer": "Residents enjoy a 2 km Green Loop wellness trail, resort-style pools, padel and squash courts, a clubhouse with gym and yoga studio, and a 200-key boutique hotel with an exclusive members club. The district also features the Art Pavilion, the world's largest Innovation Hub, an AI Campus, over 1 million sq. ft. of retail at Zabeel Village, the expanded DIFC Academy, and pedestrian-first boulevards with curated dining and cultural spaces."
+      },
+      {
+        "question": "How convenient is the location of The Residences DIFC?",
+        "answer": "The Residences DIFC enjoy a prime position within Zabeel District with direct links to the Museum of the Future and Dubai World Trade Centre. Downtown Dubai and Burj Khalifa are just 5 minutes away, Dubai Mall is within 5 minutes, and Dubai International Airport is reachable within 15 minutes. The district is connected via metro, the Dubai Future Loop Urban Walkway, and planned smart mobility networks including a suspended transport system."
       }
     ]
   },
@@ -464,7 +441,7 @@
     "reviewCount": "622 reviews",
     "serviceRating": "Service Rating",
     "disclaimer": "We are an authorized channel partner for this project. All information on this website is based on publicly available sources and marketing materials provided by the developer. The content is for informational purposes only and does not constitute an offer or contract. Prices, availability, and project details are subject to change without prior notice. For the latest information and availability, please contact our sales team.",
-    "copyright": "© 2025 Beyond. All rights reserved.",
+    "copyright": "© 2025 DIFC Developments. All rights reserved.",
     "privacyPolicy": "Privacy Policy",
     "termsConditions": "Terms & Conditions"
   },
@@ -502,7 +479,7 @@
     "reviewCount": "622 reviews",
     "serviceRating": "Service Rating",
     "disclaimer": "We are an authorized channel partner for this project. All information on this website is based on publicly available sources and marketing materials provided by the developer. The content is for informational purposes only and does not constitute an offer or contract. Prices, availability, and project details are subject to change without prior notice. For the latest information and availability, please contact our sales team.",
-    "copyright": "© 2025 Beyond. All rights reserved.",
+    "copyright": "© 2025 DIFC Developments. All rights reserved.",
     "privacyPolicy": "Privacy Policy",
     "termsConditions": "Terms & Conditions",
     "termsTitle": "Terms & Conditions",
@@ -527,7 +504,7 @@
     "backToProject": "Back to project",
     "privacyTitle": "Privacy Policy",
     "section1Title": "1. Introduction",
-    "section1Text": "This Privacy Policy explains how https://passoresidences.ae/ (\"we,\" \"our,\" or \"us\") collects, uses, and protects the personal information you provide through our website. By using our website, you agree to the terms of this Privacy Policy.",
+    "section1Text": "This Privacy Policy explains how this website (\"we,\" \"our,\" or \"us\") collects, uses, and protects the personal information you provide through our website. By using our website, you agree to the terms of this Privacy Policy.",
     "section2Title": "2. Information We Collect",
     "section2Intro": "When you submit your details on our website, we may collect the following information:",
     "section2List": [
@@ -563,7 +540,7 @@
     "section7Text": "We reserve the right to update this Privacy Policy at any time. Any updates will be posted on this page.",
     "section8Title": "8. Contact Us",
     "section8Text": "For any questions regarding this Privacy Policy or to exercise your data rights, please contact:",
-    "contactEmail": "info@passoresidences.ae"
+    "contactEmail": "info@difc-zabeel.netlify.app"
   },
   "units": {
     "sqft": "sq. ft.",
@@ -575,18 +552,18 @@
     "downloadPdf": "Open PDF"
   },
   "links": {
-    "title": "Passo by Beyond",
+    "title": "The Residences DIFC",
     "subtitle": "Contact Us",
     "whatsapp": "WhatsApp",
     "telegram": "Telegram",
     "call": "Call",
     "website": "Visit Website",
     "catalog": "Open Brochure",
-    "footer": "Palm Jumeirah, Dubai, UAE"
+    "footer": "Zabeel District, DIFC, Dubai, UAE"
   },
   "appLanding": {
-    "titleLine1": "Beachfront Luxury",
-    "titleLine2": "Redefined",
+    "titleLine1": "Luxury Living at",
+    "titleLine2": "Dubai's Financial Heart",
     "description": "Instant access to information, floor plans, and materials — no app installation required.",
     "contactTitle": "Get in Touch",
     "catalog": "Open Brochure",

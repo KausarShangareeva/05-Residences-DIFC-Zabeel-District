@@ -84,15 +84,6 @@ const AboutProject = () => {
 
             <div className="about-project__info-item">
               <span className="about-project__info-label">
-                {t("aboutProject.labels.mansions")}
-              </span>
-              <span className="about-project__info-value">
-                {t("aboutProject.values.mansions")}
-              </span>
-            </div>
-
-            <div className="about-project__info-item">
-              <span className="about-project__info-label">
                 {t("aboutProject.labels.paymentPlan")}
               </span>
               <span className="about-project__info-value">

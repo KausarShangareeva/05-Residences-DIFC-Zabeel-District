@@ -8,17 +8,30 @@ const PropertyGallery = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const images = [
-    "https://metropolitan.realestate/wp-content/uploads/2025/08/main-2.webp?_gl=1*1ousvds*_up*MQ..*_ga*MTY4NDI2MTY4My4xNzcwMzgwNjk5*_ga_EDLBN60YJR*czE3NzAzODA2OTkkbzEkZzAkdDE3NzAzODA2OTkkajYwJGwwJGgxMjUzNjk2MzA1",
-    "https://metropolitan.realestate/wp-content/uploads/2025/08/Passo_Project-Brochure-32.jpg",
-    "https://metropolitan.realestate/wp-content/uploads/2025/08/Passo_Project-Brochure-33.webp",
-    "https://metropolitan.realestate/wp-content/uploads/2025/08/Passo_Project-Brochure-40.webp",
-    "https://metropolitan.realestate/wp-content/uploads/2025/08/Passo_Project-Brochure-45.webp",
-    "https://metropolitan.realestate/wp-content/uploads/2025/08/Passo_Project-Brochure-52.webp",
-    "https://metropolitan.realestate/wp-content/uploads/2025/08/Passo_Project-Brochure-56.webp",
-    "https://metropolitan.realestate/wp-content/uploads/2025/08/Passo_Project-Brochure-57.webp",
-    "https://metropolitan.realestate/wp-content/uploads/2025/08/Passo_Project-Brochure-58-1.webp",
-    "https://metropolitan.realestate/wp-content/uploads/2025/08/Passo_Project-Brochure-64.webp",
-    "https://metropolitan.realestate/wp-content/uploads/2025/08/Passo_Project-Brochure-72.webp",
+    "https://res.cloudinary.com/dxp7ppipg/image/upload/v1770632142/ARRIVAL_2_eecob5.jpg",
+    "https://res.cloudinary.com/dxp7ppipg/image/upload/v1770632141/DIFC_Zabeel_District_AI_Campus_hiegfe.jpg",
+    "https://res.cloudinary.com/dxp7ppipg/image/upload/v1770632133/ARRIVAL_-_VALET_mwowj3.jpg",
+    "https://res.cloudinary.com/dxp7ppipg/image/upload/v1770632135/EXTERIOR_2_s0911g.jpg",
+    "https://res.cloudinary.com/dxp7ppipg/image/upload/v1770632134/EXTERIOR_1_t7pmzw.jpg",
+    "https://res.cloudinary.com/dxp7ppipg/image/upload/v1770632132/DIFC_Zabeel_District_Masterplan_Daytime_nfdpsd.jpg",
+    "https://res.cloudinary.com/dxp7ppipg/image/upload/v1770632130/DIFC_Zabeel_District_Residential_l5ewif.jpg",
+    "https://res.cloudinary.com/dxp7ppipg/image/upload/v1770632131/DIFC_Zabeel_District_Offices_cjal4v.jpg",
+    "https://res.cloudinary.com/dxp7ppipg/image/upload/v1770632129/POOL_V1_ka6esc.https://res.cloudinary.com/dxp7ppipg/image/upload/v1770632125/POOL_hthava.jpgjpg",
+    "https://res.cloudinary.com/dxp7ppipg/image/upload/v1770632126/2BR_CLOSET_lm2u6x.jpg",
+    "https://res.cloudinary.com/dxp7ppipg/image/upload/v1770632126/DUPLEX_DAY_tpejly.jpg",
+    "https://res.cloudinary.com/dxp7ppipg/image/upload/v1770632125/EXTERIOR_HERO_SHOT_jjoo0w.jpg",
+    "https://res.cloudinary.com/dxp7ppipg/image/upload/v1770632125/POOL_hthava.jpg",
+    "https://res.cloudinary.com/dxp7ppipg/image/upload/v1770632124/KIDS_POOL_jrq1bb.jpg",
+    "https://res.cloudinary.com/dxp7ppipg/image/upload/v1770632124/EXTERIOR_HERO_SHOT_-_BURJ_KHALIFA_VIEW_wkws2j.jpg",
+    "https://res.cloudinary.com/dxp7ppipg/image/upload/v1770632122/DIFC_Zabeel_District_Art_Pavilion_Academy_01_dcaphi.jpg",
+    "https://res.cloudinary.com/dxp7ppipg/image/upload/v1770632121/TYPICAL_UNIT_-_MASTER_BATHROOM_pkae2z.jpg",
+    "https://res.cloudinary.com/dxp7ppipg/image/upload/v1770632120/1_BR_BEDROOM_z6ynya.jpg",
+    "https://res.cloudinary.com/dxp7ppipg/image/upload/v1770632120/DUPLEX_NIGHT_x9qkm5.jpg",
+    "https://res.cloudinary.com/dxp7ppipg/image/upload/v1770632120/2BR_LIVING_ROOM_baeuzj.jpg",
+    "https://res.cloudinary.com/dxp7ppipg/image/upload/v1770632120/TYPICAL_UNIT_-_POWDER_ROOM_detmmj.jpg",
+    "https://res.cloudinary.com/dxp7ppipg/image/upload/v1770632120/TYPICAL_UNIT_-_POWDER_ROOM_detmmj.jpg",
+    "https://res.cloudinary.com/dxp7ppipg/image/upload/v1770632120/3BR_LIVING_ROOM_nm3ha4.jpg",
+    "https://res.cloudinary.com/dxp7ppipg/image/upload/v1770632120/1BR_LIVING_ROOM_zcakko.jpg",
   ];
 
   const openLightbox = (index) => {
@@ -64,29 +77,49 @@ const PropertyGallery = () => {
       <div className="gallery-grid">
         {/* Main large image */}
         <div className="gallery-main" onClick={() => openLightbox(0)}>
-          <img src={images[0]} alt="Passo by Beyond Palm Jumeirah waterfront view" loading="lazy" />
+          <img
+            src={images[0]}
+            alt="Passo by Beyond Palm Jumeirah waterfront view"
+            loading="lazy"
+          />
         </div>
 
         {/* Top right images */}
         <div className="gallery-top-right">
           <div className="gallery-item" onClick={() => openLightbox(1)}>
-            <img src={images[1]} alt="Passo by Beyond luxury pool area" loading="lazy" />
+            <img
+              src={images[1]}
+              alt="Passo by Beyond luxury pool area"
+              loading="lazy"
+            />
           </div>
           <div className="gallery-item" onClick={() => openLightbox(2)}>
-            <img src={images[2]} alt="Passo by Beyond modern interior design" loading="lazy" />
+            <img
+              src={images[2]}
+              alt="Passo by Beyond modern interior design"
+              loading="lazy"
+            />
           </div>
         </div>
 
         {/* Bottom right images */}
         <div className="gallery-bottom-right">
           <div className="gallery-item" onClick={() => openLightbox(3)}>
-            <img src={images[3]} alt="Passo by Beyond residence entrance" loading="lazy" />
+            <img
+              src={images[3]}
+              alt="Passo by Beyond residence entrance"
+              loading="lazy"
+            />
           </div>
           <div
             className="gallery-item gallery-item-more"
             onClick={() => openLightbox(4)}
           >
-            <img src={images[4]} alt="Passo by Beyond exterior architecture" loading="lazy" />
+            <img
+              src={images[4]}
+              alt="Passo by Beyond exterior architecture"
+              loading="lazy"
+            />
             <div className="gallery-overlay">
               <span className="gallery-button">
                 Gallery

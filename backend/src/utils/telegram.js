@@ -21,7 +21,7 @@ async function sendToTelegram({
   };
 
   const text = `
-🏠 <b>New Lead - Passo by Beyond</b>
+🏠 <b>New Lead - The Residences</b>
 
 👤 <b>Name:</b> ${escapeHtml(fullName)}
 📧 <b>Email:</b> ${escapeHtml(email)}

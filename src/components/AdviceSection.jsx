@@ -1,4 +1,9 @@
-﻿import React, { useState, forwardRef, useImperativeHandle, useEffect } from "react";
+﻿import React, {
+  useState,
+  forwardRef,
+  useImperativeHandle,
+  useEffect,
+} from "react";
 import "./AdviceSection.css";
 import { useLanguage } from "../i18n/LanguageContext";
 import { submitLead } from "../utils/api";
@@ -87,13 +92,9 @@ const AdviceSection = forwardRef((props, ref) => {
       return `Введите ещё ${missing} ${word}`;
     }
     if (lang === "ar") {
-      return missing === 1
-        ? "تبقى رقم واحد"
-        : `أدخل ${missing} أرقام إضافية`;
+      return missing === 1 ? "تبقى رقم واحد" : `أدخل ${missing} أرقام إضافية`;
     }
-    return missing === 1
-      ? "1 digit left"
-      : `Enter ${missing} more digits`;
+    return missing === 1 ? "1 digit left" : `Enter ${missing} more digits`;
   };
 
   const getPhoneErrorMessage = (validation, country) => {
@@ -124,7 +125,9 @@ const AdviceSection = forwardRef((props, ref) => {
       const detectedCountryCode = detectCountryFromPhone(value, countries);
       let currentCountry = selectedCountry;
       if (detectedCountryCode && detectedCountryCode !== selectedCountry.code) {
-        const matchedCountry = countries.find((c) => c.code === detectedCountryCode);
+        const matchedCountry = countries.find(
+          (c) => c.code === detectedCountryCode,
+        );
         if (matchedCountry) {
           currentCountry = matchedCountry;
           setSelectedCountry(matchedCountry);
@@ -152,7 +155,10 @@ const AdviceSection = forwardRef((props, ref) => {
 
   const handlePhoneBlur = () => {
     setPhoneTouched(true);
-    const validation = validatePhoneNumber(formData.phone, selectedCountry.code);
+    const validation = validatePhoneNumber(
+      formData.phone,
+      selectedCountry.code,
+    );
     setPhoneError(getPhoneErrorMessage(validation, selectedCountry));
   };
 
@@ -170,7 +176,10 @@ const AdviceSection = forwardRef((props, ref) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const validation = validatePhoneNumber(formData.phone, selectedCountry.code);
+    const validation = validatePhoneNumber(
+      formData.phone,
+      selectedCountry.code,
+    );
     if (validation.status !== "ok") {
       setPhoneTouched(true);
       setPhoneError(getPhoneErrorMessage(validation, selectedCountry));
@@ -221,7 +230,10 @@ const AdviceSection = forwardRef((props, ref) => {
   const isPhoneValid = phoneValidation.status === "ok";
   const hasStartedTyping = phoneValidation.nationalLength > 0;
   // Calculate remaining digits needed
-  const digitsRemaining = Math.max(0, (phoneValidation.min || 0) - (phoneValidation.nationalLength || 0));
+  const digitsRemaining = Math.max(
+    0,
+    (phoneValidation.min || 0) - (phoneValidation.nationalLength || 0),
+  );
   // Show live hint while typing (when no error is set)
   // Also show for "mismatch" if still below minimum length
   const liveHint =
@@ -248,7 +260,12 @@ const AdviceSection = forwardRef((props, ref) => {
         : "info";
   const renderAgentMessage = (id) => (
     <div className={`agent-message agent-message--${agentTone}`} id={id}>
-      <img className="agent-avatar" src="/face.jpg" alt="Dubai real estate consultant" loading="lazy" />
+      <img
+        className="agent-avatar"
+        src="/face.jpg"
+        alt="Dubai real estate consultant"
+        loading="lazy"
+      />
       <div className="agent-bubble">
         <p>{agentMessage}</p>
       </div>
@@ -270,7 +287,9 @@ const AdviceSection = forwardRef((props, ref) => {
             <form className="advice-form" onSubmit={handleSubmit}>
               <div className="form-row">
                 <div className="form-group">
-                  <label htmlFor="advice-fullName">{t("advice.form.fullName")}</label>
+                  <label htmlFor="advice-fullName">
+                    {t("advice.form.fullName")}
+                  </label>
                   <input
                     type="text"
                     id="advice-fullName"
@@ -319,7 +338,9 @@ const AdviceSection = forwardRef((props, ref) => {
                     inputMode="tel"
                     autoComplete="tel"
                     aria-invalid={phoneError ? "true" : "false"}
-                    aria-describedby={phoneError ? "advice-phone-error" : undefined}
+                    aria-describedby={
+                      phoneError ? "advice-phone-error" : undefined
+                    }
                     required
                   />
                   {isPhoneValid && (
@@ -346,11 +367,12 @@ const AdviceSection = forwardRef((props, ref) => {
                 {t("advice.disclaimerPrefix")}{" "}
                 <a href="/privacy" target="_blank" rel="noreferrer">
                   {t("advice.disclaimerPrivacy")}
-                </a>,{" "}
-                {t("advice.disclaimerMiddle")}{" "}
+                </a>
+                , {t("advice.disclaimerMiddle")}{" "}
                 <a href="/terms" target="_blank" rel="noreferrer">
                   {t("advice.disclaimerTerms")}
-                </a>.
+                </a>
+                .
               </p>
 
               {submitStatus === "success" && (
@@ -372,11 +394,27 @@ const AdviceSection = forwardRef((props, ref) => {
 
           <div className="advice-visual">
             <div className="visual-content">
+              <div className="visual-brand">
+                <div className="visual-brand__logo">
+                  <span className="visual-brand__script">The</span>
+                  <span className="visual-brand__main">RESIDENCES</span>
+                  <span className="visual-brand__sub">
+                    DIFC Zabeel District
+                  </span>
+                </div>
+                <div className="visual-brand__soon">COMING SOON</div>
+              </div>
               <div className="quote-mark">"</div>
-              <p className="testimonial-text">
-                {t("advice.testimonial")}
-              </p>
-              <div className="contact-phone">+971 4 428 6151</div>
+              <p className="testimonial-text">{t("advice.testimonial")}</p>
+              <div className="contact-phone">
+                <a
+                  href="https://api.whatsapp.com/send/?phone=97144286151&text=Hello%21+I+am+interested+in+Passo+by+Beyond&type=phone_number&app_absent=0"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {t("navigation.phone")}
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -387,9 +425,7 @@ const AdviceSection = forwardRef((props, ref) => {
         <>
           <div className="popup-overlay" onClick={closePopup}></div>
           <div className="popup-modal" dir={lang === "ar" ? "rtl" : "ltr"}>
-            <button className="popup-close" onClick={closePopup}>
-              
-            </button>
+            <button className="popup-close" onClick={closePopup}></button>
             <div className="popup-content">
               <h2 className="popup-title">
                 {t("advice.titlePrefix")}{" "}
@@ -400,7 +436,9 @@ const AdviceSection = forwardRef((props, ref) => {
               <form className="advice-form" onSubmit={handleSubmit}>
                 <div className="form-row">
                   <div className="form-group">
-                    <label htmlFor="advice-popup-fullName">{t("advice.form.fullName")}</label>
+                    <label htmlFor="advice-popup-fullName">
+                      {t("advice.form.fullName")}
+                    </label>
                     <input
                       type="text"
                       id="advice-popup-fullName"
@@ -413,7 +451,9 @@ const AdviceSection = forwardRef((props, ref) => {
                   </div>
 
                   <div className="form-group">
-                    <label htmlFor="advice-popup-email">{t("advice.form.email")}</label>
+                    <label htmlFor="advice-popup-email">
+                      {t("advice.form.email")}
+                    </label>
                     <input
                       type="email"
                       id="advice-popup-email"
@@ -426,18 +466,20 @@ const AdviceSection = forwardRef((props, ref) => {
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="advice-popup-phone">{t("advice.form.phone")}</label>
+                  <label htmlFor="advice-popup-phone">
+                    {t("advice.form.phone")}
+                  </label>
                   <div
                     className={`phone-input-wrapper ${
                       phoneError ? "has-error" : ""
                     }`}
                   >
                     <CountrySelect
-                    value={selectedCountry}
-                    onChange={handleCountryChange}
-                    searchPlaceholder={t("advice.form.countrySearch")}
-                    emptyLabel={t("advice.form.noResults")}
-                  />
+                      value={selectedCountry}
+                      onChange={handleCountryChange}
+                      searchPlaceholder={t("advice.form.countrySearch")}
+                      emptyLabel={t("advice.form.noResults")}
+                    />
                     <input
                       type="tel"
                       id="advice-popup-phone"
@@ -449,7 +491,11 @@ const AdviceSection = forwardRef((props, ref) => {
                       inputMode="tel"
                       autoComplete="tel"
                       aria-invalid={phoneError ? "true" : "false"}
-                      aria-describedby={phoneError ? "advice-advice-popup-phone-error" : undefined}
+                      aria-describedby={
+                        phoneError
+                          ? "advice-advice-popup-phone-error"
+                          : undefined
+                      }
                       required
                     />
                     {isPhoneValid && (
@@ -476,11 +522,12 @@ const AdviceSection = forwardRef((props, ref) => {
                   {t("advice.disclaimerPrefix")}{" "}
                   <a href="/privacy" target="_blank" rel="noreferrer">
                     {t("advice.disclaimerPrivacy")}
-                  </a>,{" "}
-                  {t("advice.disclaimerMiddle")}{" "}
+                  </a>
+                  , {t("advice.disclaimerMiddle")}{" "}
                   <a href="/terms" target="_blank" rel="noreferrer">
                     {t("advice.disclaimerTerms")}
-                  </a>.
+                  </a>
+                  .
                 </p>
 
                 {submitStatus === "success" && (
@@ -507,5 +554,3 @@ const AdviceSection = forwardRef((props, ref) => {
 });
 
 export default AdviceSection;
-
-

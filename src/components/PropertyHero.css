@@ -66,29 +66,28 @@
 }
 
 .property-hero__title {
-  font-family: "Eugusto", sans-serif;
-  font-size: 10rem;
-  font-weight: 100;
-  letter-spacing: 0.08em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-transform: uppercase;
   color: #ffffff;
+  line-height: 0.95;
 }
 
-.property-hero__title-logo {
-  width: clamp(18rem, 45vw, 52rem);
-  height: auto;
-  margin: 0 auto;
-  display: block;
-}
-
-.property-hero-minititle {
-  display: block;
+.property-hero__title-script {
   font-family: "Tangerine", "Eugusto", cursive;
-  font-size: 7rem;
+  font-size: clamp(4.8rem, 6vw, 9rem);
+  font-weight: 400;
   letter-spacing: 0.02em;
-  margin-top: -7rem;
-  margin-bottom: 1.4rem;
-  color: #ffffff;
+  text-transform: none;
+  margin-bottom: -2.2rem;
+}
+
+.property-hero__title-main {
+  font-family: "Cormorant Garamond", "Eugusto", serif;
+  font-size: clamp(6.5rem, 10vw, 12.5rem);
+  font-weight: 400;
+  letter-spacing: 0.18em;
 }
 
 .property-hero__subtitle {
@@ -120,6 +119,36 @@
   background: rgba(10, 12, 12, 0.35);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+}
+
+/* --- Hero Title + Subtitle override --- */
+.property-hero__subtitle {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 1rem;
+  font-size: clamp(1.7rem, 2.4vw, 2.8rem);
+  line-height: 1.2;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.92);
+  margin: 1.8rem auto 0;
+  text-transform: uppercase;
+  max-width: none;
+  height: auto;
+  overflow: visible;
+  -webkit-line-clamp: unset;
+  -webkit-box-orient: initial;
+  text-overflow: unset;
+}
+
+.property-hero__subtitle-lead {
+  font-weight: 600;
+}
+
+.property-hero__subtitle-trail {
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0.08em;
 }
 
 .property-hero__stat {
@@ -383,18 +412,17 @@
     max-width: 90%;
   }
 
-  .property-hero__title {
-    font-size: 8rem;
+  .property-hero__title-script {
+    font-size: clamp(4rem, 5vw, 7rem);
+    margin-bottom: -1.8rem;
   }
 
-  .property-hero-minititle {
-    font-size: 6rem;
-    margin-top: -6rem;
+  .property-hero__title-main {
+    font-size: clamp(5.5rem, 8vw, 10rem);
   }
 
   .property-hero__subtitle {
-    font-size: 2.2rem;
-    max-width: 60rem;
+    font-size: clamp(1.5rem, 2vw, 2.2rem);
   }
 
   .property-hero__stats {
@@ -424,18 +452,19 @@
     max-width: 92%;
   }
 
-  .property-hero__title {
-    font-size: 6.5rem;
-    letter-spacing: 0.05em;
+  .property-hero__title-script {
+    font-size: clamp(3.6rem, 5vw, 5.5rem);
+    margin-bottom: -1.4rem;
   }
 
-  .property-hero-minititle {
-    font-size: 5rem;
-    margin-top: -5rem;
+  .property-hero__title-main {
+    font-size: clamp(5rem, 8vw, 8rem);
+    letter-spacing: 0.12em;
   }
 
   .property-hero__subtitle {
-    font-size: 2rem;
+    font-size: clamp(1.4rem, 2vw, 2rem);
+    gap: 0.6rem;
   }
 
   .property-hero__stats {
@@ -448,7 +477,7 @@
   }
 
   .property-hero__action-btn span {
-    display: none; /* Скрываем текст, оставляем иконку */
+    display: none;
   }
 
   .property-hero__action-btn {
@@ -479,22 +508,26 @@
     max-width: 95%;
   }
 
-  .property-hero__title {
-    font-size: 6.5rem;
+  .property-hero__title-script {
+    font-size: 3.6rem;
+    margin-bottom: -1rem;
   }
 
-  .property-hero-minititle {
-    font-size: 3.5rem;
-    margin-top: -3.5rem;
+  .property-hero__title-main {
+    font-size: 5rem;
+    letter-spacing: 0.1em;
   }
 
   .property-hero__subtitle {
-    font-size: 1.8rem;
-    line-height: 1.5;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 1.6rem;
+    gap: 0.4rem;
+    letter-spacing: 0.12em;
   }
 
   .property-hero__stats {
-    grid-template-columns: 1fr; /* Один столбец */
+    grid-template-columns: 1fr;
     gap: 1.6rem;
     margin-top: 4rem;
     padding: 1.6rem;
@@ -507,7 +540,7 @@
   }
 
   .property-hero__stat::after {
-    display: none; /* Убираем все разделители */
+    display: none;
   }
 
   .property-hero__stat-label {
@@ -529,15 +562,19 @@
 
 /* Самые маленькие экраны (до 320px) */
 @media (max-width: 320px) {
-  .property-hero__title {
-    font-size: 3.8rem;
-  }
-  .property-hero-minititle {
+  .property-hero__title-script {
     font-size: 3rem;
-    margin-top: -3rem;
+    margin-bottom: -0.8rem;
   }
+
+  .property-hero__title-main {
+    font-size: 4rem;
+    letter-spacing: 0.08em;
+  }
+
   .property-hero__subtitle {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    letter-spacing: 0.08em;
   }
 }
 
@@ -545,7 +582,6 @@
 
 /* Начальное состояние (до анимации) */
 .property-hero__title,
-.property-hero-minititle,
 .property-hero__subtitle,
 .property-hero__stats {
   opacity: 0;
@@ -555,27 +591,20 @@
     transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* Класс, который мы добавим через JavaScript для запуска анимации */
 .hero-loaded .property-hero__title {
   opacity: 1;
   transform: translateY(0);
-  transition-delay: 0.2s; /* Задержка для заголовка */
-}
-
-.hero-loaded .property-hero-minititle {
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: 0.4s; /* Задержка для подзаголовка */
+  transition-delay: 0.2s;
 }
 
 .hero-loaded .property-hero__subtitle {
   opacity: 1;
   transform: translateY(0);
-  transition-delay: 0.6s; /* Задержка для описания */
+  transition-delay: 0.5s;
 }
 
 .hero-loaded .property-hero__stats {
   opacity: 1;
   transform: translateY(0);
-  transition-delay: 0.8s; /* Задержка для блока статистики */
+  transition-delay: 0.8s;
 }

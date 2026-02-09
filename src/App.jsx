@@ -34,18 +34,18 @@ function App() {
   const location = useLocation();
   const adviceSectionRef = useRef(null);
   const brochureSectionRef = useRef(null);
-  const SITE_URL = "https://passo-by-beyond.netlify.app";
+  const SITE_URL = "https://difc-zabeel.netlify.app";
   const canonicalUrl = `${SITE_URL}${location.pathname}`;
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "RealEstateAgent",
-    name: "Passo by Beyond",
+    name: "The Residences DIFC",
     url: SITE_URL,
     logo: `${SITE_URL}/icon.svg`,
     telephone: "+971 4 428 6151",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Al Salam Tecom Tower",
+      streetAddress: "Zabeel District, DIFC",
       addressLocality: "Dubai",
       addressCountry: "AE",
     },
@@ -79,15 +79,9 @@ function App() {
         <meta property="og:type" content="website" />
         <meta property="og:title" content={t("meta.title")} />
         <meta property="og:description" content={t("meta.description")} />
-        <meta
-          property="og:image"
-          content={`${SITE_URL}/og-image.jpg`}
-        />
-        <meta
-          property="og:url"
-          content={canonicalUrl}
-        />
-        <meta property="og:site_name" content="Passo by Beyond" />
+        <meta property="og:image" content={`${SITE_URL}/og-image.jpg`} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="The Residences DIFC" />
         <meta
           property="og:locale"
           content={lang === "ar" ? "ar_AE" : lang === "ru" ? "ru_RU" : "en_GB"}
@@ -97,10 +91,7 @@ function App() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={t("meta.title")} />
         <meta name="twitter:description" content={t("meta.description")} />
-        <meta
-          name="twitter:image"
-          content={`${SITE_URL}/og-image.jpg`}
-        />
+        <meta name="twitter:image" content={`${SITE_URL}/og-image.jpg`} />
         <script type="application/ld+json">
           {JSON.stringify(organizationSchema)}
         </script>

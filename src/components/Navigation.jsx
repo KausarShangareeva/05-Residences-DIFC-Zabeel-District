@@ -170,12 +170,19 @@ const Navigation = ({ onOpenConsultation }) => {
         <div className="header-top__container">
           {/* Logo */}
           <div className="header-top__logo">
-            <a href="/" className="header-logo__link">
+            <a href="/" className="header-logo__link" aria-label="The Residences">
               <img
-                src="/icon.svg"
-                alt="Passo by Beyond"
-                className="header-logo__img"
+                src="/favicon.svg"
+                alt="The Residences"
+                className="header-logo__favicon"
               />
+              <span className="header-logo__text">
+                <span className="header-logo__text-script">The</span>
+                <span className="header-logo__text-main">RESIDENCES</span>
+                <span className="header-logo__text-sub">
+                  DIFC Zabeel District
+                </span>
+              </span>
             </a>
           </div>
 

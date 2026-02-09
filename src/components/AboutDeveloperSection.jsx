@@ -26,12 +26,23 @@ const AboutDeveloperSection = ({ onOpenConsultation }) => {
           </div>
 
           <div className="about-developer-logo-card">
-            <img
-              src="/icon.svg"
-              alt="Beyond developer logo"
-              className="developer-logo"
-              loading="lazy"
-            />
+            <div className="about-developer-logo">
+              <img
+                src="/favicon.svg"
+                alt="The Residences"
+                className="about-developer-logo__favicon"
+                loading="lazy"
+              />
+              <div className="about-developer-logo__text">
+                <span className="about-developer-logo__text-script">The</span>
+                <span className="about-developer-logo__text-main">
+                  RESIDENCES
+                </span>
+                <span className="about-developer-logo__text-sub">
+                  DIFC Zabeel District
+                </span>
+              </div>
+            </div>
             <button
               className="interest-free-badge"
               onClick={onOpenConsultation}

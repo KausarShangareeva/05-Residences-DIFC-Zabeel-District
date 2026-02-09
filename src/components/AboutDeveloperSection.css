@@ -57,12 +57,52 @@
   min-width: 28rem;
 }
 
-.developer-logo {
-  width: 100%;
-  max-width: 15rem;
-  height: auto;
-  filter: var(--logo-filter-brand);
-  transition: filter 0.3s ease;
+.about-developer-logo {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  direction: ltr;
+  text-align: left;
+}
+
+.about-developer-logo__favicon {
+  width: 4.2rem;
+  height: 4.2rem;
+  display: block;
+  filter: none;
+}
+
+.about-developer-logo__text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+.about-developer-logo__text-script {
+  font-family: "Tangerine", "Eugusto", cursive;
+  font-size: 2.6rem;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  margin-bottom: -0.6rem;
+}
+
+.about-developer-logo__text-main {
+  font-family: "Cormorant Garamond", "Eugusto", serif;
+  font-size: 2.4rem;
+  letter-spacing: 0.28em;
+  font-weight: 500;
+}
+
+.about-developer-logo__text-sub {
+  font-family: "Montserrat", "Zain", sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.2em;
+  margin-top: 0.3rem;
+  text-transform: none;
+  color: var(--text-secondary);
 }
 
 .interest-free-badge {
@@ -100,7 +140,7 @@
   margin-left: calc(-50vw + 50%);
   height: 70rem;
   overflow: hidden;
-  background-image: url(https://metropolitan.realestate/wp-content/uploads/2024/02/bay-villas-01.jpg);
+  background-image: url(https://res.cloudinary.com/dxp7ppipg/image/upload/v1770632132/DIFC_Zabeel_District_Masterplan_Daytime_nfdpsd.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -196,8 +236,23 @@
     padding: 2.5rem 2rem;
   }
 
-  .developer-logo {
-    max-width: 10rem;
+  .about-developer-logo__favicon {
+    width: 3.6rem;
+    height: 3.6rem;
+  }
+
+  .about-developer-logo__text-script {
+    font-size: 2.2rem;
+  }
+
+  .about-developer-logo__text-main {
+    font-size: 2rem;
+    letter-spacing: 0.22em;
+  }
+
+  .about-developer-logo__text-sub {
+    font-size: 1rem;
+    letter-spacing: 0.16em;
   }
 
   .interest-free-badge {
@@ -283,8 +338,23 @@
     font-size: 1.2rem;
   }
 
-  .developer-logo {
-    max-width: 9rem;
+  .about-developer-logo__favicon {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+
+  .about-developer-logo__text-script {
+    font-size: 2rem;
+  }
+
+  .about-developer-logo__text-main {
+    font-size: 1.8rem;
+    letter-spacing: 0.18em;
+  }
+
+  .about-developer-logo__text-sub {
+    font-size: 0.9rem;
+    letter-spacing: 0.14em;
   }
 
   .about-developer-map {

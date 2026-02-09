@@ -466,7 +466,7 @@
   position: relative;
   background:
     linear-gradient(135deg, rgba(16, 18, 22, 0.75), rgba(16, 18, 22, 0.35)),
-    url("https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop")
+    url("https://res.cloudinary.com/dxp7ppipg/image/upload/v1770640507/ChatGPT_Image_Feb_9_2026_01_34_40_PM_hxy39a.png")
       center/cover no-repeat;
   overflow: hidden;
   box-shadow: var(--shadow-md);
@@ -474,6 +474,39 @@
   min-height: 60rem;
   display: flex;
   align-items: flex-end;
+}
+
+.advice-visual::before,
+.advice-visual::after {
+  content: "";
+  position: absolute;
+  top: -10%;
+  bottom: -10%;
+  width: 32%;
+  pointer-events: none;
+  opacity: 0.65;
+  filter: blur(34px);
+  z-index: 1;
+}
+
+.advice-visual::before {
+  left: -18%;
+  background: radial-gradient(
+    circle at 30% 50%,
+    rgba(222, 76, 72, 0.7),
+    rgba(222, 76, 72, 0.15) 45%,
+    transparent 70%
+  );
+}
+
+.advice-visual::after {
+  right: -18%;
+  background: radial-gradient(
+    circle at 70% 50%,
+    rgba(222, 76, 72, 0.65),
+    rgba(222, 76, 72, 0.12) 45%,
+    transparent 70%
+  );
 }
 
 @keyframes fadeInRight {
@@ -495,13 +528,64 @@
   width: 100%;
 }
 
+.visual-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.2rem;
+  margin-bottom: 2.8rem;
+  direction: ltr;
+  text-align: left;
+}
+
+.visual-brand__logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.visual-brand__script {
+  font-family: "Tangerine", "Eugusto", cursive;
+  font-size: 4rem;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  margin-bottom: -0.6rem;
+}
+
+.visual-brand__main {
+  font-family: "Cormorant Garamond", "Eugusto", serif;
+  font-size: 4.2rem;
+  letter-spacing: 0.22em;
+  font-weight: 500;
+}
+
+.visual-brand__sub {
+  font-family: "Montserrat", "Zain", sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.2em;
+  margin-top: 0.4rem;
+  text-transform: none;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.visual-brand__soon {
+  font-family: "Montserrat", "Zain", sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+}
+
 .quote-mark {
   font-size: 12rem;
   font-weight: 700;
   line-height: 1;
   opacity: 0.3;
   position: absolute;
-  top: 2rem;
+  top: 9.5rem;
   right: 3rem;
   font-family: Georgia, serif;
 }
@@ -528,6 +612,8 @@
   letter-spacing: 0.1rem;
   color: white;
   cursor: pointer;
+  direction: ltr;
+  text-align: left;
 }
 
 /* Responsive design */
@@ -576,6 +662,24 @@
     padding: 3rem;
   }
 
+  .visual-brand__script {
+    font-size: 3.2rem;
+  }
+
+  .visual-brand__main {
+    font-size: 3.4rem;
+    letter-spacing: 0.18em;
+  }
+
+  .visual-brand__sub {
+    font-size: 1.2rem;
+  }
+
+  .visual-brand__soon {
+    font-size: 1.2rem;
+    letter-spacing: 0.3em;
+  }
+
   .testimonial-text {
     font-size: 1.6rem;
     max-width: 100%;
@@ -583,7 +687,7 @@
 
   .quote-mark {
     font-size: 8rem;
-    top: 1rem;
+    top: 7.5rem;
     right: 2rem;
   }
 
@@ -636,6 +740,24 @@
 
   .visual-content {
     padding: 2.5rem;
+  }
+
+  .visual-brand__script {
+    font-size: 2.8rem;
+  }
+
+  .visual-brand__main {
+    font-size: 3rem;
+    letter-spacing: 0.14em;
+  }
+
+  .visual-brand__sub {
+    font-size: 1.1rem;
+  }
+
+  .visual-brand__soon {
+    font-size: 1.1rem;
+    letter-spacing: 0.26em;
   }
 
   .testimonial-text {

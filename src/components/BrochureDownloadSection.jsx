@@ -456,7 +456,7 @@ const BrochureDownloadSection = forwardRef((props, ref) => {
           <div className="brochure-visual">
             <div className="brochure-preview">
               <img
-                src="https://res.cloudinary.com/dxp7ppipg/image/upload/v1770376408/ChatGPT_Image_Feb_6_2026_12_13_21_PM_dcwajt.png"
+                src="https://res.cloudinary.com/dxp7ppipg/image/upload/v1770640508/ChatGPT_Image_Feb_9_2026_01_34_48_PM_tab22z.png"
                 alt="Passo by Beyond Palm Jumeirah brochure preview"
                 className="brochure-image"
                 loading="lazy"

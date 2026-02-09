@@ -55,12 +55,12 @@ const PropertyHero = ({ onOpenBrochure, onOpenConsultation }) => {
       {/* Hero Image */}
       <div className="property-hero__image-container">
         <img
-          src="https://res.cloudinary.com/dxp7ppipg/image/upload/w_1600,q_auto:good,f_auto,dpr_auto/v1770374815/beyond-passo-palm-jumeirah_upscayl_1x_upscayl-lite-4x_bfjx95.png"
+          src="https://res.cloudinary.com/dxp7ppipg/image/upload/v1770632125/POOL_hthava.jpg"
           srcSet="
-            https://res.cloudinary.com/dxp7ppipg/image/upload/w_768,q_auto:good,f_auto,dpr_auto/v1770374815/beyond-passo-palm-jumeirah_upscayl_1x_upscayl-lite-4x_bfjx95.png 768w,
-            https://res.cloudinary.com/dxp7ppipg/image/upload/w_1200,q_auto:good,f_auto,dpr_auto/v1770374815/beyond-passo-palm-jumeirah_upscayl_1x_upscayl-lite-4x_bfjx95.png 1200w,
-            https://res.cloudinary.com/dxp7ppipg/image/upload/w_1600,q_auto:good,f_auto,dpr_auto/v1770374815/beyond-passo-palm-jumeirah_upscayl_1x_upscayl-lite-4x_bfjx95.png 1600w,
-            https://res.cloudinary.com/dxp7ppipg/image/upload/w_1920,q_auto:good,f_auto,dpr_auto/v1770374815/beyond-passo-palm-jumeirah_upscayl_1x_upscayl-lite-4x_bfjx95.png 1920w
+            https://res.cloudinary.com/dxp7ppipg/image/upload/v1770632125/POOL_hthava.jpg 768w,
+            https://res.cloudinary.com/dxp7ppipg/image/upload/v1770632125/POOL_hthava.jpg 1200w,
+            https://res.cloudinary.com/dxp7ppipg/image/upload/v1770632125/POOL_hthava.jpg 1600w,
+            https://res.cloudinary.com/dxp7ppipg/image/upload/v1770632125/POOL_hthava.jpg 1920w
           "
           sizes="(max-width: 1024px) 100vw, 100vw"
           alt={t("propertyHero.altAerial")}
@@ -74,17 +74,22 @@ const PropertyHero = ({ onOpenBrochure, onOpenConsultation }) => {
         <div className="property-hero__center">
           <h1
             className="property-hero__title"
-            aria-label={t("propertyHero.title")}
+            aria-label={`${t("propertyHero.titleScript")} ${t("propertyHero.titleMain")}`}
           >
-            <img
-              src="/icon.svg"
-              alt={t("propertyHero.title")}
-              className="property-hero__title-logo"
-            />
+            <span className="property-hero__title-script">
+              {t("propertyHero.titleScript")}
+            </span>
+            <span className="property-hero__title-main">
+              {t("propertyHero.titleMain")}
+            </span>
           </h1>
-          <p className="property-hero-minititle">by Beyond</p>
           <p className="property-hero__subtitle">
-            {t("propertyHero.subtitle")}
+            <span className="property-hero__subtitle-lead">
+              {t("propertyHero.subtitleLead")}
+            </span>
+            <span className="property-hero__subtitle-trail">
+              {t("propertyHero.subtitleTrail")}
+            </span>
           </p>
           <div className="property-hero__stats">
             <div className="property-hero__stat">

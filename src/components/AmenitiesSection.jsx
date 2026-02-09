@@ -1,17 +1,20 @@
 import React from "react";
 import {
   FileDown,
+  Landmark,
+  Building2,
+  Trees,
+  ShoppingBag,
+  Users,
   Waves,
   Droplets,
-  BookOpen,
-  Music,
-  Baby,
   Dumbbell,
-  TreePalm,
-  BellRing,
-  PlugZap,
-  Smartphone,
+  Swords,
   Star,
+  Sparkles,
+  Armchair,
+  Laptop,
+  TreePalm,
 } from "lucide-react";
 import "./AmenitiesSection.css";
 import { useLanguage } from "../i18n/LanguageContext";
@@ -44,8 +47,8 @@ const AmenitiesSection = ({ onOpenBrochure }) => {
             </p>
             <div className="amenity-image-wrapper">
               <img
-                src="https://metropolitan.realestate/wp-content/uploads/2024/02/Bay-Villas-1-768x433.jpg"
-                alt="Passo by Beyond private beach Palm Jumeirah"
+                src="https://res.cloudinary.com/dxp7ppipg/image/upload/v1770632130/DIFC_Zabeel_District_Residential_l5ewif.jpg"
+                alt="The Residences DIFC green walkways"
                 className="amenity-image"
                 loading="lazy"
               />
@@ -65,8 +68,8 @@ const AmenitiesSection = ({ onOpenBrochure }) => {
             </p>
             <div className="amenity-image-wrapper">
               <img
-                src="https://metropolitan.realestate/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2024/02/Bay-Villas-2-768x433.jpg.webp"
-                alt="Passo by Beyond wellness and pool area"
+                src="https://res.cloudinary.com/dxp7ppipg/image/upload/v1770632125/POOL_hthava.jpg"
+                alt="The Residences DIFC pool and leisure"
                 className="amenity-image"
                 loading="lazy"
               />
@@ -77,44 +80,56 @@ const AmenitiesSection = ({ onOpenBrochure }) => {
         {/* Tags Section */}
         <div className="amenity-tags">
           <div className="tag">
+            <Landmark size={18} className="tag-icon" />
+            <span className="tag-text">{t("amenities.tags.views")}</span>
+          </div>
+          <div className="tag">
+            <Building2 size={18} className="tag-icon" />
+            <span className="tag-text">{t("amenities.tags.architecture")}</span>
+          </div>
+          <div className="tag">
+            <Trees size={18} className="tag-icon" />
+            <span className="tag-text">{t("amenities.tags.greenLoop")}</span>
+          </div>
+          <div className="tag">
+            <ShoppingBag size={18} className="tag-icon" />
+            <span className="tag-text">{t("amenities.tags.retail")}</span>
+          </div>
+          <div className="tag">
+            <Users size={18} className="tag-icon" />
+            <span className="tag-text">{t("amenities.tags.social")}</span>
+          </div>
+          <div className="tag">
             <Waves size={18} className="tag-icon" />
-            <span className="tag-text">{t("amenities.tags.skyPool")}</span>
+            <span className="tag-text">{t("amenities.tags.pool")}</span>
           </div>
           <div className="tag">
             <Droplets size={18} className="tag-icon" />
-            <span className="tag-text">{t("amenities.tags.cascadingPools")}</span>
-          </div>
-          <div className="tag">
-            <BookOpen size={18} className="tag-icon" />
-            <span className="tag-text">{t("amenities.tags.socialClub")}</span>
-          </div>
-          <div className="tag">
-            <Music size={18} className="tag-icon" />
-            <span className="tag-text">{t("amenities.tags.pianoCafe")}</span>
-          </div>
-          <div className="tag">
-            <Baby size={18} className="tag-icon" />
-            <span className="tag-text">{t("amenities.tags.kidsClub")}</span>
+            <span className="tag-text">{t("amenities.tags.familyPool")}</span>
           </div>
           <div className="tag">
             <Dumbbell size={18} className="tag-icon" />
-            <span className="tag-text">{t("amenities.tags.fitness")}</span>
+            <span className="tag-text">{t("amenities.tags.clubhouse")}</span>
           </div>
           <div className="tag">
-            <TreePalm size={18} className="tag-icon" />
-            <span className="tag-text">{t("amenities.tags.wellness")}</span>
+            <Swords size={18} className="tag-icon" />
+            <span className="tag-text">{t("amenities.tags.courts")}</span>
           </div>
           <div className="tag">
-            <BellRing size={18} className="tag-icon" />
-            <span className="tag-text">{t("amenities.tags.concierge")}</span>
+            <Star size={18} className="tag-icon" />
+            <span className="tag-text">{t("amenities.tags.arrival")}</span>
           </div>
           <div className="tag">
-            <PlugZap size={18} className="tag-icon" />
-            <span className="tag-text">{t("amenities.tags.evCharging")}</span>
+            <Sparkles size={18} className="tag-icon" />
+            <span className="tag-text">{t("amenities.tags.waterFeatures")}</span>
           </div>
           <div className="tag">
-            <Smartphone size={18} className="tag-icon" />
-            <span className="tag-text">{t("amenities.tags.smartHome")}</span>
+            <Armchair size={18} className="tag-icon" />
+            <span className="tag-text">{t("amenities.tags.lobby")}</span>
+          </div>
+          <div className="tag">
+            <Laptop size={18} className="tag-icon" />
+            <span className="tag-text">{t("amenities.tags.coworking")}</span>
           </div>
         </div>
 

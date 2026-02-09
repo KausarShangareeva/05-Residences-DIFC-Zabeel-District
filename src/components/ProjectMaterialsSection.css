@@ -330,12 +330,9 @@
 
 /* Эффект «каталог под стеклом» */
 .material-card {
-  transition:
-    transform 0.9s ease,
-    box-shadow 0.9s ease;
+  transition: transform 0.9s ease;
 }
 
 .material-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 36px 72px rgba(0, 0, 0, 0.12);
 }
