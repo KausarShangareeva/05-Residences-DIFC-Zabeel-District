@@ -21,7 +21,7 @@ const FloorPlansSection = ({ onOpenBrochure, onOpenConsultation }) => {
   return (
     <section
       id="floor-plans"
-      className="floor-plans-section"
+      className="floor-plans-section reveal-on-scroll"
       dir={lang === "ar" ? "rtl" : "ltr"}
     >
       <div className="floor-plans-container">

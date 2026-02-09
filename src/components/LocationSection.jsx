@@ -19,7 +19,7 @@ const LocationSection = ({ onOpenBrochure }) => {
   return (
     <div
       id="location"
-      className="location-section"
+      className="location-section reveal-on-scroll"
       dir={lang === "ar" ? "rtl" : "ltr"}
     >
       <div className="location-content">

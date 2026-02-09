@@ -170,7 +170,11 @@ const Navigation = ({ onOpenConsultation }) => {
         <div className="header-top__container">
           {/* Logo */}
           <div className="header-top__logo">
-            <a href="/" className="header-logo__link" aria-label="The Residences">
+            <a
+              href="/"
+              className="header-logo__link"
+              aria-label="The Residences"
+            >
               <img
                 src="/favicon.svg"
                 alt="The Residences"
@@ -190,7 +194,7 @@ const Navigation = ({ onOpenConsultation }) => {
           <div className="header-top__actions">
             <div className="header-actions__phone">
               <a
-                href="https://api.whatsapp.com/send/?phone=97144286151&text=Hello%21+I+am+interested+in+Passo+by+Beyond&type=phone_number&app_absent=0"
+                href="https://api.whatsapp.com/send/?phone=971567715771&text=Hello%21+I+am+interested+in+The+Residences+DIFC+Zabeel+District&type=phone_number&app_absent=0"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -465,7 +469,7 @@ const Navigation = ({ onOpenConsultation }) => {
                 <span>{t("navigation.contacts")}</span>
               </div>
               <a
-                href="https://api.whatsapp.com/send/?phone=97144286151&text=Hello%21+I+am+interested+in+Passo+by+Beyond&type=phone_number&app_absent=0"
+                href="https://api.whatsapp.com/send/?phone=971567715771&text=Hello%21+I+am+interested+in+The+Residences+DIFC+Zabeel+District&type=phone_number&app_absent=0"
                 target="_blank"
                 rel="noreferrer"
                 className="header-menu__phone"

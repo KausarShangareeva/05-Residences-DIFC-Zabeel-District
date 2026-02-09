@@ -21,7 +21,11 @@ const AboutProject = () => {
   };
 
   return (
-    <section id="about" className="about-project" dir={lang === "ar" ? "rtl" : "ltr"}>
+    <section
+      id="about"
+      className="about-project reveal-on-scroll"
+      dir={lang === "ar" ? "rtl" : "ltr"}
+    >
       <div className="about-project__container">
         <div className="about-project__content">
           <h2 className="about-project__title">

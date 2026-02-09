@@ -2,7 +2,7 @@ import "./App.css";
 
 //STYLES
 import { GlobalStyles } from "./styles/GlobalStyles";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { useLanguage } from "./i18n/LanguageContext";
@@ -62,6 +62,32 @@ function App() {
       brochureSectionRef.current.openPopup();
     }
   };
+
+  useEffect(() => {
+    const elements = document.querySelectorAll(".reveal-on-scroll");
+    if (!elements.length) return;
+
+    if (!("IntersectionObserver" in window)) {
+      elements.forEach((el) => el.classList.add("is-visible"));
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            obs.unobserve(entry.target);
+          }
+        });
+      },
+      { root: null, threshold: 0.2, rootMargin: "0px 0px -10% 0px" },
+    );
+
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, [location.pathname]);
 
   return (
     <div className="App">

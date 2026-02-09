@@ -8,7 +8,7 @@ const AboutDeveloperSection = ({ onOpenConsultation }) => {
   return (
     <section
       id="developer"
-      className="about-developer-section"
+      className="about-developer-section reveal-on-scroll"
       dir={lang === "ar" ? "rtl" : "ltr"}
     >
       <div className="about-developer-container">
@@ -58,18 +58,6 @@ const AboutDeveloperSection = ({ onOpenConsultation }) => {
 
       <div className="about-developer-map">
         <div className="master-plan-container">
-          <button className="master-plan-badge">
-            <span>{t("developer.masterPlan")}</span>
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path
-                d="M12 6L8 10L4 6"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </button>
         </div>
       </div>
     </section>

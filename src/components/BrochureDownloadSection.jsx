@@ -212,7 +212,8 @@ const BrochureDownloadSection = forwardRef((props, ref) => {
     setSubmitStatus(null);
   };
 
-  const pdfUrl = "/brochures/Passo-by-Beyond.pdf";
+  const pdfUrl =
+    "/brochures/The-Residences-by-DIFC-Masterplan-Presentation-Updated.pdf";
 
   const handlePdfOpen = () => {
     window.open(pdfUrl, "_blank", "noopener,noreferrer");
@@ -222,7 +223,7 @@ const BrochureDownloadSection = forwardRef((props, ref) => {
   const brochureMessages = {
     en: [
       "Hi! 😊",
-      "Thanks for reaching out and showing interest in Passo by Beyond.",
+      "Thanks for reaching out and showing interest in Residences DIFC Zabeel District, Dubai.",
       "",
       "Here is the brochure with all the key details:",
       pdfUrl,
@@ -231,7 +232,7 @@ const BrochureDownloadSection = forwardRef((props, ref) => {
     ],
     ru: [
       "Здравствуйте! 😊",
-      "Спасибо за ваш интерес к проекту Passo by Beyond.",
+      "Спасибо за ваш интерес к проекту Residences DIFC Zabeel District.",
       "",
       "По ссылке ниже вы можете скачать официальную брошюру с планировками, ценами и подробной информацией:",
       pdfUrl,
@@ -240,7 +241,7 @@ const BrochureDownloadSection = forwardRef((props, ref) => {
     ],
     ar: [
       "😊 مرحبًا!",
-      "شكرًا لاهتمامك بمشروع Passo by Beyond.",
+      "شكرًا لاهتمامك بمشروع Residences DIFC Zabeel District, Dubai.",
       "",
       "يمكنك تحميل الكتيّب الرسمي من الرابط أدناه:",
       pdfUrl,
@@ -324,7 +325,10 @@ const BrochureDownloadSection = forwardRef((props, ref) => {
   );
 
   return (
-    <section className="brochure-section" dir={lang === "ar" ? "rtl" : "ltr"}>
+    <section
+      className="brochure-section reveal-on-scroll"
+      dir={lang === "ar" ? "rtl" : "ltr"}
+    >
       <div className="brochure-container">
         <div className="brochure-content">
           <div className="brochure-form-wrapper">
@@ -457,7 +461,7 @@ const BrochureDownloadSection = forwardRef((props, ref) => {
             <div className="brochure-preview">
               <img
                 src="https://res.cloudinary.com/dxp7ppipg/image/upload/v1770640508/ChatGPT_Image_Feb_9_2026_01_34_48_PM_tab22z.png"
-                alt="Passo by Beyond Palm Jumeirah brochure preview"
+                alt="The Residences DIFC Zabeel District, Dubai brochure preview"
                 className="brochure-image"
                 loading="lazy"
               />

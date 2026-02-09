@@ -273,7 +273,10 @@ const AdviceSection = forwardRef((props, ref) => {
   );
 
   return (
-    <section className="advice-section" dir={lang === "ar" ? "rtl" : "ltr"}>
+    <section
+      className="advice-section reveal-on-scroll"
+      dir={lang === "ar" ? "rtl" : "ltr"}
+    >
       <div className="advice-container">
         <div className="advice-content">
           <div className="advice-form-wrapper">
@@ -408,7 +411,7 @@ const AdviceSection = forwardRef((props, ref) => {
               <p className="testimonial-text">{t("advice.testimonial")}</p>
               <div className="contact-phone">
                 <a
-                  href="https://api.whatsapp.com/send/?phone=97144286151&text=Hello%21+I+am+interested+in+Passo+by+Beyond&type=phone_number&app_absent=0"
+                  href="https://api.whatsapp.com/send/?phone=971567715771&text=Hello%21+I+am+interested+in+The+Residences+DIFC+Zabeel+District&type=phone_number&app_absent=0"
                   target="_blank"
                   rel="noreferrer"
                 >

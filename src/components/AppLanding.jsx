@@ -6,7 +6,10 @@ const AppLanding = () => {
   const { lang, t } = useLanguage();
 
   return (
-    <div className="app-landing" dir={lang === "ar" ? "rtl" : "ltr"}>
+    <div
+      className="app-landing reveal-on-scroll"
+      dir={lang === "ar" ? "rtl" : "ltr"}
+    >
       <div className="content-wrapper">
         <div className="text-section">
           <h2 className="main-title">
@@ -37,7 +40,7 @@ const AppLanding = () => {
               </a>
 
               <a
-                href="https://api.whatsapp.com/send/?phone=971567715771&text=Hello%21+I+am+interested+in+Passo+by+Beyond&type=phone_number&app_absent=0"
+                href="https://api.whatsapp.com/send/?phone=971567715771&text=Hello%21+I+am+interested+in+The+Residences+DIFC+Zabeel+District&type=phone_number&app_absent=0"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="store-button whatsapp-button"
@@ -53,7 +56,7 @@ const AppLanding = () => {
               </a>
 
               <a
-                href="/brochures/Passo-by-Beyond.pdf"
+                href="/brochures/The-Residences-by-DIFC-Masterplan-Presentation-Updated.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="store-button catalog-button"

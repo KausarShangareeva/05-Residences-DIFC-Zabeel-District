@@ -1,7 +1,15 @@
 const API_URL =
-  import.meta.env.VITE_API_URL || "https://zero4-passo-by-beyond.onrender.com";
+  import.meta.env.VITE_API_URL ||
+  "https://zero5-residences-difc-zabeel-district.onrender.com";
 
-export async function submitLead({ fullName, email, phone, message, source, contactMethod }) {
+export async function submitLead({
+  fullName,
+  email,
+  phone,
+  message,
+  source,
+  contactMethod,
+}) {
   try {
     const response = await fetch(`${API_URL}/api/leads`, {
       method: "POST",

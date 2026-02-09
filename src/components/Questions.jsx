@@ -21,7 +21,11 @@ const Questions = () => {
   };
 
   return (
-    <div id="faq" className="faq-container" dir={lang === "ar" ? "rtl" : "ltr"}>
+    <div
+      id="faq"
+      className="faq-container reveal-on-scroll"
+      dir={lang === "ar" ? "rtl" : "ltr"}
+    >
       <SchemaMarkup schemaData={buildFaqSchema(faqData)} />
       <h2 className="faq-title">
         <span className="text-accent">{t("faq.title")}</span>

@@ -17,20 +17,21 @@ export default function LinksPage() {
   }, [lang, setLang]);
 
   const whatsappUrl =
-    "https://api.whatsapp.com/send/?phone=971567715771&text=Hello%21+I+am+interested+in+Passo+by+Beyond&type=phone_number&app_absent=0";
+    "https://api.whatsapp.com/send/?phone=971567715771&text=Hello%21+I+am+interested+in+The+Residences+DIFC+Zabeel+District&type=phone_number&app_absent=0";
   const telegramUrl = "https://t.me/iammmhmd";
   const phoneNumber = "+971 56 771 5771";
-  const catalogUrl = "/brochures/Passo-by-Beyond.pdf";
+  const catalogUrl =
+    "/brochures/The-Residences-by-DIFC-Masterplan-Presentation-Updated.pdf";
 
   return (
     <div className="links-page">
       <div className="links-container">
         <div className="links-logo">
-          <img src="/icon.svg" alt="Passo by Beyond" />
+          <img src="/icon.svg" alt="The Residences DIFC Zabeel District" />
         </div>
 
         <h1 className="links-title">
-          {t("links.title") || "Passo by Beyond"}
+          {t("links.title") || "The Residences DIFC Zabeel District"}
         </h1>
         <p className="links-subtitle">
           {t("links.subtitle") || "Get in touch with us"}
@@ -73,7 +74,7 @@ export default function LinksPage() {
 
           <a
             href={catalogUrl}
-            download="Passo-by-Beyond-Brochure.pdf"
+            download="The-Residences-by-DIFC-Masterplan-Presentation-Updated.pdf"
             className="links-btn links-btn--catalog"
           >
             <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">

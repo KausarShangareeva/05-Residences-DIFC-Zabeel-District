@@ -71,7 +71,7 @@ const PropertyGallery = () => {
   return (
     <div
       id="gallery"
-      className="property-gallery"
+      className="property-gallery reveal-on-scroll"
       dir={lang === "ar" ? "rtl" : "ltr"}
     >
       <div className="gallery-grid">
@@ -79,7 +79,7 @@ const PropertyGallery = () => {
         <div className="gallery-main" onClick={() => openLightbox(0)}>
           <img
             src={images[0]}
-            alt="Passo by Beyond Palm Jumeirah waterfront view"
+            alt="DIFC Zabeel District, Dubai Palm Jumeirah waterfront view"
             loading="lazy"
           />
         </div>
@@ -89,14 +89,14 @@ const PropertyGallery = () => {
           <div className="gallery-item" onClick={() => openLightbox(1)}>
             <img
               src={images[1]}
-              alt="Passo by Beyond luxury pool area"
+              alt="DIFC Zabeel District, Dubai luxury pool area"
               loading="lazy"
             />
           </div>
           <div className="gallery-item" onClick={() => openLightbox(2)}>
             <img
               src={images[2]}
-              alt="Passo by Beyond modern interior design"
+              alt="DIFC Zabeel District, Dubai modern interior design"
               loading="lazy"
             />
           </div>
@@ -107,7 +107,7 @@ const PropertyGallery = () => {
           <div className="gallery-item" onClick={() => openLightbox(3)}>
             <img
               src={images[3]}
-              alt="Passo by Beyond residence entrance"
+              alt="DIFC Zabeel District, Dubai residence entrance"
               loading="lazy"
             />
           </div>
@@ -117,7 +117,7 @@ const PropertyGallery = () => {
           >
             <img
               src={images[4]}
-              alt="Passo by Beyond exterior architecture"
+              alt="DIFC Zabeel District, Dubai exterior architecture"
               loading="lazy"
             />
             <div className="gallery-overlay">
@@ -173,7 +173,7 @@ const PropertyGallery = () => {
           >
             <img
               src={images[currentImageIndex]}
-              alt={`Passo by Beyond ${currentImageIndex + 1}`}
+              alt={`DIFC Zabeel District, Dubai ${currentImageIndex + 1}`}
             />
             <div className="lightbox-counter">
               {currentImageIndex + 1} / {images.length}

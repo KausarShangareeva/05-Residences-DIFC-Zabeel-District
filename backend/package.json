@@ -1,7 +1,7 @@
 {
-  "name": "nakheel-backend",
+  "name": "residences-backend",
   "version": "1.0.0",
-  "description": "Backend API for Nakheel landing page",
+  "description": "Backend API for Residences DIFC Zabeel District landing page",
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",

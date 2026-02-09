@@ -57,7 +57,10 @@ const Footer = () => {
   };
 
   return (
-    <footer className="footer" dir={lang === "ar" ? "rtl" : "ltr"}>
+    <footer
+      className="footer reveal-on-scroll"
+      dir={lang === "ar" ? "rtl" : "ltr"}
+    >
       <div className="footer-container">
         <div className="footer-content">
           {/* Left Section - Logo and Address */}

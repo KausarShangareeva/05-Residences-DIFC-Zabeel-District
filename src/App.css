@@ -2,3 +2,18 @@
   width: 100%;
   overflow-x: hidden;
 }
+
+.reveal-on-scroll * {
+  animation-play-state: paused !important;
+}
+
+.reveal-on-scroll.is-visible * {
+  animation-play-state: running !important;
+}
+
+.popup-overlay,
+.popup-modal,
+.delivery-overlay,
+.delivery-modal {
+  animation-play-state: running !important;
+}

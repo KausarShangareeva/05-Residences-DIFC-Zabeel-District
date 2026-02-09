@@ -24,7 +24,7 @@ const AmenitiesSection = ({ onOpenBrochure }) => {
   return (
     <section
       id="amenities"
-      className="amenities-section"
+      className="amenities-section reveal-on-scroll"
       dir={lang === "ar" ? "rtl" : "ltr"}
     >
       <div className="amenities-container">

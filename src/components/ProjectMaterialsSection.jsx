@@ -63,7 +63,7 @@ const ProjectMaterialsSection = ({ onOpenBrochure }) => {
   return (
     <section
       id="materials"
-      className="project-materials-section"
+      className="project-materials-section reveal-on-scroll"
       dir={lang === "ar" ? "rtl" : "ltr"}
     >
       <div className="project-materials-container">

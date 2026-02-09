@@ -1,59 +1,63 @@
 const fallbackFaqData = [
   {
-    question: "Who is the developer of Passo by Beyond?",
+    question: "Who is the developer of The Residences DIFC Zabeel District?",
     answer:
-      "Passo is developed by Beyond, a premium Dubai-based developer known for delivering luxury waterfront residences with exceptional design, quality craftsmanship, and resort-style living experiences on Palm Jumeirah.",
+      "The Residences DIFC is a landmark project developed directly by DIFC (Dubai International Financial Centre), the government-backed entity governing the region's leading financial hub. This ensures the highest standards of construction, regulatory compliance, and long-term value preservation for investors.",
     isOpen: true,
   },
   {
-    question: "Where is Passo by Beyond located?",
+    question: "Where exactly is The Residences DIFC Zabeel District located?",
     answer:
-      "Passo by Beyond is located on Palm Jumeirah, Dubai's iconic man-made island and one of the world's most prestigious waterfront addresses. The development offers direct beach access, stunning Arabian Gulf views, and is just minutes from Dubai Marina, JBR, and major business districts.",
+      "The project is located in the newly announced Zabeel District, an elite expansion of the Dubai International Financial Centre (DIFC). It sits at the intersection of Dubai's financial core and the lush Zabeel area, offering direct access to Zabeel Boulevard and seamless connectivity to Sheikh Zayed Road and Downtown Dubai.",
   },
   {
-    question: "What types of properties are available in Passo by Beyond?",
+    question: "What makes The Residences DIFC a unique investment opportunity?",
     answer:
-      "Passo by Beyond offers a curated selection of luxury villas and townhouses with spacious layouts, premium finishes, private gardens, and resort-style amenities. The properties feature modern coastal architecture with floor-to-ceiling windows and high-end specifications throughout.",
+      "It is the first-ever residential project within the visionary DIFC Zabeel District (DIFC 2.0). With a $27 billion expansion plan for the district, early investors benefit from limited supply in a high-demand corporate zone, projected rental yields of 6-8%, and significant capital appreciation as the financial hub doubles in size.",
   },
   {
-    question: "When will the construction of Passo by Beyond be completed?",
+    question: "What types of apartments are available in The Residences DIFC?",
     answer:
-      "The expected handover date for Passo by Beyond is Q4 2028. The exact completion date may be confirmed by the developer and depends on construction progress. Beyond has a strong track record of delivering landmark projects on schedule.",
+      "The development offers a premium collection of luxury 1, 2, 3, and 4-bedroom apartments, as well as exclusive 3BR and 4BR duplex penthouses. Each unit features generous surface areas (starting from 846 sq.ft for 1BR), fully equipped kitchens, and high-end finishes reflecting the prestige of the DIFC brand.",
   },
   {
-    question: "What payment plans are available for Passo by Beyond?",
+    question:
+      "What are the starting prices for The Residences DIFC Zabeel District?",
     answer:
-      "Beyond offers a flexible payment plan for Passo. The typical structure includes a down payment at booking, installments during construction, and a final payment upon handover. This construction-linked payment plan makes ownership more accessible. Contact us for the latest payment plan details.",
+      "Starting prices for 1-bedroom apartments begin at approximately AED 2,600,000. Prices vary based on unit type, floor level, and view. Given the prime location and government-backed developer status, these residences represent a high-value asset in Dubai's luxury real estate market.",
   },
   {
-    question: "How much do properties in Passo by Beyond cost?",
+    question: "What is the payment plan for The Residences DIFC?",
     answer:
-      "Prices for Passo by Beyond vary depending on property type and size. Contact our team for the latest pricing and availability. Palm Jumeirah properties are positioned as premium luxury offerings with strong value appreciation potential.",
+      "The project offers an attractive 70/30 payment plan: 20% down payment (+4% DLD fee) at the time of booking, 50% during the construction phase, and the final 30% upon completion in Q4 2029. The final installment can be financed through local banks for both residents and non-residents.",
   },
   {
-    question: "Can a foreigner buy property in Passo by Beyond?",
+    question: "When is the expected handover date for The Residences DIFC?",
     answer:
-      "Yes, Passo by Beyond is freehold property open to all nationalities under Dubai's freehold property regulations. Foreign nationals can purchase and fully own properties in this development without restriction. Palm Jumeirah is a designated freehold area where foreigners are permitted to buy, own, and sell property freely.",
+      "The anticipated completion and handover date for The Residences DIFC Zabeel District is scheduled for the fourth quarter (Q4) of 2029. This timeline aligns with the broader infrastructure development of the DIFC 2.0 expansion.",
   },
   {
-    question: "Can I obtain residency status if I buy property in Passo by Beyond?",
+    question:
+      "What amenities are available to residents of The Residences DIFC?",
     answer:
-      "Yes, purchasing property in Passo by Beyond can qualify you for UAE residency visas. For properties worth AED 750,000+, you can obtain a 2-year renewable investor visa. For investments of AED 2 million+, you qualify for a 10-year Golden Visa. The property must be in your name with a title deed, and you can sponsor your spouse and children.",
+      "Residents enjoy world-class facilities including adult and children's swimming pools, a state-of-the-art fitness center, sports fields, children's play areas, a clubhouse, a dedicated games room, BBQ zones, and 24/7 concierge and security services, all designed to cater to a high-flying professional lifestyle.",
   },
   {
-    question: "What visa can I get if I buy property in Passo by Beyond?",
+    question: "Is The Residences DIFC a freehold property for foreigners?",
     answer:
-      "Based on your investment level, you can obtain: (1) 2-Year Investor Visa for properties worth AED 750,000+ - renewable every 2 years, allows family sponsorship; (2) 10-Year Golden Visa for properties worth AED 2 million+ - long-term residency with no minimum stay requirement, includes family sponsorship and extended travel flexibility.",
+      "Yes, The Residences DIFC is located in a designated freehold area. Foreign investors and expats of all nationalities can own property here with 100% ownership rights, making it an ideal choice for international investors looking for a secure asset in Dubai.",
   },
   {
-    question: "Are properties in Passo by Beyond a good investment?",
+    question:
+      "Can I get a UAE Golden Visa by investing in The Residences DIFC?",
     answer:
-      "Yes, Passo by Beyond presents strong investment potential due to several factors: (1) Prime Palm Jumeirah location with limited supply, (2) Premium quality by Beyond developer, (3) High rental demand for luxury beachfront properties, (4) Strong historical appreciation on Palm Jumeirah, (5) Resort-style amenities and private beach access, (6) Excellent connectivity to major Dubai hubs.",
+      "Absolutely. Since the starting prices exceed AED 2,000,000, purchasing a property in The Residences DIFC qualifies you for the 10-year UAE Golden Visa. This provides long-term residency for the investor and their family, along with numerous benefits like the Esaad privilege card.",
   },
   {
-    question: "Will Passo by Beyond be a good place to live in Dubai?",
+    question:
+      "How will the DIFC 2.0 expansion affect property values in Zabeel District?",
     answer:
-      "Passo by Beyond offers exceptional quality of life combining island tranquility with urban convenience. Residents enjoy private beach access, sky pools, cascading pools, wellness facilities, a piano cafe, kids club, fitness center, smart home technology, EV charging, and 24/7 concierge services. Located on Palm Jumeirah, it provides the perfect balance of luxury beachfront living and connectivity to Dubai's key destinations.",
+      "The DIFC expansion is set to bring over 42,000 new companies and thousands of high-net-worth professionals to the area. This massive influx of corporate demand, combined with the limited residential supply within the district itself, is expected to drive both rental rates and property valuations significantly higher by the time of handover.",
   },
 ];
 

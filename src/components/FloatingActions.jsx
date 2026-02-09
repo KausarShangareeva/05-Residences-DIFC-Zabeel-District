@@ -25,7 +25,7 @@ const FloatingActions = () => {
       </button>
       <a
         className="fab__btn fab__btn--wa"
-        href="https://api.whatsapp.com/send/?phone=971567715771&text=Hello%21+I+am+interested+in+Passo+by+Beyond&type=phone_number&app_absent=0"
+        href="https://api.whatsapp.com/send/?phone=971567715771&text=Hello%21+I+am+interested+in+The+Residences+DIFC+Zabeel+District&type=phone_number&app_absent=0"
         target="_blank"
         rel="noreferrer"
         aria-label={t("fab.whatsapp")}
