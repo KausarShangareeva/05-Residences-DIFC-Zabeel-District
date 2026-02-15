@@ -30,6 +30,7 @@ Check out the project live: [The Residences DIFC](https://difc-zabeel.netlify.ap
 ## 📦 Tech Stack
 
 ### Frontend
+
 - **React 19** — UI library
 - **Vite** — build tool
 - **React Router** — client-side routing
@@ -41,12 +42,14 @@ Check out the project live: [The Residences DIFC](https://difc-zabeel.netlify.ap
 - **QRCode.react** — QR code generation
 
 ### Backend
+
 - **Express.js** — REST API server
 - **PostgreSQL** — lead data storage
 - **express-validator** — server-side form validation
 - **Telegram Bot API** — instant lead notifications
 
 ### Deployment
+
 - **Netlify** — frontend hosting
 - **Render.com** — backend hosting
 - **Cloudinary** — image CDN with responsive srcSet
@@ -111,13 +114,13 @@ Check out the project live: [The Residences DIFC](https://difc-zabeel.netlify.ap
 
 ## 🏢 Apartment Types
 
-| Type | Area | Units | Starting Price |
-|------|------|-------|---------------|
-| 1 BR | 846 sq.ft | 247 | AED 2.6M |
-| 2 BR | 1,460 sq.ft | 164 | — |
-| 3 BR | 1,898 sq.ft | 40 | — |
-| 4 BR | 3,437 sq.ft | 6 | — |
-| Duplex Penthouse | 4,489 sq.ft | 6 | — |
+| Type             | Area        | Units | Starting Price |
+| ---------------- | ----------- | ----- | -------------- |
+| 1 BR             | 846 sq.ft   | 247   | AED 2.6M       |
+| 2 BR             | 1,460 sq.ft | 164   | —              |
+| 3 BR             | 1,898 sq.ft | 40    | —              |
+| 4 BR             | 3,437 sq.ft | 6     | —              |
+| Duplex Penthouse | 4,489 sq.ft | 6     | —              |
 
 **Total: 463 luxury apartments** · Handover: Q4 2029
 
@@ -125,19 +128,19 @@ Check out the project live: [The Residences DIFC](https://difc-zabeel.netlify.ap
 
 ## 🎨 Themes & Design
 
-| Theme | Icon | Description |
-|-------|------|-------------|
-| Light | ☀️ | Warm beige with antique gold accents |
-| Dark | 🌙 | Deep tones with champagne highlights |
+| Theme | Icon | Description                          |
+| ----- | ---- | ------------------------------------ |
+| Light | ☀️   | Warm beige with antique gold accents |
+| Dark  | 🌙   | Deep tones with champagne highlights |
 
 **Color Palette:**
 
-| Color | Hex | Usage |
-|-------|-----|-------|
+| Color        | Hex       | Usage                     |
+| ------------ | --------- | ------------------------- |
 | Antique Gold | `#9a742e` | Primary buttons & accents |
-| Slate Steel | `#6d7b88` | Secondary elements |
-| Champagne | `#e0c27c` | Highlights & hover states |
-| Warm Beige | `#f6f1ea` | Light mode background |
+| Slate Steel  | `#6d7b88` | Secondary elements        |
+| Champagne    | `#e0c27c` | Highlights & hover states |
+| Warm Beige   | `#f6f1ea` | Light mode background     |
 
 **Typography:** Montserrat · Cormorant Garamond · Eugusto · Tangerine · Zain (Arabic)
 
@@ -182,16 +185,10 @@ npm run dev
 
 ## 📄 Pages
 
-| Route | Description |
-|-------|-------------|
-| `/` | Main landing page |
-| `/terms` | Terms and Conditions |
-| `/privacy` | Privacy Policy |
-| `/block` | Building block details |
-| `/links` | QR code links page |
-
----
-
-## 📄 License
-
-This project is free for educational use.
+| Route      | Description            |
+| ---------- | ---------------------- |
+| `/`        | Main landing page      |
+| `/terms`   | Terms and Conditions   |
+| `/privacy` | Privacy Policy         |
+| `/block`   | Building block details |
+| `/links`   | QR code links page     |
